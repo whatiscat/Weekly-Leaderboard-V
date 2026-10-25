@@ -1,0 +1,49 @@
+{
+  "account": {
+    "mid": "3546800279522160",
+    "name": "Bili-Board_Atel",
+    "spaceUrl": "https://space.bilibili.com/3546800279522160"
+  },
+  "paths": {
+    "raw": "data/raw",
+    "data": "data",
+    "out": "public",
+    "logs": "logs",
+    "state": "data/state.json"
+  },
+  "http": {
+    "userAgentDesktop": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",
+    "userAgentMobile": "Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1",
+    "minIntervalMs": 1200,
+    "maxRetries": 5,
+    "backoffBaseMs": 4000,
+    "backoffMaxMs": 30000,
+    "timeoutMs": 20000
+  },
+  "crawl": {
+    "maxPages": 40,
+    "pageSize": 20,
+    "timeBudgetMs": 120000
+  },
+  "render": {
+    "title": "术力口周榜 · 数据看板",
+    "brand": "BB",
+    "csvName": "术力口周榜-全量数据.csv",
+    "htmlName": "index.html",
+    "jsonName": "data.json"
+  },
+  "schedule": {
+    "weekday": 3,
+    "hour": 19,
+    "minute": 30,
+    "timezoneNote": "本地时区；周榜通常在周三 18:00 前后发布"
+  },
+  "server": {
+    "port": 5173,
+    "host": "127.0.0.1"
+  },
+  "bili": {
+    "cookie": "",
+    "note": "可选：填入浏览器里的 SESSDATA/buvid3 等 Cookie，可显著降低风控概率"
+  }
+}

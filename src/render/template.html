@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<meta name="generator" content="bili-board-weekly">
+<title>{{TITLE}}</title>
+<style>{{CSS}}</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="bar">
+    <a class="brand" href="#boardSec">
+      <span class="name">术力口周榜</span>
+    </a>
+    <nav class="actions">
+      <a class="btn" href="{{SPACE_URL}}" target="_blank" rel="noopener">B 站主页</a>
+      <a class="btn" href="{{READ_LIST}}" target="_blank" rel="noopener">文字版文集</a>
+      <a class="btn" href="https://biliboard.uk" target="_blank" rel="noopener">收录公示</a>
+      <a class="btn" href="{{CSV_NAME}}" download>下载 CSV</a>
+      <button class="btn primary" id="refreshBtn" type="button" title="重新加载最新数据">
+        <span class="ico">⟳</span><span class="lbl">刷新</span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="page-head">
+    <h1>{{HEADING}}</h1>
+    <p>{{SUBTITLE}}</p>
+  </div>
+
+  <div class="hero" id="hero"></div>
+
+  <section id="boardSec">
+    <div class="sec-head"><h3>本期榜单</h3><div class="desc">点击任意一行查看名次走势与视频预览</div><div class="right" id="boardMeta"></div></div>
+    <div class="toolbar" id="toolbar"></div>
+    <div class="board">
+      <div class="board-head"><div>名次</div><div>变化</div><div>封面</div><div>歌曲</div><div>近 30 期</div><div>上周</div><div>在榜</div></div>
+      <div id="rows"></div>
+    </div>
+    <div class="note">▲ 上升 / ▼ 下降 / NEW 首次上榜 / RE 回归榜单 · 变化以上一期为准</div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h3>本期看点</h3><div class="desc">相对上一期的榜单流动</div></div>
+    <div class="grid3">
+      <div class="panel" id="p-new"></div>
+      <div class="panel" id="p-up"></div>
+      <div class="panel" id="p-down"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><h3>冠军榜</h3><div class="desc">连续夺冠合并为一段</div><div class="right" id="champMeta"></div></div>
+    <div class="champ-list" id="champs"></div>
+  </section>
+
+  <section id="trendSec">
+    <div class="sec-head"><h3>歌曲走势</h3><div class="desc">名次越高越靠上；断点表示该期未上榜</div></div>
+    <div class="trend-wrap">
+      <div class="song-list"><input id="q" placeholder="搜索歌曲…"><div class="items" id="songItems"></div></div>
+      <div class="chart-card" id="chartCard"></div>
+    </div>
+  </section>
+
+  {{LEGEND_SECTION}}
+
+  <footer>
+  {{FOOTER}}
+  </footer>
+
+</main>
+
+<script>window.__DATA__={{DATA}};</script>
+<script>{{APP}}</script>
+</body>
+</html>
