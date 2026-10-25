@@ -31,6 +31,8 @@ npm run package        # 或 node scripts/package.mjs
 
 产物：`dist/术力口周榜-便携版.zip`（约 1MB，解压后 10MB）。
 
+已发布版本可直接下载：**[Releases · v1.0.0](https://github.com/whatiscat/Weekly-Leaderboard-V/releases/latest)**（附件 `Weekly-Leaderboard-Portable-v1.0.0.zip`）。
+
 解压后双击 `启动.cmd`：
 
 1. 检查 Node.js（≥20，没有会提示下载地址）
