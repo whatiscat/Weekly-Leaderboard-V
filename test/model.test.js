@@ -5,7 +5,7 @@ import { championRuns, songIndex, summarize } from '../src/model/stats.js';
 
 const config = {
   account: { name: 'T', mid: '1', spaceUrl: 'https://space.bilibili.com/1' },
-  render: { title: 'T', brand: 'T' }
+  site: { title: 'T', brand: 'T' }
 };
 
 function issue(id, date, week = 1, bvid = 'BVvideo' + id) {

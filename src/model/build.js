@@ -74,16 +74,23 @@ export function buildDataset(rawRecords, boards, config) {
     if (!postsByDate.has(day)) postsByDate.set(day, []);
     postsByDate.get(day).push(rec);
   }
+  /**
+   * 给一期找文字版原帖：优先同一天，否则取 ±4 天内日期最近的一条。
+   * 返回的 diffDays 是**配对偏差**，不是装饰：原帖期号有笔误（第 65 期写成第 25 期），
+   * 所以配对只能靠日期；而日期一旦配错，BV 核对会整片飘红。把偏差记下来，
+   * 偏差 >1 天的期数进 alignment，让人一眼看出"这期是不是配歪了"。
+   */
   function postFor(issueDate) {
     if (!issueDate) return null;
-    if (postsByDate.has(issueDate)) return postsByDate.get(issueDate)[0];
+    if (postsByDate.has(issueDate)) return { post: postsByDate.get(issueDate)[0], diffDays: 0 };
     const t = new Date(issueDate + 'T00:00:00Z').getTime();
-    let best = null, bestDiff = 4;
+    let best = null;
+    let bestDiff = 4;
     for (const [day, list] of postsByDate) {
       const diff = Math.abs(new Date(day + 'T00:00:00Z').getTime() - t) / 86400000;
       if (diff < bestDiff) { bestDiff = diff; best = list[0]; }
     }
-    return best;
+    return best ? { post: best, diffDays: Math.round(bestDiff * 10) / 10 } : null;
   }
 
   const issues = [];
@@ -91,7 +98,8 @@ export function buildDataset(rawRecords, boards, config) {
     const rows = (rowsByIssue.get(m.issue_id) || []).sort((a, b) => a.rank - b.rank);
     if (!rows.length) continue;
     const date = dateFromTs(m.video_pubdate || m.end_date);
-    const post = postFor(date);
+    const pair = postFor(date);
+    const post = pair?.post || null;
     issues.push({
       issue: m.issue_id,
       year: m.year,
@@ -101,6 +109,7 @@ export function buildDataset(rawRecords, boards, config) {
       videoBvid: m.video_bvid || '',
       postUrl: post?.url || '',
       postTitle: post?.title || '',
+      postDateDiff: pair ? pair.diffDays : null,
       postedWeek: post?.week ?? null,
       entries: rows.map(entryOf)
     });
@@ -108,10 +117,15 @@ export function buildDataset(rawRecords, boards, config) {
   issues.sort((a, b) => a.issue - b.issue);
 
   // 对齐校验：官方行 vs 帖子行（同名义曲目/改译名/换稿件都会在这里体现）
-  const alignment = { issues: 0, ranks: 0, bvidMismatch: 0, rows: [] };
+  const alignment = { issues: 0, ranks: 0, bvidMismatch: 0, maxPostDiffDays: 0, looseMatches: 0, rows: [] };
   for (const it of issues) {
-    const post = postFor(it.date);
-    if (!post) continue;
+    const pair = postFor(it.date);
+    if (!pair) continue;
+    const post = pair.post;
+    alignment.maxPostDiffDays = Math.max(alignment.maxPostDiffDays, pair.diffDays);
+    // 超过 1 天就算"松配对"：原帖通常在榜单发布当天或前一天出现，
+    // 差到 2 天以上多半是某一期没有原帖、被邻期顶上了。
+    if (pair.diffDays > 1) alignment.looseMatches++;
     alignment.issues++;
     const byRank = new Map(post.entries.map((e) => [e.rank, e]));
     for (const e of it.entries) {
@@ -145,27 +159,70 @@ export function buildDataset(rawRecords, boards, config) {
     })
     .filter(Boolean);
 
+  // 缺名：以官方声明的 video_count 为准，**不要写死 20**。
+  // 有两期（第 63、73 期）官方就只有 19 首，写死 20 会把它们误报成缺一名，
+  // 于是页脚的「数据完整性」永远停在 121/123 —— 假警报比没有警报更糟。
+  const expectedOf = (issue) => {
+    const board = issueMeta.find((m) => m.issue_id === issue);
+    return Number.isInteger(board?.video_count) && board.video_count > 0 ? board.video_count : 20;
+  };
+
+  const gaps = [];
+  const numberingGaps = [];
+  for (const it of issues) {
+    const expected = expectedOf(it.issue);
+    const have = new Set(it.entries.map((e) => e.rank));
+    const missingFromList = [];
+    for (let r = 1; r <= expected; r++) if (!have.has(r)) missingFromList.push(r);
+    const short = Math.max(0, expected - have.size);
+    if (short > 0) {
+      gaps.push({ issue: it.issue, date: it.date, expected, have: have.size, miss: missingFromList });
+    } else if (missingFromList.length) {
+      // 条数够了但名次不连续（例如 19 首里没有 #18、却有 #20）：
+      // 这是原榜的编号习惯，不是缺歌，单独记一笔、不进 gaps。
+      numberingGaps.push({ issue: it.issue, miss: missingFromList });
+    }
+  }
+
+  const expectedEntries = issues.reduce((n, it) => {
+    const board = issueMeta.find((m) => m.issue_id === it.issue);
+    return n + (Number.isInteger(board?.video_count) && board.video_count > 0 ? board.video_count : 20);
+  }, 0);
+  const actualEntries = issues.reduce((n, it) => n + it.entries.length, 0);
+
   const meta = {
     account: config.account,
     generatedAt: new Date().toISOString(),
-    title: config.render.title,
-    brand: config.render.brand,
-    csvName: config.render.csvName,
+    title: config.site.title,
+    brand: config.site.brand,
+    csvName: config.site.csvName,
     sources: {
       board: 'https://biliboard.uk',
       space: config.account.spaceUrl,
       readList: 'https://www.bilibili.com/read/readlist/rl954223'
     },
     charts: { first: issues[0]?.issue ?? null, last: issues.at(-1)?.issue ?? null },
-    alignment: { issues: alignment.issues, ranks: alignment.ranks, bvidMismatch: alignment.bvidMismatch },
-    gaps: issues
-      .map((it) => {
-        const have = new Set(it.entries.map((e) => e.rank));
-        const miss = [];
-        for (let r = 1; r <= 20; r++) if (!have.has(r)) miss.push(r);
-        return { issue: it.issue, date: it.date, miss };
-      })
-      .filter((g) => g.miss.length)
+    alignment: {
+      issues: alignment.issues,
+      ranks: alignment.ranks,
+      bvidMismatch: alignment.bvidMismatch,
+      maxPostDiffDays: alignment.maxPostDiffDays,
+      looseMatches: alignment.looseMatches
+    },
+    gaps,
+    quality: {
+      completeIssues: issues.length - gaps.length,
+      totalIssues: issues.length,
+      missingRanks: gaps.reduce((n, g) => n + (g.expected - g.have), 0),
+      numberingGaps: numberingGaps.length,
+      entries: { actual: actualEntries, expected: expectedEntries },
+      // 有文字版原帖的期数：原帖只是旁证（用于核对 BV 与期号），
+      // 缺了它不影响榜单数据本身。
+      posts: {
+        aligned: issues.filter((it) => it.postUrl).length,
+        total: issues.length
+      }
+    }
   };
 
   return { meta, issues, legend, stats: summarize(issues), alignment: alignment.rows };

@@ -3,14 +3,23 @@ node_modules/
 logs/
 *.log
 
+# 本机私货（端口 / Cookie 等覆盖项），从 config/local.example.json 复制
+config/local.json
+
 # 运行态
 data/state.json
 data/.lock
 data/failures.json
+data/covers-failures.json
 
 # 构建产物（便携包）
 dist/
 .installed
+
+# 开发产物：备份、临时脚本、截图、浏览器调试目录
+devtools/tmp/
+devtools/backups/
+devtools/.dshcheck/
 
 # 系统文件
 Thumbs.db

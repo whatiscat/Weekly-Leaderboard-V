@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { readJson } from './util/fsx.js';
+import { checkLatest, describeCoverage } from './biliboard/validate.js';
 
 const UA = 'Mozilla/5.0 (compatible; bbw/1.0)';
 
@@ -35,6 +36,23 @@ export async function doctor(cfg, log) {
   const webIndex = path.join(cfg.paths.web, 'index.html');
   lines.push('数据：官方期次 ' + issuesMeta.length + ' 期 · 曲目 ' + songs.length + ' 首 · 封面直链 ' + Object.keys(covers).length + ' 条 · 帖子 ' + rawCount + ' 期');
   lines.push('前端：' + (fs.existsSync(webIndex) ? 'src/web 就绪' : '缺少 src/web/index.html'));
+
+  // 完整性：缺名次是数据本身的状态（如实报告），曲目库落后于榜单则是"该同步了"
+  if (issuesMeta.length && songs.length) {
+    const coverage = describeCoverage(songs, issuesMeta);
+    const latest = checkLatest(songs, issuesMeta);
+    lines.push('完整性：' + coverage.completeIssues + '/' + coverage.totalIssues + ' 期名次齐全'
+      + (coverage.orphanRows ? ' · 孤儿行 ' + coverage.orphanRows : '')
+      + (coverage.duplicateRanks.length ? ' · 重复名次 ' + coverage.duplicateRanks.length : ''));
+    if (coverage.incomplete.length) {
+      lines.push('  缺行：' + coverage.incomplete.slice(0, 6).map((x) => '第 ' + x.issue + ' 期 ' + x.have + '/' + x.expected).join('、')
+        + (coverage.incomplete.length > 6 ? ' …' : ''));
+    }
+    if (latest.stale) {
+      lines.push('  ⚠ 曲目库最高只到第 ' + latest.latestInSongs + ' 期，榜单已到第 ' + latest.latestIssue + ' 期');
+      issues.push('曲目库可能不是最新：运行 node src/cli.js sync --full');
+    }
+  }
   if (!songs.length) issues.push('缺少 data/boards/songs.json —— 先运行 node src/cli.js sync --full');
   if (!issuesMeta.length) issues.push('缺少 data/boards/issues-1.json —— 先运行 node src/cli.js sync');
   if (!fs.existsSync(webIndex)) issues.push('前端入口缺失 —— 检查 src/web/index.html');
@@ -55,7 +73,17 @@ export async function doctor(cfg, log) {
   // 状态
   const state = readJson(cfg.paths.state, {}) || {};
   lines.push('');
-  lines.push('最近同步：' + (state.lastSyncAt || '从未') + ' · 最近抓帖：' + (state.lastCrawlAt || '从未') + ' · 最近构建：' + (state.lastBuildAt || '从未'));
+  lines.push('最近同步：' + (state.lastSyncAt || '从未') + ' · 最近抓帖：' + (state.lastCrawlAt || '从未') + ' · 最近更新：' + (state.lastRunAt || '从未'));
+  const syncMeta = readJson(path.join(boardsDir, 'meta.json'), {}) || {};
+  const syncQuality = syncMeta.quality;
+  if (syncQuality && syncQuality.warnings && syncQuality.warnings.length) {
+    lines.push('上次同步的一致性告警：');
+    syncQuality.warnings.slice(0, 6).forEach((w) => lines.push('  · ' + w));
+  }
+  if (state.lastCrawl && state.lastCrawl.incomplete && state.lastCrawl.incomplete.length) {
+    lines.push('上次抓帖：' + state.lastCrawl.incomplete.length + ' 期不满 20 名（数据本身如此，已如实标记）');
+  }
+  if (state.stats) lines.push('数据统计：' + state.stats.issues + ' 期 / ' + state.stats.entries + ' 条 / ' + state.stats.songs + ' 首');
   if (state.lastCrawl && state.lastCrawl.error) lines.push('最近一次抓帖失败：' + state.lastCrawl.error);
 
   lines.push('');

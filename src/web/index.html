@@ -1,26 +1,84 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-CN" class="no-js">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
+<meta name="description" content="术力口周榜数据看板：逐期名次、涨跌、冠军段、曲目走势与传说曲附榜。">
+<meta name="theme-color" content="#0e0f13" id="theme-color-meta">
 <title>术力口周榜 · 数据看板</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script>
+  /* 这段必须内联、且必须在样式表之前执行：
+     1) 打上 .js 标记 —— 样式里"封面淡入"以 .js 为前提，
+        脚本被禁用时图片保持正常显示，而不是永远停在 opacity:0；
+     2) 在首次绘制前定好 data-theme —— 否则会先按默认深色画一帧、
+        再跳成浅色，也就是常说的"闪屏"。
+     这里读的键与 theme.js 完全一致（theme），取值也必须一致，
+     改一处必须两处一起改。 */
+  (function () {
+    var root = document.documentElement;
+    root.className = root.className.replace(/\bno-js\b/, '') + ' js';
+
+    var VALID = ['system', 'dark', 'light', 'OLED'];
+    var COLOR = { dark: '#0e0f13', light: '#f7f8fa', OLED: '#000000' };
+    var theme = 'system';
+    try { theme = localStorage.getItem('theme') || 'system'; } catch (e) { /* 存储不可用：按跟随系统 */ }
+    if (VALID.indexOf(theme) < 0) theme = 'system';
+
+    var resolved = theme === 'system'
+      ? (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark')
+      : theme;
+
+    root.setAttribute('data-theme', resolved);
+    var meta = document.getElementById('theme-color-meta');
+    if (meta) meta.setAttribute('content', COLOR[resolved] || COLOR.dark);
+  })();
+</script>
 <link rel="stylesheet" href="/styles.css">
 </head>
-<body>
+<body id="top">
 
 <header class="topbar">
   <div class="bar">
-    <a class="brand" href="#boardSec"><span class="name">术力口周榜</span></a>
-    <nav class="actions">
+    <!-- 徽标：一枚 6×6 像素字形（上升的四根柱子 + 起点那一格强调色）。
+         与 favicon.svg 同源，像素边缘靠 shape-rendering: crispEdges 保住。 -->
+    <a class="brand" href="#top" aria-label="回到页面顶部">
+      <svg class="brand-mark" viewBox="0 0 6 6" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
+        <rect x="2" y="3" width="1" height="2"/>
+        <rect x="3" y="2" width="1" height="3"/>
+        <rect x="4" y="1" width="1" height="4"/>
+        <rect class="on" x="1" y="4" width="1" height="1"/>
+      </svg>
+      <span class="name">术力口周榜<small>数据看板</small></span>
+    </a>
+
+    <div class="actions">
       <a class="btn" id="linkSpace" target="_blank" rel="noopener">B 站主页</a>
       <a class="btn" id="linkRead" target="_blank" rel="noopener">文字版文集</a>
       <a class="btn" href="https://biliboard.uk" target="_blank" rel="noopener">收录公示</a>
       <a class="btn" href="/api/csv" download>下载 CSV</a>
+
+      <div class="theme">
+        <button class="btn" id="themeBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="主题">
+          <svg class="ico-theme" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" focusable="false">
+            <circle cx="8" cy="8" r="6.2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M8 1.8a6.2 6.2 0 0 0 0 12.4z" fill="currentColor"/>
+          </svg>
+          <span class="lbl" id="themeLabel">跟随系统</span>
+        </button>
+        <div class="theme-menu" id="themeMenu" role="menu" aria-label="主题" hidden>
+          <button type="button" role="menuitemradio" data-theme-value="system" aria-checked="true">跟随系统</button>
+          <button type="button" role="menuitemradio" data-theme-value="dark" aria-checked="false">深色</button>
+          <button type="button" role="menuitemradio" data-theme-value="light" aria-checked="false">浅色</button>
+          <button type="button" role="menuitemradio" data-theme-value="OLED" aria-checked="false">OLED</button>
+        </div>
+      </div>
+
       <button class="btn primary" id="refreshBtn" type="button" title="重新加载最新数据">
-        <span class="ico">⟳</span><span class="lbl">刷新</span>
+        <span class="ico" aria-hidden="true">⟳</span><span class="lbl">刷新</span>
       </button>
-    </nav>
+    </div>
   </div>
 </header>
 
@@ -32,18 +90,25 @@
 
   <div class="hero" id="hero"><div class="skeleton hero-sk"></div></div>
 
-  <section id="boardSec">
-    <div class="sec-head"><h3>本期榜单</h3><div class="desc">点击任意一行查看名次走势与视频预览</div><div class="right" id="boardMeta"></div></div>
+  <section id="boardSec" aria-labelledby="boardTitle">
+    <div class="sec-head">
+      <h3 id="boardTitle">本期榜单</h3>
+      <div class="desc">点击任意一行查看名次走势与视频预览</div>
+      <div class="right" id="boardMeta"></div>
+    </div>
     <div class="toolbar" id="toolbar"></div>
     <div class="board">
-      <div class="board-head"><div>名次</div><div>变化</div><div>封面</div><div>歌曲</div><div>近 30 期</div><div>上周</div><div>在榜</div></div>
+      <div class="board-head" aria-hidden="true"><div>名次</div><div>变化</div><div>封面</div><div>歌曲</div><div>近 30 期</div><div>上周</div><div>在榜</div></div>
       <div id="rows"><div class="skeleton row-sk"></div></div>
     </div>
     <div class="note">▲ 上升 / ▼ 下降 / NEW 首次上榜 / RE 回归榜单 · 变化以上一期为准</div>
   </section>
 
-  <section>
-    <div class="sec-head"><h3>本期看点</h3><div class="desc">相对上一期的榜单流动</div></div>
+  <section id="insightSec" aria-labelledby="insightTitle">
+    <div class="sec-head">
+      <h3 id="insightTitle">本期看点</h3>
+      <div class="desc">相对上一期的榜单流动</div>
+    </div>
     <div class="grid3">
       <div class="panel" id="p-new"></div>
       <div class="panel" id="p-up"></div>
@@ -51,27 +116,51 @@
     </div>
   </section>
 
-  <section>
-    <div class="sec-head"><h3>冠军榜</h3><div class="desc">连续夺冠合并为一段</div><div class="right" id="champMeta"></div></div>
+  <section id="champSec" aria-labelledby="champTitle">
+    <div class="sec-head">
+      <h3 id="champTitle">冠军榜</h3>
+      <div class="desc">连续夺冠合并为一段</div>
+      <div class="right" id="champMeta"></div>
+    </div>
     <div class="champ-list" id="champs"></div>
   </section>
 
-  <section id="trendSec">
-    <div class="sec-head"><h3>歌曲走势</h3><div class="desc">名次越高越靠上；断点表示该期未上榜</div></div>
+  <section id="trendSec" aria-labelledby="trendTitle">
+    <div class="sec-head">
+      <h3 id="trendTitle">歌曲走势</h3>
+      <div class="desc">名次越高越靠上；断点表示该期未上榜</div>
+    </div>
     <div class="trend-wrap">
-      <div class="song-list"><input id="q" placeholder="搜索歌曲…" autocomplete="off"><div class="items" id="songItems"></div></div>
+      <div class="song-list">
+        <label class="sr-only" for="q">搜索歌曲</label>
+        <input id="q" placeholder="搜索歌曲…" autocomplete="off">
+        <div class="items" id="songItems"></div>
+      </div>
       <div class="chart-card" id="chartCard"></div>
     </div>
   </section>
 
-  <section id="legendSec" hidden>
-    <div class="sec-head"><h3>附：传说曲周榜</h3><div class="desc">同账号发布的另一条榜单，期号独立</div></div>
+  <section id="legendSec" hidden aria-labelledby="legendTitle">
+    <div class="sec-head">
+      <h3 id="legendTitle">附：传说曲周榜</h3>
+      <div class="desc">同账号发布的另一条榜单，期号独立</div>
+    </div>
     <div class="board"><table class="ltable"><thead><tr><th>期号</th><th>日期</th><th>本期冠军</th><th>链接</th></tr></thead><tbody id="legendBody"></tbody></table></div>
   </section>
 
   <footer id="footer"></footer>
 </main>
 
+<noscript>
+  <div class="noscript">
+    这个看板由前端脚本渲染，需要启用 JavaScript。全部数据可以直接下载：
+    <a href="/api/csv">全量 CSV</a>；接口在 <a href="/api/meta">/api/meta</a>。
+  </div>
+</noscript>
+
+<!-- 顺序有意义：theme 先定主题，motion 供 app 调用；三个都是 defer，按声明顺序执行 -->
+<script src="/theme.js" defer></script>
+<script src="/motion.js" defer></script>
 <script src="/app.js" defer></script>
 </body>
 </html>

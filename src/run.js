@@ -11,6 +11,21 @@ import { readJson, writeJson } from './util/fsx.js';
 
 const lockPath = (cfg) => path.join(cfg.paths.data, '.lock');
 
+/**
+ * state.json 只保留这些键。
+ *
+ * 它是运行态文件（不入库），但旧版本留下的键会一直被展开运算符带着走：
+ * 上一版静态生成器写的 output / lastBuildAt 就这样在盘上躺了很久。
+ * 显式白名单比"自然消亡"可靠 —— 加新键要改这里，等于强制想一遍它是不是运行态。
+ */
+const STATE_KEYS = ['lastSyncAt', 'lastCrawlAt', 'lastCrawl', 'lastRunAt', 'lastRunMs', 'stats', 'songs', 'quality'];
+
+function pickState(state) {
+  const out = {};
+  for (const key of STATE_KEYS) if (state && state[key] !== undefined) out[key] = state[key];
+  return out;
+}
+
 function withLock(cfg, fn) {
   const lock = lockPath(cfg);
   if (fs.existsSync(lock)) {
@@ -52,7 +67,12 @@ export function runSync(cfg, log, { full = false } = {}) {
   return withLock(cfg, async () => {
     const result = await syncBoards(new BoardClient(cfg, log), cfg, log, { full });
     const state = readJson(cfg.paths.state, {}) || {};
-    writeJson(cfg.paths.state, { ...state, lastSyncAt: new Date().toISOString(), songs: result.songs.length });
+    writeJson(cfg.paths.state, {
+      ...pickState(state),
+      lastSyncAt: new Date().toISOString(),
+      songs: result.songs.length,
+      quality: result.quality
+    });
     return result;
   });
 }
@@ -61,7 +81,7 @@ export function runCrawl(cfg, log, opts = {}) {
   return withLock(cfg, async () => {
     const result = await doCrawl(cfg, log, opts);
     const state = readJson(cfg.paths.state, {}) || {};
-    writeJson(cfg.paths.state, { ...state, lastCrawlAt: new Date().toISOString(), lastCrawl: result });
+    writeJson(cfg.paths.state, { ...pickState(state), lastCrawlAt: new Date().toISOString(), lastCrawl: result });
     return result;
   });
 }
@@ -84,12 +104,13 @@ export function runUpdate(cfg, log, { force = false, deep = false, limit = 0, sk
     const dataset = loadDataset(cfg);
     const state = readJson(cfg.paths.state, {}) || {};
     writeJson(cfg.paths.state, {
-      ...state,
+      ...pickState(state),
       lastRunAt: new Date().toISOString(),
       lastRunMs: Date.now() - started,
       lastCrawl: crawlResult,
       lastSyncAt: syncResult ? new Date().toISOString() : state.lastSyncAt,
-      stats: dataset.stats
+      stats: dataset.stats,
+      quality: syncResult ? syncResult.quality : state.quality
     });
     return { crawl: crawlResult, sync: syncResult, dataset, ms: Date.now() - started };
   });
@@ -101,6 +122,12 @@ export function formatReport(dataset) {
   lines.push('术力口周榜 · ' + dataset.meta.account.name);
   lines.push('期数 ' + s.firstIssue + '–' + s.lastIssue + '（' + s.firstDate + ' ~ ' + s.lastDate + '），共 ' + s.issues + ' 期 / ' + s.entries + ' 条 / ' + s.songs + ' 首曲目');
   lines.push('冠军段数 ' + s.championRuns + (s.longest ? '，最长在榜 ' + s.longest.title + '（' + s.longest.weeks + ' 期）' : ''));
+  const q = dataset.meta.quality;
+  if (q) {
+    lines.push('数据质量：' + q.completeIssues + '/' + q.totalIssues + ' 期名次齐全'
+      + (q.missingRanks ? '（缺 ' + q.missingRanks + ' 个名次）' : '')
+      + ' · 有文字版原帖 ' + q.posts.aligned + '/' + q.posts.total + ' 期');
+  }
   const last = dataset.issues.at(-1);
   if (last) {
     lines.push('');

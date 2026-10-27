@@ -1,6 +1,6 @@
 {
   "name": "bili-board-weekly",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "description": "术力口周榜：Node.js 数据服务 + 看板前端（抓取、对齐、API、定时更新）",
   "type": "module",
@@ -13,18 +13,20 @@
   "scripts": {
     "start": "node src/cli.js serve --open",
     "serve": "node src/cli.js serve",
-    "crawl": "node src/cli.js crawl",
+    "dev": "node src/cli.js serve --open --verbose",
+    "sync": "node src/cli.js sync",
     "update": "node src/cli.js update",
+    "crawl": "node src/cli.js crawl",
+    "report": "node src/cli.js report",
+    "status": "node src/cli.js status",
     "schedule": "node src/cli.js schedule",
-    "migrate": "node scripts/migrate-legacy.mjs",
-    "test": "node --test",
-    "check": "node --check src/cli.js",
     "doctor": "node src/cli.js doctor",
+    "test": "node --test",
+    "check": "node scripts/check.mjs",
     "package": "node scripts/package.mjs",
     "serve:bg": "powershell -ExecutionPolicy Bypass -File scripts/serve-bg.ps1",
     "serve:stop": "powershell -ExecutionPolicy Bypass -File scripts/serve-bg.ps1 -Stop",
-    "serve:status": "powershell -ExecutionPolicy Bypass -File scripts/serve-bg.ps1 -Status",
-    "dev": "node src/cli.js serve --open --verbose"
+    "serve:status": "powershell -ExecutionPolicy Bypass -File scripts/serve-bg.ps1 -Status"
   },
   "keywords": [
     "bilibili",

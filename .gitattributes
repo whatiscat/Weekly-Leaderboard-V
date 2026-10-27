@@ -1,11 +1,15 @@
-* text=auto
+* text=auto eol=lf
 
-# Windows 脚本保持 CRLF
+# Windows 脚本保持 CRLF（cmd.exe 对 LF 的批处理会读错行）
 *.cmd text eol=crlf
 *.bat text eol=crlf
 *.ps1 text eol=crlf
 
-# 生成物不参与 diff 统计
-public/index.html linguist-generated=true
-public/data.json linguist-generated=true
+# 便携包里给用户直接双击打开看的说明：保持 CRLF（老记事本对 LF 的支持不靠谱）
+packaging/*.txt text eol=crlf
+
+# 生成物不参与 diff 统计 / 语言统计
 data/boards/songs.json linguist-generated=true
+data/boards/issues-*.json linguist-generated=true
+data/covers.json linguist-generated=true
+data/raw/*.json linguist-generated=true

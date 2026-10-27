@@ -7,6 +7,7 @@ import { formatReport, loadDataset, runCrawl, runSync, runUpdate } from './run.j
 import { listen } from './server/index.js';
 import { doctor } from './doctor.js';
 import { RawStore } from './crawler/store.js';
+import { reparseAll } from './crawler/reparse.js';
 import { readJson } from './util/fsx.js';
 
 const HELP = [
@@ -19,6 +20,7 @@ const HELP = [
   '  update [--force] [--limit N] [--no-crawl] [--no-sync]   同步数据 + 增量抓帖',
   '  sync [--full]                           同步 Biliboard 期次与曲目库',
   '  crawl [--deep] [--force] [--limit N]    只抓 B 站帖子',
+  '  reparse [--write] [--limit N]            用当前解析器重算已存的原文（默认只报告）',
   '  report                                  终端打印数据摘要',
   '  status                                  查看数据与服务状态',
   '  doctor                                  体检：数据文件、网络、目录',
@@ -85,8 +87,29 @@ async function main() {
       }
       case 'crawl': {
         const res = await runCrawl(cfg, log, { force: Boolean(args.force), deep: Boolean(args.deep), limit: Number(args.limit || 0) });
-        log.info('抓取完成：发现 ' + res.discovered + ' 条，新增 ' + res.fetched + ' 条，失败 ' + res.failed.length + ' 条');
+        log.info('抓取完成：发现 ' + res.discovered + ' 条，新增 ' + res.fetched + ' 条，失败 ' + res.failed.length + ' 条'
+          + (res.incomplete.length ? '，其中 ' + res.incomplete.length + ' 期不满 20 名（已标记 complete:false）' : ''));
         return res.failed.length ? 2 : 0;
+      }
+      case 'reparse': {
+        const store = new RawStore(cfg.paths.raw);
+        const write = Boolean(args.write);
+        const res = reparseAll(store, { write, limit: Number(args.limit || 0), logger: log });
+        console.log('');
+        console.log('重解析：扫描 ' + res.scanned + ' 期 · 可解析 ' + res.parsed + ' · 有差异 ' + res.changed + ' · 无法解析 ' + res.unparsable);
+        if (res.changed) {
+          console.log('差异统计：曲名 ' + res.counts.title + ' · 链接 ' + res.counts.url + ' · 封面 ' + res.counts.cover
+            + ' · 新增名次 ' + res.counts.added + ' · 消失名次 ' + res.counts.removed);
+          console.log('有差异的期：' + res.changedIds.slice(0, 20).join('、') + (res.changedIds.length > 20 ? ' …（共 ' + res.changedIds.length + ' 期）' : ''));
+          console.log(write
+            ? '已写回 data/raw；页面点「刷新」（或重启服务）后生效'
+            : '这是试运行，什么都没写。确认无误后加 --write');
+        }
+        if (res.problems.length) {
+          console.log('无法重解析 ' + res.problems.length + ' 期：');
+          res.problems.slice(0, 10).forEach((x) => console.log('  ' + x.id + '  ' + x.reason));
+        }
+        return 0;
       }
       case 'update': {
         const res = await runUpdate(cfg, log, {
@@ -96,7 +119,10 @@ async function main() {
           skipSync: Boolean(args['no-sync']),
           full: Boolean(args.full)
         });
-        if (res.crawl) log.info('抓取：发现 ' + res.crawl.discovered + ' 条，新增 ' + res.crawl.fetched + ' 条，失败 ' + res.crawl.failed.length + ' 条');
+        if (res.crawl) {
+          log.info('抓取：发现 ' + res.crawl.discovered + ' 条，新增 ' + res.crawl.fetched + ' 条，失败 ' + res.crawl.failed.length + ' 条'
+            + (res.crawl.incomplete && res.crawl.incomplete.length ? '，缺名 ' + res.crawl.incomplete.length + ' 期' : ''));
+        }
         console.log('');
         console.log(formatReport(res.dataset));
         log.info('耗时 ' + (res.ms / 1000).toFixed(1) + 's。服务端会自动重载数据（或点页面右上角刷新）');
@@ -110,6 +136,16 @@ async function main() {
         const store = new RawStore(cfg.paths.raw);
         const state = readJson(cfg.paths.state, {}) || {};
         console.log('数据：官方曲目库 ' + (fs.existsSync(path.join(cfg.paths.data, 'boards', 'songs.json')) ? '已同步' : '缺失') + ' · 帖子原始记录 ' + store.ids().length + ' 期');
+        const covers = readJson(path.join(cfg.paths.data, 'covers.json'), {}) || {};
+        const failures = readJson(path.join(cfg.paths.data, 'failures.json'), {}) || {};
+        console.log('封面直链 ' + Object.keys(covers).length + ' 条 · 抓帖失败记录 ' + Object.keys(failures).length + ' 条');
+        const syncMeta = readJson(path.join(cfg.paths.data, 'boards', 'meta.json'), {}) || {};
+        if (syncMeta.quality) {
+          const q = syncMeta.quality;
+          console.log('数据质量：满员 ' + q.completeIssues + '/' + q.totalIssues + ' 期'
+            + (q.stale ? ' · ⚠ 曲目库可能不是最新（建议 sync --full）' : '')
+            + (q.warnings && q.warnings.length ? ' · 一致性告警 ' + q.warnings.length + ' 条' : ''));
+        }
         console.log('最近同步: ' + (state.lastSyncAt || '从未') + ' · 最近抓帖: ' + (state.lastCrawlAt || '从未') + ' · 最近更新: ' + (state.lastRunAt || '从未'));
         if (state.stats) console.log('数据统计: ' + state.stats.issues + ' 期 / ' + state.stats.entries + ' 条 / ' + state.stats.songs + ' 首');
         console.log('前端目录: ' + (fs.existsSync(path.join(cfg.paths.web, 'index.html')) ? 'ok' : '缺失'));

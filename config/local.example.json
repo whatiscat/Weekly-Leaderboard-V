@@ -1,0 +1,12 @@
+{
+  "//": "复制成 config/local.json（已被 .gitignore 排除）后按需覆盖，只写要改的那几项。",
+  "server": {
+    "port": 5174
+  },
+  "bili": {
+    "cookie": "SESSDATA=...; buvid3=..."
+  },
+  "http": {
+    "minIntervalMs": 2000
+  }
+}

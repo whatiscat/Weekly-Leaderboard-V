@@ -1,5 +1,5 @@
 {
-  "lastSyncAt": "2026-10-24T04:56:47.642Z",
+  "lastSyncAt": "2026-10-27T15:38:23.485Z",
   "pagesScanned": 5,
   "scannedSongs": 500,
   "songs": 642,
@@ -7,5 +7,18 @@
   "boards": {
     "weekly": 123,
     "legend": 84
+  },
+  "full": false,
+  "covers": 698,
+  "quality": {
+    "completeIssues": 123,
+    "totalIssues": 123,
+    "incomplete": [],
+    "orphanRows": 0,
+    "duplicateRanks": 0,
+    "latestIssue": 124,
+    "latestInSongs": 124,
+    "stale": false,
+    "warnings": []
   }
 }

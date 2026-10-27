@@ -1,6 +1,6 @@
 import { API, detailParams, feedParams, WEB } from '../bili/endpoints.js';
 import { isChartPost, normalizeUrl, parseTitle } from '../util/text.js';
-import { parseArticleHtml, parseOpusItem, parseSsrArticle } from './parse.js';
+import { missingRanks, parseArticleHtml, parseOpusItem, parseSsrArticle } from './parse.js';
 
 const FEED_REFERER = (mid) => 'https://space.bilibili.com/' + mid + '/dynamic';
 
@@ -24,9 +24,10 @@ export async function listChartPosts(client, mid, { maxPages = 40, logger, known
       if (!id || seen.has(id)) continue;
       seen.add(id);
       const title = it.content || '';
-      if (isChartPost(title) || /周榜/.test(title)) {
-        posts.push({ id, title, cover: normalizeUrl(it.cover?.url || '') });
-      }
+      // 只认正式榜单帖：招聘、致歉、预告这类动态不算。
+      // 这里判一次就够了 —— 以前进循环判 isChartPost、出循环又 filter 一遍，
+      // 中间那个 "|| /周榜/" 永远不会让多出来的东西活到最后。
+      if (isChartPost(title)) posts.push({ id, title, cover: normalizeUrl(it.cover?.url || '') });
     }
     logger?.debug('feed page ' + page + ': +' + items.length + ' (total seen ' + seen.size + ')');
     if (!res?.data?.has_more || items.length === 0) break;
@@ -57,8 +58,27 @@ async function metaOf(client, id) {
 }
 
 /**
+ * 把某一层解析结果记进 record，并算出"缺哪几名"。
+ *
+ * 20 条的榜单里缺 3 条，以前和"完整抓到"一样算成功：页面上那三名凭空消失，
+ * 抓取侧却以为自己干完了。missingRanks() 是 parse.js 里现成的，之前没人用；
+ * 接上之后，缺名的记录会带 complete:false 与 missing:[...]，抓取汇总里也会单独计数。
+ */
+function applyEntries(record, entries, source, payload) {
+  record.entries = entries;
+  record.source = source;
+  record.payload = payload;
+  record.missing = missingRanks(entries);
+  record.complete = record.missing.length === 0;
+  if (!record.complete) {
+    record.warnings.push('解析到 ' + entries.length + ' 条，缺第 ' + record.missing.join('、') + ' 名');
+  }
+  return record;
+}
+
+/**
  * 抓单期内容。按「opus 段落 → 专栏接口 → 专栏 SSR 页」依次降级，
- * 任一成功即返回，并保留原文 payload 以便重新解析。
+ * 任一成功即返回，并保留原文 payload 以便重新解析（见 src/crawler/reparse.js）。
  */
 export async function fetchPost(client, post, { logger } = {}) {
   const record = {
@@ -71,6 +91,8 @@ export async function fetchPost(client, post, { logger } = {}) {
     entries: [],
     source: '',
     payload: null,
+    missing: [],
+    complete: false,
     warnings: [],
     fetchedAt: new Date().toISOString()
   };
@@ -83,6 +105,10 @@ export async function fetchPost(client, post, { logger } = {}) {
       record.pubTs = meta.pubTs;
       record.pubTime = meta.pubTime;
       if (meta.title && meta.title.includes('期')) record.title = meta.title;
+    } else {
+      // 没有详情就拿不到 cv，后面两个专栏分支都会走空；必须留痕，否则
+      // 只看 warnings 的人会以为"三条路都试过了、只是没解析出来"
+      record.warnings.push('meta: 动态详情为空');
     }
   } catch (err) {
     record.warnings.push('meta: ' + err.message);
@@ -93,9 +119,7 @@ export async function fetchPost(client, post, { logger } = {}) {
     const res = await client.api(API.opusDetail, detailParams(post.id));
     const parsed = parseOpusItem(res?.data?.item);
     if (parsed?.entries?.length) {
-      record.entries = parsed.entries;
-      record.source = 'opus';
-      record.payload = { kind: 'paragraphs', data: parsed.paragraphs };
+      applyEntries(record, parsed.entries, 'opus', { kind: 'paragraphs', data: parsed.paragraphs });
       if (!record.pubTs && parsed.pubTs) record.pubTs = parsed.pubTs;
       return record;
     }
@@ -115,9 +139,7 @@ export async function fetchPost(client, post, { logger } = {}) {
     const content = res?.data?.content || '';
     const entries = parseArticleHtml(content);
     if (entries.length) {
-      record.entries = entries;
-      record.source = 'article';
-      record.payload = { kind: 'html', data: content };
+      applyEntries(record, entries, 'article', { kind: 'html', data: content });
       if (!record.title || !record.title.includes('期')) record.title = res.data.title || record.title;
       return record;
     }
@@ -130,9 +152,7 @@ export async function fetchPost(client, post, { logger } = {}) {
     const html = await client.html(WEB.readPage(cv) + '?r=' + Math.random().toString(36).slice(2));
     const entries = parseSsrArticle(html);
     if (entries && entries.length) {
-      record.entries = entries;
-      record.source = 'ssr';
-      record.payload = { kind: 'html', data: html };
+      applyEntries(record, entries, 'ssr', { kind: 'html', data: html });
       return record;
     }
     record.warnings.push('ssr: 页面未返回正文');
@@ -179,7 +199,14 @@ export async function crawl(client, cfg, store, { force = false, deep = false, l
 
   logger?.info('发现周榜帖 ' + posts.length + ' 条，待抓取 ' + todo.length + ' 条');
 
-  const result = { discovered: posts.length, fetched: 0, failed: [], skipped: posts.length - todo.length, skippedReasons };
+  const result = {
+    discovered: posts.length,
+    fetched: 0,
+    failed: [],
+    incomplete: [],
+    skipped: posts.length - todo.length,
+    skippedReasons
+  };
   let i = 0;
   for (const post of todo) {
     i++;
@@ -194,7 +221,12 @@ export async function crawl(client, cfg, store, { force = false, deep = false, l
         store.write(record);
         failures?.clear(post.id);
         result.fetched++;
-        logger?.info('[' + i + '/' + todo.length + '] ' + record.title + ' → ' + record.entries.length + ' 条 (' + record.source + ')');
+        if (!record.complete) {
+          result.incomplete.push({ id: post.id, title: record.title, missing: record.missing });
+          logger?.warn('[' + i + '/' + todo.length + '] ' + record.title + ' 缺第 ' + record.missing.join('、') + ' 名（已存，页面会如实显示空缺）');
+        } else {
+          logger?.info('[' + i + '/' + todo.length + '] ' + record.title + ' → ' + record.entries.length + ' 条 (' + record.source + ')');
+        }
       } else {
         failures?.record(post.id, record.warnings.join('; ') || '无条目');
         result.failed.push({ id: post.id, title: post.title, warnings: record.warnings });
@@ -205,6 +237,9 @@ export async function crawl(client, cfg, store, { force = false, deep = false, l
       result.failed.push({ id: post.id, title: post.title, warnings: [err.message] });
       logger?.error('抓取异常 ' + post.id + ': ' + err.message);
     }
+  }
+  if (result.incomplete.length) {
+    logger?.warn('本轮有 ' + result.incomplete.length + ' 期不满 20 名，已在 data/raw 里标记 complete:false');
   }
   return result;
 }

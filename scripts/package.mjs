@@ -37,7 +37,10 @@ fs.mkdirSync(OUT, { recursive: true });
 // 程序与配置
 for (const item of ['package.json', 'README.md']) copy(item, path.join(OUT, item));
 copy('src', path.join(OUT, 'src'));
-copy('config', path.join(OUT, 'config'));
+// ⚠️ 只白名单式地复制配置文件，不要 copy('config', ...)：
+// config/local.json 是本机私货（端口、B 站 Cookie），整目录复制会把 Cookie 打进 zip 发出去。
+copy('config/default.json', path.join(OUT, 'config/default.json'));
+copy('config/local.example.json', path.join(OUT, 'config/local.example.json'));
 
 // 数据（不含运行态）
 copy('data/boards', path.join(OUT, 'data/boards'));

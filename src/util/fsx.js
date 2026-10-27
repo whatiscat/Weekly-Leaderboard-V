@@ -6,12 +6,35 @@ export function ensureDir(dir) {
   return dir;
 }
 
+/**
+ * 读 JSON。文件不存在返回 fallback；**语法错误必须抛出，而且要说清是哪个文件**。
+ *
+ * 默认的 JSON.parse 报错只有 "Unexpected token } in JSON at position 12345"——
+ * 在 data/boards/songs.json（4MB）这种文件上等于什么都没说。这里把路径、字节数、
+ * 出错位置附近的一小段原文一起带上，坏文件能直接定位。
+ */
 export function readJson(file, fallback = null) {
+  let text;
   try {
-    return JSON.parse(fs.readFileSync(file, 'utf8'));
+    text = fs.readFileSync(file, 'utf8');
   } catch (err) {
     if (err.code === 'ENOENT') return fallback;
     throw err;
+  }
+  try {
+    return JSON.parse(text);
+  } catch (err) {
+    const m = /position (\d+)/.exec(err.message);
+    const at = m ? Number(m[1]) : -1;
+    const around = at >= 0
+      ? text.slice(Math.max(0, at - 40), at + 40).replace(/\n/g, '⏎')
+      : text.slice(0, 80).replace(/\n/g, '⏎');
+    throw new Error(
+      'JSON 解析失败：' + file + '（' + Buffer.byteLength(text) + ' 字节，位置 ' + at + '）\n' +
+      '  ' + err.message + '\n' +
+      '  附近内容：…' + around + '…\n' +
+      '  修复方式：重新运行 node src/cli.js sync --full（曲目库），或从备份恢复该文件。'
+    );
   }
 }
 

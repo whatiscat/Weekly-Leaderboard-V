@@ -1,8 +1,21 @@
-/* 术力口周榜 · 前端（纯渲染层，数据全部来自 /api） */
+/* 术力口周榜 · 前端（纯渲染层，数据全部来自 /api）
+ *
+ * 分工：
+ *   · 本文件：状态、取数、拼字符串、事件 —— 不写任何动画定时器
+ *   · motion.js：入场交错 / 图表描线 / 封面淡入 / 滚动锁
+ *   · theme.js：主题（与数据无关）
+ *
+ * 两条约定：
+ *   1. 事件一律**委托到稳定的容器**（#rows / #champs / #songItems / #drawerBody）。
+ *      以前是每次重绘都 querySelectorAll 再逐个绑，换一期就绑 20 个新监听，
+ *      旧节点虽然丢了但代码路径越用越绕；委托只需绑一次。
+ *   2. 图表的颜色不写在 JS 里（不写 #1896DA），只给 class，让主题令牌决定颜色。
+ */
 (function () {
   'use strict';
 
   var $ = function (id) { return document.getElementById(id); };
+
   var state = {
     meta: null,
     issues: [],
@@ -14,7 +27,8 @@
     songs: [],
     songCache: new Map(),
     curSong: null,
-    drawer: { open: false, id: null, issue: null, bvid: null }
+    filter: '',
+    drawer: { open: false, id: null, issue: null, bvid: null, returnFocus: null }
   };
 
   /* ---------- 工具 ---------- */
@@ -27,6 +41,12 @@
     var p = String(d || '').split('-');
     return p.length === 3 ? p[0] + '.' + p[1] + '.' + p[2] : String(d || '');
   }
+  /* ISO 时间 → "2026.10.24 04:56"。页脚的"数据更新 / 服务端载入"用得上：
+     只写日期看不出"今天的和昨天那份是不是同一份数据"。 */
+  function fmtTime(iso) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})T(\d{2}):(\d{2})/.exec(String(iso || ''));
+    return m ? m[1] + '.' + m[2] + '.' + m[3] + ' ' + m[4] + ':' + m[5] : String(iso || '');
+  }
   function num(n) { return (n < 10 ? '0' : '') + n; }
   function names(list) { return (list || []).join(' / '); }
   function cover(bvid, w) { return bvid ? '/img/' + encodeURIComponent(bvid) + (w ? '?w=' + w : '') : ''; }
@@ -34,6 +54,16 @@
   function playerUrl(bvid) {
     return 'https://player.bilibili.com/player.html?bvid=' + encodeURIComponent(bvid) + '&autoplay=0&high_quality=1&danmaku=1';
   }
+  /* 滚动落点：吸顶栏 58px + 18px 呼吸空间，与 styles.css 的 scroll-padding-top 同一个数。
+     减少动效时用 'auto' —— CSS 的 scroll-behavior 管不到 JS 的 options，这一条只能在这里让。 */
+  var SCROLL_OFFSET = 76;
+
+  function scrollToSection(el) {
+    if (!el) return;
+    var y = el.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
+    window.scrollTo({ top: y < 0 ? 0 : y, behavior: (window.DshMotion && window.DshMotion.reduced()) ? 'auto' : 'smooth' });
+  }
+
 
   var toastTimer = null;
   function toast(msg, kind) {
@@ -42,6 +72,8 @@
       t = document.createElement('div');
       t.id = 'toast';
       t.className = 'toast';
+      t.setAttribute('role', 'status');
+      t.setAttribute('aria-live', 'polite');
       document.body.appendChild(t);
     }
     t.textContent = msg;
@@ -77,11 +109,13 @@
       paintHeader();
       bindUI();
       await selectIssue(state.issues[state.issues.length - 1].issue, { silent: true });
-      fillSongList('');
+      // 首次填充 120 首不做入场：一屏之外的一百多个元素同时起跑，
+      // 除了让弱机器掉帧之外没有观感收益（滚动到列表里时才看得见前几条）
+      fillSongList('', { animate: false });
       loadLegend();
     } catch (err) {
       $('pageSub').textContent = '加载失败：' + err.message;
-      $('rows').innerHTML = '<div class="empty">数据加载失败，请确认服务正常运行</div>';
+      $('rows').innerHTML = '<div class="empty">数据加载失败，请确认服务正在运行（node src/cli.js serve）</div>';
     }
   }
 
@@ -96,14 +130,36 @@
     renderFooter();
   }
 
+  /* 对齐结果：说清「核对了几期、几处官方换了稿件」。
+     不一致不是脏数据 —— 官方偶尔统一换成本家稿件；页脚如实写出来，
+     比「看起来完美」更可信。 */
+  function alignmentLine(meta) {
+    var a = meta.alignment;
+    if (!a) return "";
+    var mismatch = a.bvidMismatch ? "，其中 " + a.bvidMismatch + " 处官方替换了稿件" : "";
+    return "<div><b>曲目对齐</b>：以 Biliboard 公开曲目库的歌曲 ID 为准，同一首歌的不同译名、不同投稿稿件归为同一条记录；每行显示该期实际使用的稿件。已核对 "
+      + a.issues + " 期 / " + a.ranks + " 个名次" + mismatch + "。</div>";
+  }
+
+  /* 数据完整性：如实说清"缺哪几期、缺几个名次、有多少期能找到原帖"。
+     不补、不猜 —— 缺一行就是缺一行，这比"看起来满满的"有用得多。 */
+  function qualityLine(meta) {
+    var q = meta.quality;
+    if (!q) return '';
+    var missing = q.missingRanks ? '，缺 ' + q.missingRanks + ' 个名次' : '';
+    return '<div><b>数据完整性</b>：' + q.completeIssues + ' / ' + q.totalIssues + ' 期名次齐全' + missing
+      + ' · 有文字版原帖 ' + q.posts.aligned + ' / ' + q.posts.total + ' 期</div>';
+  }
+
   function renderFooter() {
     var m = state.meta;
     var gaps = (m.gaps || []).map(function (g) { return '第 ' + g.issue + ' 期缺第 ' + g.miss.join('、') + ' 名'; }).join('；');
     $('footer').innerHTML = [
-      '<div><b>曲目对齐</b>：以 Biliboard 公开曲目库的歌曲 ID 为准，同一首歌的不同译名、不同投稿稿件归为同一条记录；每行显示该期实际使用的稿件。已核对 ' + m.alignment.issues + ' 期 / ' + m.alignment.ranks + ' 个名次。</div>',
+      alignmentLine(m),
       '<div><b>数据来源</b>：' + esc(m.account.name) + ' 的文字版周榜（' + esc(m.account.spaceUrl) + '）+ Biliboard 公开曲目库（' + esc(m.sources.board) + '）。</div>',
+      qualityLine(m),
       '<div><b>说明</b>：' + (gaps ? gaps + '。' : '') + '名次不完全等同于歌曲质量，请理性看待。数据版权归原作者所有，本项目为非官方个人整理。</div>',
-      '<div><b>构建</b>：' + fmtDate(String(m.generatedAt).slice(0, 10)) + ' · 服务端 ' + (m.builtAt ? '已就绪' : '') + '</div>'
+      '<div><b>数据</b>：文件更新于 ' + fmtTime(m.generatedAt) + ' · 服务端载入于 ' + fmtTime(m.builtAt) + '</div>'
     ].join('');
   }
 
@@ -116,28 +172,28 @@
   }
 
   async function selectIssue(n, opts) {
+    var o = opts || {};
     var data = await loadIssue(n);
     state.issue = data;
     state.issueIdx = state.indexByIssue.get(data.issue);
     renderToolbar();
     renderHero(data);
-    renderBoard(data);
+    // 换期是"数据整体换了"：这次可以播入场。筛选重绘走 animate:false（见 renderBoard）
+    renderBoard(data, { animate: true });
     renderInsights(data);
     renderChampions();
-    if (!opts || !opts.silent) {
-      window.scrollTo({ top: $('boardSec').offsetTop - 70, behavior: 'smooth' });
-    }
+    if (!o.silent) scrollToSection($('boardSec'));
   }
 
   function renderToolbar() {
-    var opts = state.issues.map(function (x, i) {
+    var opts = state.issues.map(function (x) {
       return '<option value="' + x.issue + '"' + (x.issue === state.issue.issue ? ' selected' : '') + '>第 ' + x.issue + ' 期 · ' + fmtDate(x.date) + '</option>';
     }).reverse().join('');
-    $('toolbar').innerHTML = '<button class="nav" data-step="-1" title="上一期">‹</button>'
-      + '<select id="issueSel" class="sel">' + opts + '</select>'
-      + '<button class="nav" data-step="1" title="下一期">›</button>'
+    $('toolbar').innerHTML = '<button class="nav" type="button" data-step="-1" aria-label="上一期" title="上一期">‹</button>'
+      + '<select id="issueSel" class="sel" aria-label="选择期次">' + opts + '</select>'
+      + '<button class="nav" type="button" data-step="1" aria-label="下一期" title="下一期">›</button>'
       + '<span class="tl-meta">' + fmtDate(state.issue.date) + (state.issue.week ? ' · 第 ' + state.issue.week + ' 周' : '') + ' · 共 ' + state.issue.count + ' 首</span>'
-      + '<input id="rowFilter" class="filter" placeholder="筛选本期歌曲 / P 主…" autocomplete="off">';
+      + '<input id="rowFilter" class="filter" placeholder="筛选本期歌曲 / P 主…" autocomplete="off" aria-label="筛选本期歌曲" value="' + esc(state.filter) + '">';
     $('issueSel').addEventListener('change', function (e) { selectIssue(Number(e.target.value)); });
     Array.prototype.forEach.call(document.querySelectorAll('#toolbar .nav'), function (b) {
       b.addEventListener('click', function () {
@@ -145,7 +201,11 @@
         if (idx >= 0 && idx < state.issues.length) selectIssue(state.issues[idx].issue);
       });
     });
-    $('rowFilter').addEventListener('input', function () { renderBoard(state.issue); });
+    // 筛选时保留输入内容：换期后用户多半还想看同一个筛选条件下的对比
+    $('rowFilter').addEventListener('input', function (e) {
+      state.filter = e.target.value;
+      renderBoard(state.issue, { animate: false });
+    });
   }
 
   /* ---------- 概览 ---------- */
@@ -161,7 +221,8 @@
       + '</div>';
 
     h += '<div class="hero-main">'
-      + '<div class="cover-wrap" data-bvid="' + esc(champ.bvid) + '"><img class="cover-lg" src="' + esc(cover(champ.bvid, 640)) + '" alt="" onerror="this.remove()"><span class="play-l"></span></div>'
+      + '<div class="cover-wrap" data-bvid="' + esc(champ.bvid) + '" role="button" tabindex="0" aria-label="查看冠军详情">'
+      + '<img class="cover-lg" data-img src="' + esc(cover(champ.bvid, 640)) + '" alt=""><span class="play-l"></span></div>'
       + '<div class="champ">'
       + '<div class="lbl">本 期 冠 军</div>'
       + '<h2><a href="' + esc(videoUrl(champ.bvid)) + '" target="_blank" rel="noopener">' + esc(champ.title || '—') + '</a></h2>'
@@ -186,8 +247,12 @@
       + '</div>';
     $('hero').innerHTML = h;
 
+    window.DshMotion.images($('hero'));
     var cw = $('hero').querySelector('.cover-wrap');
-    if (cw) cw.addEventListener('click', function () { openDrawer(champ.songId, data.issue, champ.bvid); });
+    cw.addEventListener('click', function () { openDrawer(champ.songId, data.issue, champ.bvid, cw); });
+    cw.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openDrawer(champ.songId, data.issue, champ.bvid, cw); }
+    });
   }
 
   function kpi(label, value, cls) {
@@ -195,8 +260,9 @@
   }
 
   /* ---------- 榜单 ---------- */
-  function renderBoard(data) {
-    var q = ($('rowFilter') && $('rowFilter').value || '').trim().toLowerCase();
+  function renderBoard(data, opts) {
+    var animate = !opts || opts.animate !== false;
+    var q = state.filter.trim().toLowerCase();
     var rows = data.rows.filter(function (r) {
       if (!q) return true;
       return (r.title + ' ' + r.titleAlt + ' ' + names(r.producers) + ' ' + names(r.vocalists)).toLowerCase().indexOf(q) >= 0;
@@ -210,10 +276,11 @@
       else if (r.state === 'up') dl = '<div class="delta up">▲' + r.delta + '</div>';
       else if (r.state === 'down') dl = '<div class="delta down">▼' + (-r.delta) + '</div>';
       else dl = '<div class="delta same">—</div>';
-      return '<div class="' + cls + '" data-id="' + esc(r.songId) + '" data-bvid="' + esc(r.bvid) + '">'
+      return '<div class="' + cls + '" role="button" tabindex="0" data-id="' + esc(r.songId) + '" data-bvid="' + esc(r.bvid) + '"'
+        + ' aria-label="第 ' + r.rank + ' 名，' + esc(r.title) + '，查看走势">'
         + '<div class="rk mono">' + num(r.rank) + '</div>'
         + dl
-        + '<div class="cv-wrap"><img class="cv" loading="lazy" src="' + esc(cover(r.bvid, 320)) + '" alt="" onerror="this.style.opacity=0"><span class="play"></span></div>'
+        + '<div class="cv-wrap"><img class="cv" data-img loading="lazy" src="' + esc(cover(r.bvid, 320)) + '" alt=""><span class="play"></span></div>'
         + '<div class="tcell"><div class="ttl">' + esc(r.title) + (r.titleAlt ? '<span class="alt">' + esc(r.titleAlt) + '</span>' : '') + '</div>'
         + '<div class="sub">' + esc(names(r.producers) || '—') + (r.vocalists.length ? ' <i>·</i> ' + esc(names(r.vocalists)) : '')
         + (r.variants > 1 ? ' <b class="vb" title="该曲在榜期间使用过 ' + r.variants + ' 个不同稿件">多稿件</b>' : '') + '</div></div>'
@@ -225,12 +292,7 @@
 
     $('rows').innerHTML = html || '<div class="empty">没有匹配的曲目</div>';
     $('boardMeta').textContent = '第 ' + data.issue + ' 期 · ' + data.date + ' · ' + rows.length + ' 首';
-
-    Array.prototype.forEach.call($('rows').querySelectorAll('.row'), function (el) {
-      el.addEventListener('click', function () {
-        openDrawer(el.getAttribute('data-id'), data.issue, el.getAttribute('data-bvid'));
-      });
-    });
+    window.DshMotion.animate($('rows'), { animate: animate });
   }
 
   function spark(points, lastIdx) {
@@ -244,9 +306,10 @@
       prevI = p.i;
       last = [x.toFixed(1), y.toFixed(1)];
     });
-    return '<svg class="spark" width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '">'
-      + '<path d="' + segs.join(' ') + '" fill="none" stroke="rgba(24,150,218,.6)" stroke-width="1.3" stroke-linejoin="round"/>'
-      + '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="2" fill="#1896DA"/></svg>';
+    // 颜色由 .spark path / .spark circle 决定（主题令牌），这里不写死十六进制
+    return '<svg class="spark" width="' + W + '" height="' + H + '" viewBox="0 0 ' + W + ' ' + H + '" aria-hidden="true">'
+      + '<path d="' + segs.join(' ') + '"/>'
+      + '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="2"/></svg>';
   }
 
   /* ---------- 看点 ---------- */
@@ -261,6 +324,7 @@
       + (ins.ups.length ? '<ul>' + ins.ups.map(function (x) { return li(x.title, '▲' + x.delta, 'delta-up'); }).join('') + '</ul>' : '<p>本期无明显上升</p>');
     $('p-down').innerHTML = '<h4><span>跌出榜单</span><span>' + ins.outs.length + '</span></h4>'
       + (ins.outs.length ? '<ul>' + ins.outs.map(function (x) { return li(x.title, '上周 #' + x.rank, 'delta-down'); }).join('') + '</ul>' : '<p>上周曲目全部在榜</p>');
+    window.DshMotion.animate(document.querySelector('#insightSec .grid3'), { animate: true });
   }
 
   /* ---------- 冠军榜 ---------- */
@@ -268,32 +332,29 @@
     var data = state.champions;
     $('champs').innerHTML = data.runs.map(function (r) {
       var label = r.issueFrom === r.issueTo ? '第 ' + r.issueFrom + ' 期' : '第 ' + r.issueFrom + '–' + r.issueTo + ' 期';
-      return '<div class="champ-item" data-id="' + esc(r.id) + '" data-bvid="' + esc(r.bvid) + '" data-issue="' + r.issueTo + '">'
-        + '<img loading="lazy" src="' + esc(cover(r.bvid, 320)) + '" alt="" onerror="this.style.opacity=0">'
+      return '<div class="champ-item" role="button" tabindex="0" data-id="' + esc(r.id) + '" data-bvid="' + esc(r.bvid) + '" data-issue="' + r.issueTo + '"'
+        + ' aria-label="' + esc(r.title) + '，' + label + '，查看详情">'
+        + '<img data-img loading="lazy" src="' + esc(cover(r.bvid, 320)) + '" alt="">'
         + '<div style="min-width:0"><div class="t">' + esc(r.title) + '</div><div class="m">' + label + ' · ' + fmtDate(r.date) + '</div></div>'
         + '<div class="c">' + (r.count > 1 ? r.count + ' 连冠' : '1 周') + '</div></div>';
     }).join('');
     $('champMeta').textContent = '共 ' + data.total + ' 段冠军 · 显示最近 ' + data.runs.length + ' 段';
-    Array.prototype.forEach.call($('champs').querySelectorAll('.champ-item'), function (el) {
-      el.addEventListener('click', function () {
-        openDrawer(el.getAttribute('data-id'), Number(el.getAttribute('data-issue')), el.getAttribute('data-bvid'));
-      });
-    });
+    window.DshMotion.animate($('champs'), { animate: true });
   }
 
   /* ---------- 歌曲列表 / 走势 ---------- */
-  function fillSongList(q) {
+  function fillSongList(q, opts) {
+    var animate = !opts || opts.animate !== false;
     var needle = (q || '').trim().toLowerCase();
     var list = state.songs.filter(function (s) {
       return !needle || (s.title + ' ' + s.titleAlt).toLowerCase().indexOf(needle) >= 0;
     }).slice(0, 120);
     $('songItems').innerHTML = list.map(function (s) {
-      return '<div class="song-item' + (String(s.id) === String(state.curSong) ? ' on' : '') + '" data-id="' + esc(s.id) + '">'
-        + '<span class="t">' + esc(s.title) + '</span><span class="w">' + s.weeks + ' 期</span></div>';
+      return '<button type="button" class="song-item' + (String(s.id) === String(state.curSong) ? ' on' : '') + '" data-id="' + esc(s.id) + '">'
+        + '<span class="t">' + esc(s.title) + '</span><span class="w">' + s.weeks + ' 期</span></button>';
     }).join('') || '<div style="padding:10px;color:var(--faint);font-size:12.5px">没有匹配的歌曲</div>';
-    Array.prototype.forEach.call(document.querySelectorAll('.song-item'), function (el) {
-      el.addEventListener('click', function () { selectSong(el.getAttribute('data-id')); });
-    });
+    // 搜索框每敲一个字都会重绘，这里不能播入场
+    window.DshMotion.animate($('songItems'), { animate: animate });
   }
 
   async function fetchSong(id) {
@@ -305,10 +366,10 @@
 
   async function selectSong(id) {
     state.curSong = id;
-    fillSongList($('q').value);
+    fillSongList($('q').value, { animate: false });
     var song = await fetchSong(id);
     renderChart(song);
-    window.scrollTo({ top: $('trendSec').offsetTop - 64, behavior: 'smooth' });
+    scrollToSection($('trendSec'));
   }
 
   function renderChart(song) {
@@ -335,21 +396,21 @@
       var x = X(idx[k]), y = Y(a.rank);
       segs.push((prevI !== null && idx[k] === prevI + 1 ? 'L ' : 'M ') + x.toFixed(1) + ' ' + y.toFixed(1));
       prevI = idx[k];
-      dots += '<circle cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="3.2" fill="#1896DA" stroke="#0e0f13" stroke-width="1.6"></circle>';
+      dots += '<circle class="trend-dot" cx="' + x.toFixed(1) + '" cy="' + y.toFixed(1) + '" r="3.2"></circle>';
     });
 
     var grid = '';
     [1, 5, 10, 15, 20].forEach(function (r) {
       var y = Y(r);
-      grid += '<line x1="' + PL + '" y1="' + y.toFixed(1) + '" x2="' + (W - PR) + '" y2="' + y.toFixed(1) + '" stroke="rgba(255,255,255,.06)"/>'
-        + '<text x="' + (PL - 10) + '" y="' + (y + 3.5).toFixed(1) + '" fill="#676e7d" font-size="10" text-anchor="end">#' + r + '</text>';
+      grid += '<line class="trend-grid" x1="' + PL + '" y1="' + y.toFixed(1) + '" x2="' + (W - PR) + '" y2="' + y.toFixed(1) + '"/>'
+        + '<text class="chart-txt" x="' + (PL - 10) + '" y="' + (y + 3.5).toFixed(1) + '" text-anchor="end">#' + r + '</text>';
     });
 
     var ticks = '';
     var step = Math.max(1, Math.ceil(span / 7));
     for (var i = first; i <= last; i += step) {
       var issueNo = state.issues[i] ? state.issues[i].issue : '';
-      ticks += '<text x="' + X(i).toFixed(1) + '" y="' + (H - PB + 20) + '" fill="#676e7d" font-size="10" text-anchor="middle">' + issueNo + '期</text>';
+      ticks += '<text class="chart-txt" x="' + X(i).toFixed(1) + '" y="' + (H - PB + 20) + '" text-anchor="middle">' + issueNo + '期</text>';
     }
 
     var head = '<div class="chart-head"><h4>' + esc(song.title) + '</h4>'
@@ -357,9 +418,13 @@
       + (app[app.length - 1].bvid ? '<a class="lnk" href="' + videoUrl(app[app.length - 1].bvid) + '" target="_blank" rel="noopener">在 B 站打开 ↗</a>' : '')
       + '</div>';
 
-    card.innerHTML = head + '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;height:auto;margin-top:8px">' + grid
-      + '<path d="' + segs.join(' ') + '" fill="none" stroke="#1896DA" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>'
+    // pathLength="1" 让描线动画不需要在 JS 里量路径长度（见 motion.js 的 chart()）
+    card.innerHTML = head + '<svg class="chart" viewBox="0 0 ' + W + ' ' + H + '" role="img" aria-label="' + esc(song.title) + ' 逐期名次走势">'
+      + grid
+      + '<path class="trend-line" pathLength="1" d="' + segs.join(' ') + '"/>'
       + dots + ticks + '</svg>';
+
+    window.DshMotion.chart(card.querySelector('svg.chart'));
   }
 
   /* ---------- 抽屉 ---------- */
@@ -367,35 +432,51 @@
     if ($('drawer')) return;
     var wrap = document.createElement('div');
     wrap.innerHTML = '<div class="overlay" id="overlay"></div>'
-      + '<aside class="drawer" id="drawer" aria-hidden="true">'
-      + '<button class="close" id="drawerClose" aria-label="关闭">×</button>'
+      + '<aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" aria-hidden="true">'
+      + '<button class="close" id="drawerClose" type="button" aria-label="关闭">×</button>'
       + '<div class="player" id="player"></div>'
       + '<div class="d-body" id="drawerBody"></div></aside>';
     document.body.appendChild(wrap);
     $('overlay').addEventListener('click', closeDrawer);
     $('drawerClose').addEventListener('click', closeDrawer);
+
+    // 稿件切换按钮是整块重绘的，委托到 #drawerBody 一次即可
+    $('drawerBody').addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('.bv');
+      if (!b) return;
+      state.drawer.bvid = b.getAttribute('data-bv');
+      paintDrawer();
+    });
   }
 
-  async function openDrawer(songId, issue, bvid) {
+  async function openDrawer(songId, issue, bvid, opener) {
     if (!songId) return;
     ensureDrawer();
+    // 记住点开抽屉的那一行：关闭时把焦点还回去，键盘用户不会掉到页面顶部。
+    // 优先用传进来的激活元素：程序化点击（或某些浏览器）里 document.activeElement
+    // 可能还停在 body 上，那样"关闭后焦点回到原处"就静默失效了。
+    state.drawer.returnFocus = opener || document.activeElement;
     var song = await fetchSong(songId);
-    state.drawer = { open: true, song: song, issue: Number(issue), bvid: bvid || '' };
+    state.drawer = { open: true, id: songId, song: song, issue: Number(issue), bvid: bvid || '', returnFocus: state.drawer.returnFocus };
     $('drawer').classList.add('on');
     $('overlay').classList.add('on');
     $('drawer').setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+    window.DshMotion.lockScroll(true);
     paintDrawer();
+    $('drawerClose').focus();
   }
 
   function closeDrawer() {
-    if (!$('drawer')) return;
+    if (!$('drawer') || !state.drawer.open) return;
     state.drawer.open = false;
     $('drawer').classList.remove('on');
     $('overlay').classList.remove('on');
     $('drawer').setAttribute('aria-hidden', 'true');
     $('player').innerHTML = '';
-    document.body.style.overflow = '';
+    window.DshMotion.lockScroll(false);
+    var back = state.drawer.returnFocus;
+    state.drawer.returnFocus = null;
+    if (back && document.contains(back)) back.focus();
   }
 
   function paintDrawer() {
@@ -404,11 +485,11 @@
     var bvid = d.bvid || at.bvid;
 
     $('player').innerHTML = bvid
-      ? '<iframe src="' + playerUrl(bvid) + '" scrolling="no" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe>'
+      ? '<iframe src="' + playerUrl(bvid) + '" scrolling="no" frameborder="0" allowfullscreen allow="autoplay; encrypted-media" title="视频播放器"></iframe>'
       : '<div class="no-player">没有可播放的稿件</div>';
 
     var variants = song.variants.map(function (v) {
-      return '<button class="bv' + (v.bvid === bvid ? ' on' : '') + '" data-bv="' + esc(v.bvid) + '">'
+      return '<button class="bv' + (v.bvid === bvid ? ' on' : '') + '" type="button" data-bv="' + esc(v.bvid) + '">'
         + '<span class="mono">' + esc(v.bvid) + '</span><em>' + v.issues.map(function (n) { return '第' + n + '期'; }).join('、') + '</em></button>';
     }).join('');
 
@@ -416,7 +497,7 @@
       return '<li><span>第 ' + a.issue + ' 期</span><b>#' + a.rank + '</b><em>' + fmtDate(a.date) + '</em></li>';
     }).join('');
 
-    $('drawerBody').innerHTML = '<div class="d-head"><h3>' + esc(song.title) + '</h3>'
+    $('drawerBody').innerHTML = '<div class="d-head"><h3 id="drawerTitle">' + esc(song.title) + '</h3>'
       + (song.titleAlt ? '<div class="alt">' + esc(song.titleAlt) + '</div>' : '')
       + '<div class="tags">' + esc(names(song.producers) || '—') + (song.vocalists.length ? ' · ' + esc(names(song.vocalists)) : '') + '</div></div>'
       + '<div class="d-stats">'
@@ -431,10 +512,6 @@
       + (bvid ? '<a class="btn primary" href="' + videoUrl(bvid) + '" target="_blank" rel="noopener">在 B 站打开</a>' : '')
       + (state.issue && state.issue.postUrl ? '<a class="btn" href="' + esc(state.issue.postUrl) + '" target="_blank" rel="noopener">本期文字版</a>' : '')
       + '</div>';
-
-    Array.prototype.forEach.call($('drawerBody').querySelectorAll('.bv'), function (b) {
-      b.addEventListener('click', function () { state.drawer.bvid = b.getAttribute('data-bv'); paintDrawer(); });
-    });
   }
 
   /* ---------- 传说曲附榜 ---------- */
@@ -447,7 +524,7 @@
         return '<tr><td>第 ' + it.issue + ' 期</td><td>' + fmtDate(it.date) + '</td><td>' + esc(it.champion) + '</td>'
           + '<td>' + (it.videoBvid ? '<a href="' + videoUrl(it.videoBvid) + '" target="_blank" rel="noopener">榜单视频 ↗</a>' : '') + '</td></tr>';
       }).join('');
-    } catch { /* 附榜没有就算了 */ }
+    } catch (e) { /* 附榜没有就算了，不该影响主榜 */ }
   }
 
   /* ---------- 刷新 ---------- */
@@ -475,7 +552,7 @@
         state.champions = await api('/api/champions?limit=24');
         state.songs = (await api('/api/songs?limit=1000')).items;
         renderChampions();
-        fillSongList($('q').value);
+        fillSongList($('q').value, { animate: false });
         toast('已更新到第 ' + last + ' 期');
       } else {
         toast('已是最新：第 ' + state.issue.issue + ' 期');
@@ -489,11 +566,44 @@
   }
 
   /* ---------- 事件 ---------- */
+  function activateIn(container, selector, handler) {
+    container.addEventListener('click', function (e) {
+      var el = e.target.closest && e.target.closest(selector);
+      if (!el || !container.contains(el)) return;
+      handler(el);
+    });
+    container.addEventListener('keydown', function (e) {
+      if (e.key !== 'Enter' && e.key !== ' ') return;
+      var el = e.target.closest && e.target.closest(selector);
+      if (!el || !container.contains(el)) return;
+      // 原生按钮 / 链接自己会把 Enter/空格 转成 click；再手动触发一次就成了执行两遍
+      // （歌曲列表是 <button>，榜单行是 <div role="button">，两者必须走不同分支）
+      if (el.tagName === 'BUTTON' || el.tagName === 'A') return;
+      e.preventDefault();
+      handler(el);
+    });
+  }
+
   function bindUI() {
     $('refreshBtn').addEventListener('click', refresh);
-    $('q').addEventListener('input', function (e) { fillSongList(e.target.value); });
+    $('q').addEventListener('input', function (e) { fillSongList(e.target.value, { animate: false }); });
+
+    activateIn($('rows'), '.row', function (el) {
+      openDrawer(el.getAttribute('data-id'), state.issue.issue, el.getAttribute('data-bvid'), el);
+    });
+    activateIn($('champs'), '.champ-item', function (el) {
+      openDrawer(el.getAttribute('data-id'), Number(el.getAttribute('data-issue')), el.getAttribute('data-bvid'), el);
+    });
+    activateIn($('songItems'), '.song-item', function (el) {
+      selectSong(el.getAttribute('data-id'));
+    });
+
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape') closeDrawer();
+
+      // 在输入框里按左右键是移动光标，绝不该顺带换期（这是很容易踩的一条）
+      var tag = (e.target && e.target.tagName) || '';
+      if (/^(INPUT|SELECT|TEXTAREA)$/.test(tag)) return;
       if (!state.drawer.open && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
         var idx = state.issueIdx + (e.key === 'ArrowLeft' ? -1 : 1);
         if (idx >= 0 && idx < state.issues.length) selectIssue(state.issues[idx].issue, { silent: true });

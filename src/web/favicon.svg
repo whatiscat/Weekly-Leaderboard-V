@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 6 6" shape-rendering="crispEdges">
+  <!-- 术力口周榜的像素徽标：四根上升的柱子 + 左下角那格强调色（起点）。
+       按整数格设计：6×6 的网格、1 格宽的柱子，16px 下仍然是一枚清楚的图形。
+       深色底 + 浅色字形：浏览器标签栏深浅两种主题下都看得见。 -->
+  <rect width="6" height="6" rx="1.2" fill="#0e0f13"/>
+  <g fill="#e9ebf0">
+    <rect x="2" y="3" width="1" height="2"/>
+    <rect x="3" y="2" width="1" height="3"/>
+    <rect x="4" y="1" width="1" height="4"/>
+  </g>
+  <rect x="1" y="4" width="1" height="1" fill="#1896DA"/>
+</svg>

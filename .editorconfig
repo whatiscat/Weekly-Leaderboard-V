@@ -2,10 +2,16 @@ root = true
 
 [*]
 charset = utf-8
-end_of_line = crlf
+end_of_line = lf
 insert_final_newline = true
+trim_trailing_whitespace = true
 indent_style = space
 indent_size = 2
+
+# Windows 批处理 / PowerShell：cmd.exe 与部分编辑器对 LF 的 .cmd 会读错行，保持 CRLF
+[*.{cmd,bat,ps1}]
+end_of_line = crlf
+insert_final_newline = true
 
 [*.md]
 trim_trailing_whitespace = false

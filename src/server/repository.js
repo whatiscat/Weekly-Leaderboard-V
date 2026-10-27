@@ -57,9 +57,12 @@ export class Repository {
     if (this.dataset) return this.dataset;
     const started = Date.now();
     this.version = this.dataVersion();
-    const ds = buildDataset(new RawStore(this.cfg.paths.raw).all(), loadBoards(this.cfg), this.cfg);
+    // 只读一次磁盘：songs.json 是 4MB 级别，loadBoards 调两次就是白读两遍
+    // （以前 ensure() 里确实调了两次，一次建数据集、一次取封面）。
+    const boards = loadBoards(this.cfg);
+    const ds = buildDataset(new RawStore(this.cfg.paths.raw).all(), boards, this.cfg);
     if (!ds.issues.length) throw new Error('没有可用数据：先运行 node src/cli.js sync');
-    ds.covers = loadBoards(this.cfg).covers;
+    ds.covers = boards.covers;
     this.dataset = ds;
     this.builtAt = Date.now();
     this.log?.info('数据集已载入：' + ds.issues.length + ' 期 / ' + ds.stats.entries + ' 条，用时 ' + (this.builtAt - started) + 'ms');
@@ -88,6 +91,7 @@ export class Repository {
       sources: ds.meta.sources,
       alignment: ds.meta.alignment,
       gaps: ds.meta.gaps,
+      quality: ds.meta.quality,
       stats: ds.stats,
       generatedAt: new Date(this.version || Date.now()).toISOString(),
       dataVersion: this.version,

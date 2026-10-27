@@ -22,14 +22,6 @@ export function cleanTitle(input) {
     .trim();
 }
 
-/** 曲目主键：全半角归一 + 去空白 + 小写，避免「!」与「！」被当成两首歌 */
-export function normalizeKey(title) {
-  return String(title || '')
-    .normalize('NFKC')
-    .replace(/\s+/g, '')
-    .toLowerCase();
-}
-
 export function normalizeUrl(url) {
   let u = String(url || '').trim().replace(/\\\//g, '/');
   if (!u) return '';

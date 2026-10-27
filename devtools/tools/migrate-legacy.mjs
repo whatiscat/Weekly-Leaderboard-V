@@ -1,13 +1,16 @@
 #!/usr/bin/env node
 /**
  * 把上一版 _tools/ 下的抓取缓存迁移为 data/raw/<id>.json
- * 只跑一次；迁移后可删除 _tools/（脚本、缓存仍在 git 之外可保留）
+ *
+ * 一次性迁移脚本，已被移到 devtools/（运行不需要它）：
+ *   node devtools/tools/migrate-legacy.mjs
+ * 迁移后可删除 _tools/（脚本、缓存仍在 git 之外可保留）。
  */
 import fs from 'node:fs';
 import path from 'node:path';
-import { ROOT, loadConfig } from '../src/config.js';
-import { parseArticleHtml, parseOpusItem } from '../src/crawler/parse.js';
-import { writeJson, ensureDir } from '../src/util/fsx.js';
+import { ROOT, loadConfig } from '../../src/config.js';
+import { parseArticleHtml, parseOpusItem } from '../../src/crawler/parse.js';
+import { writeJson, ensureDir } from '../../src/util/fsx.js';
 
 const cfg = loadConfig();
 const T = path.join(ROOT, '_tools');

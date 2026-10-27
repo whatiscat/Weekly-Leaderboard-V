@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { parseTitle, isChartPost, normalizeKey, normalizeUrl, bvOf } from '../src/util/text.js';
+import { parseTitle, isChartPost, normalizeUrl, bvOf } from '../src/util/text.js';
 import { parseParagraphs, parseArticleHtml, extractParagraphsFromHtml, missingRanks } from '../src/crawler/parse.js';
 
 test('parseTitle 解析期号/日期/周次', () => {
@@ -23,11 +23,6 @@ test('isChartPost 只认正式榜单帖', () => {
   assert.equal(isChartPost('视频更新预告'), false);
   assert.equal(isChartPost('关于最近盗搬视频行为的声明'), false);
   assert.equal(isChartPost('各位关注 Bili-Board_atel 的小伙伴：'), false);
-});
-
-test('normalizeKey 抹平全半角与空白差异', () => {
-  assert.equal(normalizeKey('请批准吧灯神先生!'), normalizeKey('请批准吧灯神先生！'));
-  assert.equal(normalizeKey(' 梦 '), normalizeKey('梦'));
 });
 
 test('normalizeUrl 统一协议', () => {

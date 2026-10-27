@@ -8,6 +8,8 @@ export class BoardClient {
     this.intervalMs = 350;
     this.lastAt = 0;
     this.stats = { requests: 0, retries: 0 };
+    /** 整轮截止时间戳（0 = 不限）。由 syncBoards 设置。 */
+    this.deadline = 0;
   }
 
   async #throttle() {
@@ -20,6 +22,11 @@ export class BoardClient {
     let attempt = 0;
     for (;;) {
       attempt++;
+      // 整轮预算：单请求有 20s 超时 + 重试，但"每页都慢一点"能把一次同步拖到十几分钟。
+      // 到点直接失败，比让定时任务叠着跑好 —— 叠跑会互相抢锁、还会加倍请求上游。
+      if (this.deadline && Date.now() > this.deadline) {
+        throw new Error('同步超时（已超过本轮时间预算），已中止：' + pathname);
+      }
       await this.#throttle();
       try {
         this.stats.requests++;

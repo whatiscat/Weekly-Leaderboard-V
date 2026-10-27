@@ -1,4 +1,4 @@
-﻿<#
+<#
   注册 / 注销 Windows 计划任务：每周三 19:30 自动执行增量更新。
   用法：
     powershell -ExecutionPolicy Bypass -File scripts\register-task.ps1
@@ -27,7 +27,7 @@ $action = New-ScheduledTaskAction -Execute $node -Argument 'src/cli.js update' -
 $trigger = New-ScheduledTaskTrigger -Weekly -DaysOfWeek $DayOfWeek -At $Time
 $settings = New-ScheduledTaskSettingsSet -StartWhenAvailable -DontStopIfGoingOnBatteries -AllowStartIfOnBatteries
 
-$desc = 'Bili-Board_Atel 术力口周榜：增量抓取并重新生成看板'
+$desc = 'Bili-Board_Atel 术力口周榜：同步官方库 + 增量抓帖（看板按请求读数据，无需重新生成）'
 Register-ScheduledTask -TaskName $TaskName -Action $action -Trigger $trigger -Settings $settings -Force -Description $desc | Out-Null
 
 Write-Host "已注册计划任务 $TaskName：每周 $DayOfWeek $Time 执行 node src/cli.js update"

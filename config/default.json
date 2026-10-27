@@ -4,10 +4,14 @@
     "name": "Bili-Board_Atel",
     "spaceUrl": "https://space.bilibili.com/3546800279522160"
   },
+  "site": {
+    "title": "术力口周榜 · 数据看板",
+    "brand": "BB",
+    "csvName": "术力口周榜-全量数据.csv"
+  },
   "paths": {
     "raw": "data/raw",
     "data": "data",
-    "out": "public",
     "logs": "logs",
     "state": "data/state.json"
   },
@@ -24,13 +28,6 @@
     "maxPages": 40,
     "pageSize": 20,
     "timeBudgetMs": 120000
-  },
-  "render": {
-    "title": "术力口周榜 · 数据看板",
-    "brand": "BB",
-    "csvName": "术力口周榜-全量数据.csv",
-    "htmlName": "index.html",
-    "jsonName": "data.json"
   },
   "schedule": {
     "weekday": 3,
