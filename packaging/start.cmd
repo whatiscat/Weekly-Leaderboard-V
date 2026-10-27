@@ -17,12 +17,6 @@ for /f "delims=" %%v in ('node -p "process.versions.node"') do set NODE_VER=%%v
 for /f "tokens=1 delims=." %%m in ("%NODE_VER%") do set NODE_MAJOR=%%m
 if %NODE_MAJOR% LSS 20 goto NODE_OLD
 
-if not exist "public\index.html" (
-  echo   [1/3] 首次运行，正在生成看板...
-  call node src\cli.js build
-  if errorlevel 1 goto BUILD_FAIL
-)
-
 rem 已有服务在运行就直接打开浏览器
 powershell -NoProfile -Command "try{ $c=New-Object Net.Sockets.TcpClient; $c.Connect('127.0.0.1',5173); $c.Close(); exit 0 }catch{ exit 1 }" >nul 2>nul
 if not errorlevel 1 (
@@ -73,8 +67,3 @@ echo.
 pause
 exit /b 1
 
-:BUILD_FAIL
-echo.
-echo   [!] 生成看板失败，请把上面的报错信息发给维护者。
-pause
-exit /b 1

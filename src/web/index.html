@@ -4,22 +4,19 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta name="generator" content="bili-board-weekly">
-<title>{{TITLE}}</title>
-<style>{{CSS}}</style>
+<title>术力口周榜 · 数据看板</title>
+<link rel="stylesheet" href="/styles.css">
 </head>
 <body>
 
 <header class="topbar">
   <div class="bar">
-    <a class="brand" href="#boardSec">
-      <span class="name">术力口周榜</span>
-    </a>
+    <a class="brand" href="#boardSec"><span class="name">术力口周榜</span></a>
     <nav class="actions">
-      <a class="btn" href="{{SPACE_URL}}" target="_blank" rel="noopener">B 站主页</a>
-      <a class="btn" href="{{READ_LIST}}" target="_blank" rel="noopener">文字版文集</a>
+      <a class="btn" id="linkSpace" target="_blank" rel="noopener">B 站主页</a>
+      <a class="btn" id="linkRead" target="_blank" rel="noopener">文字版文集</a>
       <a class="btn" href="https://biliboard.uk" target="_blank" rel="noopener">收录公示</a>
-      <a class="btn" href="{{CSV_NAME}}" download>下载 CSV</a>
+      <a class="btn" href="/api/csv" download>下载 CSV</a>
       <button class="btn primary" id="refreshBtn" type="button" title="重新加载最新数据">
         <span class="ico">⟳</span><span class="lbl">刷新</span>
       </button>
@@ -28,20 +25,19 @@
 </header>
 
 <main class="wrap">
-
   <div class="page-head">
-    <h1>{{HEADING}}</h1>
-    <p>{{SUBTITLE}}</p>
+    <h1 id="pageTitle">术力口周榜 · 数据看板</h1>
+    <p id="pageSub">正在加载…</p>
   </div>
 
-  <div class="hero" id="hero"></div>
+  <div class="hero" id="hero"><div class="skeleton hero-sk"></div></div>
 
   <section id="boardSec">
     <div class="sec-head"><h3>本期榜单</h3><div class="desc">点击任意一行查看名次走势与视频预览</div><div class="right" id="boardMeta"></div></div>
     <div class="toolbar" id="toolbar"></div>
     <div class="board">
       <div class="board-head"><div>名次</div><div>变化</div><div>封面</div><div>歌曲</div><div>近 30 期</div><div>上周</div><div>在榜</div></div>
-      <div id="rows"></div>
+      <div id="rows"><div class="skeleton row-sk"></div></div>
     </div>
     <div class="note">▲ 上升 / ▼ 下降 / NEW 首次上榜 / RE 回归榜单 · 变化以上一期为准</div>
   </section>
@@ -63,20 +59,19 @@
   <section id="trendSec">
     <div class="sec-head"><h3>歌曲走势</h3><div class="desc">名次越高越靠上；断点表示该期未上榜</div></div>
     <div class="trend-wrap">
-      <div class="song-list"><input id="q" placeholder="搜索歌曲…"><div class="items" id="songItems"></div></div>
+      <div class="song-list"><input id="q" placeholder="搜索歌曲…" autocomplete="off"><div class="items" id="songItems"></div></div>
       <div class="chart-card" id="chartCard"></div>
     </div>
   </section>
 
-  {{LEGEND_SECTION}}
+  <section id="legendSec" hidden>
+    <div class="sec-head"><h3>附：传说曲周榜</h3><div class="desc">同账号发布的另一条榜单，期号独立</div></div>
+    <div class="board"><table class="ltable"><thead><tr><th>期号</th><th>日期</th><th>本期冠军</th><th>链接</th></tr></thead><tbody id="legendBody"></tbody></table></div>
+  </section>
 
-  <footer>
-  {{FOOTER}}
-  </footer>
-
+  <footer id="footer"></footer>
 </main>
 
-<script>window.__DATA__={{DATA}};</script>
-<script>{{APP}}</script>
+<script src="/app.js" defer></script>
 </body>
 </html>

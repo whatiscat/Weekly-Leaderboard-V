@@ -1,8 +1,8 @@
 {
   "name": "bili-board-weekly",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
-  "description": "Bili-Board_Atel 术力口周榜：抓取、整理、看板生成与定时更新",
+  "description": "术力口周榜：Node.js 数据服务 + 看板前端（抓取、对齐、API、定时更新）",
   "type": "module",
   "engines": {
     "node": ">=20.6"
@@ -11,10 +11,9 @@
     "bbw": "./src/cli.js"
   },
   "scripts": {
-    "start": "node src/cli.js serve --build --open",
+    "start": "node src/cli.js serve --open",
     "serve": "node src/cli.js serve",
     "crawl": "node src/cli.js crawl",
-    "build": "node src/cli.js build",
     "update": "node src/cli.js update",
     "schedule": "node src/cli.js schedule",
     "migrate": "node scripts/migrate-legacy.mjs",
@@ -24,7 +23,8 @@
     "package": "node scripts/package.mjs",
     "serve:bg": "powershell -ExecutionPolicy Bypass -File scripts/serve-bg.ps1",
     "serve:stop": "powershell -ExecutionPolicy Bypass -File scripts/serve-bg.ps1 -Stop",
-    "serve:status": "powershell -ExecutionPolicy Bypass -File scripts/serve-bg.ps1 -Status"
+    "serve:status": "powershell -ExecutionPolicy Bypass -File scripts/serve-bg.ps1 -Status",
+    "dev": "node src/cli.js serve --open --verbose"
   },
   "keywords": [
     "bilibili",

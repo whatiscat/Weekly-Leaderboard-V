@@ -554,3 +554,8 @@ footer a:hover { color: var(--accent); }
     transition-duration: .01ms !important;
   }
 }
+
+/* ---------- 加载骨架 ---------- */
+.skeleton { background: linear-gradient(100deg, var(--surface-2) 30%, var(--surface-3) 50%, var(--surface-2) 70%); background-size: 200% 100%; animation: shimmer 1.6s linear infinite; border-radius: var(--r-md); }
+.hero-sk { height: 220px; }
+.row-sk { height: 64px; margin: 8px 18px; }

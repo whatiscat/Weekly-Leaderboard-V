@@ -38,7 +38,6 @@ fs.mkdirSync(OUT, { recursive: true });
 for (const item of ['package.json', 'README.md']) copy(item, path.join(OUT, item));
 copy('src', path.join(OUT, 'src'));
 copy('config', path.join(OUT, 'config'));
-copy('public', path.join(OUT, 'public'));
 
 // 数据（不含运行态）
 copy('data/boards', path.join(OUT, 'data/boards'));

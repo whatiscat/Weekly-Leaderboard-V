@@ -3,23 +3,15 @@ node_modules/
 logs/
 *.log
 
-# 运行状态与锁
+# 运行态
 data/state.json
 data/.lock
-public/preview.png
-
-# 系统文件
-Thumbs.db
-.DS_Store
+data/failures.json
 
 # 构建产物（便携包）
 dist/
 .installed
 
-# 运行态
-data/failures.json
-data/state.json
-data/.lock
-
-# 临时截图
-public/_*.png
+# 系统文件
+Thumbs.db
+.DS_Store

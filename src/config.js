@@ -24,7 +24,13 @@ export function loadConfig(overrides = {}) {
     p[key] = path.isAbsolute(p[key]) ? p[key] : path.join(ROOT, p[key]);
   }
   cfg.paths.public = path.join(ROOT, 'public');
+  cfg.paths.web = path.join(ROOT, 'src/web');
   cfg.paths.assets = path.join(ROOT, 'src/render/assets');
   cfg.paths.template = path.join(ROOT, 'src/render/template.html');
+  try {
+    cfg.version = JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8')).version;
+  } catch {
+    cfg.version = 'dev';
+  }
   return cfg;
 }

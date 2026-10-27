@@ -6,8 +6,7 @@ import { BiliClient } from './bili/client.js';
 import { crawl } from './crawler/pipeline.js';
 import { FailureTracker } from './crawler/failures.js';
 import { RawStore } from './crawler/store.js';
-import { buildDataset } from './model/build.js';
-import { renderSite } from './render/build.js';
+import { Repository } from './server/repository.js';
 import { readJson, writeJson } from './util/fsx.js';
 
 const lockPath = (cfg) => path.join(cfg.paths.data, '.lock');
@@ -31,36 +30,14 @@ function withLock(cfg, fn) {
     .finally(() => fs.rmSync(lock, { force: true }));
 }
 
-export function loadBoards(cfg) {
-  const dir = path.join(cfg.paths.data, 'boards');
-  const weekly = readJson(path.join(dir, 'issues-1.json'), []) || [];
-  const legend = readJson(path.join(dir, 'issues-2.json'), []) || [];
-  const songs = readJson(path.join(dir, 'songs.json'), []) || [];
-  const covers = readJson(path.join(cfg.paths.data, 'covers.json'), {}) || {};
-  return { issues: { weekly, legend }, songs, covers };
-}
-
+/** 读一遍数据，构出只读数据集（服务端与命令行共用） */
 export function loadDataset(cfg) {
-  const boards = loadBoards(cfg);
-  const dataset = buildDataset(new RawStore(cfg.paths.raw).all(), boards, cfg);
-  dataset.covers = boards.covers || {};
-  return dataset;
-}
-
-export function buildFromRaw(cfg, log) {
-  const dataset = loadDataset(cfg);
-  if (!dataset.issues.length) throw new Error('data/raw 下没有可用的榜单数据，请先执行 crawl');
-  const out = renderSite(dataset, cfg);
-  const state = readJson(cfg.paths.state, {}) || {};
-  writeJson(cfg.paths.state, { ...state, lastBuildAt: new Date().toISOString(), stats: dataset.stats, output: out });
-  log?.info('已生成 ' + out.html + ' (' + (out.bytes / 1024).toFixed(1) + 'KB) 与 ' + out.csv);
-  return { dataset, out };
+  return new Repository(cfg, null).ensure();
 }
 
 async function doCrawl(cfg, log, { force = false, deep = false, limit = 0 } = {}) {
   const budget = cfg.crawl?.timeBudgetMs ?? 120000;
   const client = new BiliClient(cfg, log);
-  // 初始化（spi/nav）单独限时，避免被风控拖住整条流水线
   client.deadline = Date.now() + 30000;
   await client.init();
   client.deadline = Date.now() + budget;
@@ -71,7 +48,6 @@ async function doCrawl(cfg, log, { force = false, deep = false, limit = 0 } = {}
   return crawl(client, cfg, store, { force, deep, limit, logger: log, failures });
 }
 
-/** 同步 biliboard 曲目库（曲目身份与逐期稿件的权威来源） */
 export function runSync(cfg, log, { full = false } = {}) {
   return withLock(cfg, async () => {
     const result = await syncBoards(new BoardClient(cfg, log), cfg, log, { full });
@@ -81,7 +57,6 @@ export function runSync(cfg, log, { full = false } = {}) {
   });
 }
 
-/** 只抓取（增量），写 data/raw */
 export function runCrawl(cfg, log, opts = {}) {
   return withLock(cfg, async () => {
     const result = await doCrawl(cfg, log, opts);
@@ -91,25 +66,22 @@ export function runCrawl(cfg, log, opts = {}) {
   });
 }
 
-/** 抓取 + 构建（定时任务与 update 命令使用） */
+/** 同步官方库 + 增量抓帖；服务端会自动重载数据，无需重新生成页面 */
 export function runUpdate(cfg, log, { force = false, deep = false, limit = 0, skipCrawl = false, skipSync = false, full = false } = {}) {
   return withLock(cfg, async () => {
     const started = Date.now();
     let crawlResult = null;
     let syncResult = null;
-    if (!skipSync) {
-      syncResult = await syncBoards(new BoardClient(cfg, log), cfg, log, { full });
-    }
+    if (!skipSync) syncResult = await syncBoards(new BoardClient(cfg, log), cfg, log, { full });
     if (!skipCrawl) {
       try {
         crawlResult = await doCrawl(cfg, log, { force, deep, limit });
       } catch (err) {
-        // B 站接口不可用（限流/风控/断网）不应阻塞看板生成：页面主体来自 biliboard 数据
         log?.warn('B 站帖子抓取失败，已跳过（不影响看板）：' + err.message);
         crawlResult = { error: err.message, discovered: 0, fetched: 0, failed: [], skipped: 0, skippedReasons: {} };
       }
     }
-    const { dataset, out } = buildFromRaw(cfg, log);
+    const dataset = loadDataset(cfg);
     const state = readJson(cfg.paths.state, {}) || {};
     writeJson(cfg.paths.state, {
       ...state,
@@ -117,10 +89,9 @@ export function runUpdate(cfg, log, { force = false, deep = false, limit = 0, sk
       lastRunMs: Date.now() - started,
       lastCrawl: crawlResult,
       lastSyncAt: syncResult ? new Date().toISOString() : state.lastSyncAt,
-      stats: dataset.stats,
-      output: out
+      stats: dataset.stats
     });
-    return { crawl: crawlResult, sync: syncResult, dataset, out, ms: Date.now() - started };
+    return { crawl: crawlResult, sync: syncResult, dataset, ms: Date.now() - started };
   });
 }
 

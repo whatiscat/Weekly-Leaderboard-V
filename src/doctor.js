@@ -32,12 +32,12 @@ export async function doctor(cfg, log) {
   const songs = readJson(path.join(boardsDir, 'songs.json'), []) || [];
   const issuesMeta = readJson(path.join(boardsDir, 'issues-1.json'), []) || [];
   const covers = readJson(path.join(cfg.paths.data, 'covers.json'), {}) || {};
-  const html = path.join(cfg.paths.public, cfg.render.htmlName);
+  const webIndex = path.join(cfg.paths.web, 'index.html');
   lines.push('数据：官方期次 ' + issuesMeta.length + ' 期 · 曲目 ' + songs.length + ' 首 · 封面直链 ' + Object.keys(covers).length + ' 条 · 帖子 ' + rawCount + ' 期');
-  lines.push('产物：' + (fs.existsSync(html) ? html + '（' + (fs.statSync(html).size / 1024).toFixed(0) + 'KB，' + fs.statSync(html).mtime.toLocaleString() + '）' : '未生成'));
+  lines.push('前端：' + (fs.existsSync(webIndex) ? 'src/web 就绪' : '缺少 src/web/index.html'));
   if (!songs.length) issues.push('缺少 data/boards/songs.json —— 先运行 node src/cli.js sync --full');
   if (!issuesMeta.length) issues.push('缺少 data/boards/issues-1.json —— 先运行 node src/cli.js sync');
-  if (!fs.existsSync(html)) issues.push('看板还没生成 —— 运行 node src/cli.js build');
+  if (!fs.existsSync(webIndex)) issues.push('前端入口缺失 —— 检查 src/web/index.html');
   if (songs.length && !Object.keys(covers).length) issues.push('封面直链还没解析 —— 运行 node src/cli.js sync（首次约 3 分钟）');
 
   // 网络
