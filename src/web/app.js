@@ -42,6 +42,8 @@
     ranges: {},
     /* 当前画在走势图里的曲子 { key, song }。换区间时要能重画，所以得留住它 */
     curTrend: null,
+    /* 单曲档案：搜索结果、当前选中的 key（"b:15" / "n:曲名"）、卡片缓存 */
+    song: { q: '', items: [], cur: null, cache: new Map(), loaded: false },
     /* 附榜 B：ニコニコ VOCALOID SONGS TOP20（另一个 UP 主、另一套期号） */
     nico: {
       index: null,
@@ -249,7 +251,10 @@
   var VIEW_KEY = 'chart';
 
   function storedView() {
-    try { return localStorage.getItem(VIEW_KEY) === 'n' ? 'n' : 'b'; } catch (e) { return 'b'; }
+    try {
+      var v = localStorage.getItem(VIEW_KEY);
+      return v === 'n' || v === 'song' ? v : 'b';
+    } catch (e) { return 'b'; }
   }
 
   var BOARD_KEY = 'board';
@@ -377,9 +382,15 @@
     if (!m) return;
     var ni = state.nico.index;
     var isN = state.view === 'n';
-    $('pageTitle').hidden = isN;
+    var isS = state.view === 'song';
+    $('pageTitle').hidden = isN || isS;
     $('pageTitleN').hidden = !isN;
-    if (isN) {
+    $('pageTitleS').hidden = !isS;
+    if (isS) {
+      $('pageSub').textContent = '在四条榜上查同一首曲子：周榜 / 传说榜 / 年榜 / ニコニコ VOCALOID TOP20';
+      $('linkSpace').href = m.sources.space;
+      $('linkRead').href = m.sources.readList;
+    } else if (isN) {
       $('pageTitleN').textContent = (ni && ni.title) || 'ニコニコ VOCALOID SONGS TOP20';
       $('pageSub').textContent = ni
         ? '第 ' + ni.first + '–' + ni.last + ' 期（' + fmtDate(ni.firstDate).slice(0, 7) + ' – ' + fmtDate(ni.lastDate).slice(0, 7)
@@ -396,7 +407,7 @@
       $('linkSpace').href = m.sources.space;
       $('linkRead').href = m.sources.readList;
     }
-    document.title = (isN ? $('pageTitleN').textContent : '术力口' + boardLabel(state.board) + ' · 数据看板');
+    document.title = isS ? '单曲档案 · 术力口周榜' : (isN ? $('pageTitleN').textContent : '术力口' + boardLabel(state.board) + ' · 数据看板');
     renderFooter();
   }
 
@@ -405,11 +416,13 @@
     // 兜底：N 榜没有数据时不能停在 N 视图（B 的区块收起了、N 的又没内容，就是一屏空白）。
     // 这里也管住"上次记住的是 N，这次抓取失败"的情况。
     if (state.view === 'n' && !state.nico.loaded) state.view = 'b';
-    var n = state.view === 'n';
-    B_SECTIONS.forEach(function (id) { var el = $(id); if (el) el.hidden = n; });
+    var v = state.view;
+    var n = v === 'n';
+    B_SECTIONS.forEach(function (id) { var el = $(id); if (el) el.hidden = v !== 'b'; });
     // 年榜没有走势：一年一期、总共 5 期，"逐期名次曲线"画出来就是三五个点，没有信息量
-    if (!n && state.board === 'annual') $('trendSec').hidden = true;
+    if (v === 'b' && state.board === 'annual') $('trendSec').hidden = true;
     $('nicoSec').hidden = !n || !state.nico.loaded;
+    $('songSec').hidden = v !== 'song';
     // 顶栏那几个出口都是 B 榜的东西（文集 / 收录公示 / CSV 导出的都是 B 榜数据），
     // 在 N 榜视图里留着只会让人点开一个不相干的页面。
     ['linkRead', 'linkBoard', 'linkCsv'].forEach(function (id) {
@@ -425,7 +438,7 @@
   }
 
   function setView(v) {
-    if (v !== 'b' && v !== 'n') v = 'b';
+    if (v !== 'b' && v !== 'n' && v !== 'song') v = 'b';
     // N 榜还没抓到时不许切过去 —— 那会是一屏空白，看起来像页面坏了。
     // 但"正在加载"和"没有数据"是两回事：前者记下来，加载完自动切过去，
     // 否则用户刚打开页面就点 N 榜会挨一句莫名其妙的"还没有数据"。
@@ -437,6 +450,7 @@
     if (v === state.view) return;
     state.view = v;
     try { localStorage.setItem(VIEW_KEY, v); } catch (e) { /* 存储不可用就只是不记住 */ }
+    if (v === 'song') openSongView();
     applyView();
     window.scrollTo({ top: 0, behavior: (window.DshMotion && window.DshMotion.reduced()) ? 'auto' : 'smooth' });
   }
@@ -483,7 +497,21 @@
     $('footer').innerHTML = parts.join('');
   }
 
+  /* 单曲档案的页脚：这里唯一需要解释的是**跨榜是怎么对上的** ——
+     B 站三条榜用 song.id，ニコニコ 用曲名，两套 id 空间只能靠日文原名归一化后匹配。 */
+  function renderSongFooter() {
+    var m = state.meta;
+    $('footer').innerHTML = [
+      '<div><b>数据来源</b>：Biliboard 公开曲目库（' + esc(m.sources.board) + '）+ ' + esc(m.account.name)
+        + ' 的文字版周榜；ニコニコ 榜由 Elvansphere 译制（Billboard JAPAN × ニコニコ）。</div>',
+      '<div><b>匹配口径</b>：B 站那三条榜共用 song.id，直接按 id 查；ニコニコ 没有曲目库，'
+        + '只能按**日文曲名**归一化后匹配 —— 改名或写法不同的曲子可能对不上，对不上时如实显示"没上过这条榜"。</div>',
+      '<div><b>数据</b>：服务端载入于 ' + fmtTime(m.builtAt) + '</div>'
+    ].join('');
+  }
+
   function renderFooter() {
+    if (state.view === 'song') return renderSongFooter();
     if (state.view === 'n') return renderNicoFooter();
     var m = state.meta;
     if (!m) return;
@@ -836,7 +864,12 @@
     });
 
     var rangeText = '第 ' + (issues[first] ? issues[first].issue : first) + '–' + (issues[last] ? issues[last].issue : last) + ' 期';
-    var head = '<div class="chart-head"><h4>' + esc(song.title) + '</h4>'
+    // 单曲档案里的四块小图由卡片自己写标题，图就不用再带一份
+    if (ctx.bare) {
+      if (!app.length) { card.innerHTML = '<div class="sc-empty">这段区间里没有上榜记录</div>'; return; }
+      if (app.length === 1) { card.innerHTML = '<div class="sc-empty">区间内只上榜 1 期（#' + app[0].rank + '）</div>'; return; }
+    }
+    var head = ctx.bare ? '' : '<div class="chart-head"><h4>' + esc(song.title) + '</h4>'
       + '<span class="st">' + rangeText + ' · 区间内上榜 ' + app.length + ' 期 · 最高 #' + song.best + '</span>'
       + (all[all.length - 1].bvid ? '<a class="lnk" href="' + videoUrl(all[all.length - 1].bvid) + '" target="_blank" rel="noopener">在 B 站打开 ↗</a>' : '')
       + '</div>';
@@ -1426,6 +1459,143 @@
     toast(head + (done.length ? ' · ' + done.join(' · ') : '') + (warn.length ? ' · ' + warn.join(' · ') : ''), warn.length ? 'err' : '');
   }
 
+  /* ---------- 单曲档案 ----------
+   * 以一首曲子为中心：四条榜上的记录摊在一起。
+   * 跨榜靠曲名对齐 —— Biliboard 用 song.id，ニコニコ 用曲名，两套 id 空间在服务端拼好。
+   */
+  var songTimer = null;
+
+  async function loadSongIndex(q) {
+    var data = await api('/api/find?limit=100&q=' + encodeURIComponent(q || ''));
+    state.song.items = data.items || [];
+    state.song.q = q || '';
+    renderSongPick();
+    if ($('songMeta')) {
+      $('songMeta').textContent = state.song.q
+        ? '匹配 ' + data.total + ' 首'
+        : '共 ' + data.total + ' 首 · 按在榜期数排序';
+    }
+  }
+
+  function songCountsText(c) {
+    var bits = [];
+    if (c.weekly) bits.push('周 ' + c.weekly);
+    if (c.legend) bits.push('传 ' + c.legend);
+    if (c.annual) bits.push('年 ' + c.annual);
+    if (c.nico) bits.push('N ' + c.nico);
+    return bits.join(' · ');
+  }
+
+  function renderSongPick() {
+    var html = state.song.items.map(function (s) {
+      var key = (s.kind === 'n' ? 'n:' : 'b:') + s.id;
+      var badge = songCountsText(s.counts) || '—';
+      return '<button type="button" class="song-item' + (key === state.song.cur ? ' on' : '') + '" data-key="' + esc(key) + '"'
+        + ' title="' + esc(s.title + '（周榜 ' + s.counts.weekly + ' · 传说榜 ' + s.counts.legend + ' · 年榜 ' + s.counts.annual + ' · ニコニコ ' + s.counts.nico + ' 期）') + '">'
+        + '<span class="t">' + esc(s.title) + '</span>'
+        + '<span class="w">' + esc(badge) + '</span></button>';
+    }).join('') || '<div style="padding:10px;color:var(--faint);font-size:12.5px">没有匹配的曲子</div>';
+    $('songPick').innerHTML = html;
+    window.DshMotion.animate($('songPick'), { animate: false });
+  }
+
+  function boardCtxFor(name) {
+    if (name === 'nico') return { issues: rangeItems('nico'), map: nicoIndexMap() };
+    return { issues: boardIndexItems(name), map: boardIndexMap(name) };
+  }
+
+  function scKpi(label, stats) {
+    var on = stats && stats.weeks;
+    return '<div class="sc-kpi' + (on ? '' : ' off') + '"><b>' + (on ? stats.weeks + ' 期' : '—') + '</b>'
+      + '<span>' + esc(label) + '</span></div>';
+  }
+
+  function scPanel(name, label, stats, note) {
+    var head = '<h4>' + esc(label) + '<span>' + (stats && stats.weeks
+      ? stats.weeks + ' 期 · 最高 #' + stats.best + (note ? ' · ' + note : '')
+      : '没上过这条榜') + '</span></h4>';
+    // CSS 的 --i 是入场延迟；这里不参与，给个空 div 让渲染器有落点
+    return '<div class="sc-panel">' + head
+      + (stats && stats.weeks ? '<div class="sc-chart" data-board="' + name + '"></div>' : '<div class="sc-empty">—</div>')
+      + '</div>';
+  }
+
+  function scAnnualPanel(stats) {
+    if (!stats || !stats.weeks) return scPanel('annual', '年榜', null);
+    var list = stats.appearances.slice().reverse().map(function (a) {
+      return '<li><span class="y">第 ' + a.issue + ' 期' + (a.date ? ' · ' + fmtDate(a.date) : '') + '</span>'
+        + '<span class="r">#' + a.rank + '</span></li>';
+    }).join('');
+    return '<div class="sc-panel"><h4>年榜<span>' + stats.weeks + ' 次 · 最高 #' + stats.best + '</span></h4>'
+      + '<ul class="sc-years">' + list + '</ul></div>';
+  }
+
+  async function selectSongCard(key) {
+    state.song.cur = key;
+    renderSongPick();
+    var card;
+    if (state.song.cache.has(key)) card = state.song.cache.get(key);
+    else {
+      card = await api('/api/song-card?key=' + encodeURIComponent(key));
+      state.song.cache.set(key, card);
+    }
+    renderSongDetail(card);
+  }
+
+  function renderSongDetail(card) {
+    var b = card.boards;
+    var h = '<div class="chart-card">'
+      + '<div class="sc-head"><h3>' + esc(card.title || '—') + '</h3>'
+      + (card.titleAlt ? '<div class="alt">' + esc(card.titleAlt) + '</div>' : '')
+      + '<div class="tags">' + esc(names(card.producers) || '—')
+      + (card.vocalists && card.vocalists.length ? ' · ' + esc(names(card.vocalists)) : '') + '</div></div>'
+      + '<div class="sc-kpis">' + scKpi('周榜', b.weekly) + scKpi('传说榜', b.legend) + scKpi('年榜', b.annual) + scKpi('ニコニコ', b.nico) + '</div>'
+      + '<div class="sc-grid">'
+      + scPanel('weekly', '周榜', b.weekly)
+      + scPanel('legend', '传说榜', b.legend)
+      + scAnnualPanel(b.annual)
+      + scPanel('nico', 'ニコニコ TOP20', b.nico, b.nico && b.nico.reported && b.nico.reported > b.nico.weeks ? '正文自报 ' + b.nico.reported + ' 期' : '')
+      + '</div>'
+      + (card.variants && card.variants.length > 1
+        ? '<div class="sc-vary">这首歌用过 ' + card.variants.length + ' 个稿件：'
+          + card.variants.map(function (v) {
+            return '<a href="' + videoUrl(v.bvid) + '" target="_blank" rel="noopener">' + esc(v.bvid) + '</a>';
+          }).join(' · ') + '</div>'
+        : '')
+      + '</div>';
+    $('songDetail').innerHTML = h;
+
+    // 四块小图：横轴用这首曲子自己的上榜区间，而不是整条榜的全部期次
+    Array.prototype.forEach.call($('songDetail').querySelectorAll('.sc-chart'), function (el) {
+      var name = el.getAttribute('data-board');
+      var stats = b[name];
+      if (!stats || !stats.weeks) return;
+      var ctx = boardCtxFor(name);
+      var idx = stats.appearances.map(function (a) { return ctx.map.get(a.issue); })
+        .filter(function (i) { return i != null; });
+      if (idx.length < 2) { el.innerHTML = '<div class="sc-empty">只有 1 个点，画不出走势</div>'; return; }
+      var from = Math.min.apply(null, idx);
+      var to = Math.max.apply(null, idx);
+      renderChart(
+        { title: card.title, best: stats.best, appearances: stats.appearances },
+        { card: el, indexByIssue: ctx.map, issues: ctx.issues, range: { fromIdx: from, toIdx: to }, bare: true }
+      );
+    });
+  }
+
+  function openSongView() {
+    if (state.song.loaded) return;
+    state.song.loaded = true;
+    // 第一次进来就选中第一条：整个页面是为"某一首曲子"组织的，
+    // 右侧先空着等于让人看一块白板，还得自己猜要点哪里
+    loadSongIndex('').then(function () {
+      if (!state.song.cur && state.song.items.length) {
+        var s = state.song.items[0];
+        selectSongCard((s.kind === 'n' ? 'n:' : 'b:') + s.id);
+      }
+    }).catch(function () { /* 列表拉不到就先空着，搜索还能用 */ });
+  }
+
   /* ---------- 设置抽屉：命令行那几件事的网页版 ----------
    * 每个按钮对应后端白名单里的一个动作（src/server/console.js），前端不拼命令。
    * 长任务（同步/抓帖/附榜）后台跑，这里轮询日志；短任务（报告/状态/体检）直接拿文本。
@@ -1600,6 +1770,16 @@
     activateIn($('champs'), '.champ-item', function (el) {
       openDrawer(el.getAttribute('data-id'), { board: state.board, issue: Number(el.getAttribute('data-issue')), bvid: el.getAttribute('data-bvid') }, el);
     });
+    // 单曲档案：搜索（防抖）+ 点选
+    $('sq').addEventListener('input', function (e) {
+      var q = e.target.value;
+      clearTimeout(songTimer);
+      songTimer = setTimeout(function () { loadSongIndex(q).catch(function () { /* 输入中途的失败忽略 */ }); }, 220);
+    });
+    activateIn($('songPick'), '.song-item', function (el) {
+      selectSongCard(el.getAttribute('data-key'));
+    });
+
     // 走势区间：两个下拉 + 一键回默认
     $('rangeFrom').addEventListener('change', function (e) { onRangeChange(state.board, 'from', e.target.value); });
     $('rangeTo').addEventListener('change', function (e) { onRangeChange(state.board, 'to', e.target.value); });

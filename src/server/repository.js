@@ -31,6 +31,19 @@ function uniq(arr) {
 }
 
 /**
+ * 曲名的归一化形式，只用来**跨榜匹配**（Biliboard 的 song.id 与 ニコニコ 的曲名是两套 id 空间）。
+ *
+ * 只丢掉确定不影响身份的差异：大小写、空白、各种引号/括号/波浪线/句读。
+ * 不去汉字、不去假名 —— 那是把不同的歌匹配到一起去的最快方式。
+ */
+function normTitle(t) {
+  return String(t || '')
+    .toLowerCase()
+    .replace(/[\s\u3000]+/g, '')
+    .replace(/[~〜～!！?？.,、。·・:：;；'"`"'""()（）\[\]【】<>《》「」『』-]/g, '');
+}
+
+/**
  * 一张榜的索引：期号 → 位置、曲目 → 在这张榜上的每次上榜。
  *
  * 三张榜各有一份，**绝不共用**：传说曲榜第 84 期和周榜第 84 期不是同一周，
@@ -162,6 +175,20 @@ export class Repository {
           });
         }
       }
+    }
+
+    // ニコニコ 那条榜的曲目身份是曲名：建一张"归一化曲名 → 曲名"的表，
+    // 用来把 Biliboard 的曲子对到 ニコニコ 上（同一首歌、两个 id 空间）。
+    this.nicoByTitle = new Map();
+    for (const key of this.nico.history.keys()) {
+      const k = normTitle(key);
+      if (k && !this.nicoByTitle.has(k)) this.nicoByTitle.set(k, key);
+    }
+    // 反向：ニコニコ 每条曲名归一化后对应哪首 B 榜曲子（用来在搜索里去掉重复项）
+    this.nicoToB = new Map();
+    for (const [id, info] of this.songInfo) {
+      const k = normTitle(info.titleAlt || info.title);
+      if (k && !this.nicoToB.has(k)) this.nicoToB.set(k, id);
     }
   }
 
@@ -659,6 +686,156 @@ export class Repository {
       variants: [...byBvid.entries()].map(([bvid, issues]) => ({ bvid, issues })),
       boards
     };
+  }
+
+  /* ---------- 单曲档案：一首曲子跨四条榜的全部记录 ---------- */
+
+  /**
+   * 一首曲子在四条榜上的档案。
+   *
+   * B 站那三条榜共用 Biliboard 的 song.id，所以直接查 history；
+   * ニコニコ 那条用的是曲名，只能靠**日文原名**归一化后匹配 —— 匹配不到的诚实写 null，
+   * 不要用"看起来像"去凑，那会把两首不同的歌黏在一起。
+   */
+  songCard(id) {
+    this.ensure();
+    const key = /^\d+$/.test(String(id)) ? Number(id) : String(id);
+    // 不认识的 id 要回 404：给一张全 0 的卡片等于告诉前端"这本书存在但没有上榜"
+    const known = this.songInfo.has(key) || ['weekly', 'legend', 'annual'].some((n) => this.boards[n].history.has(key));
+    if (!known) return null;
+    return this.#cardOf('b', String(key), () => {
+      const info = this.songInfo.get(key) || {};
+      const boards = {};
+      let total = 0;
+      for (const name of ['weekly', 'legend', 'annual']) {
+        boards[name] = this.#boardStats(name, key);
+        total += boards[name].weeks;
+      }
+      // ニコニコ：拿日文原名去匹配（有译名时 titleAlt 才是原名）
+      const jp = info.titleAlt || info.title || '';
+      const nk = this.nicoByTitle.get(normTitle(jp));
+      boards.nico = nk ? this.#nicoStats(nk) : null;
+      return { info, boards, total, jp };
+    });
+  }
+
+  /** 只在 ニコニコ 榜上出现的曲子（搜索时点到的那些） */
+  nicoCard(title) {
+    this.ensure();
+    const key = String(title || '').trim();
+    if (!this.nico.history.has(key)) return null;
+    return this.#cardOf('n', key, () => {
+      const boards = { weekly: null, legend: null, annual: null, nico: this.#nicoStats(key) };
+      const last = this.nico.history.get(key).at(-1);
+      const entry = this.nico.list[last.i].entries.find((e) => e.songId === key) || {};
+      return {
+        info: { title: key, titleAlt: '', producers: entry.producer ? [entry.producer] : [], vocalists: [] },
+        boards,
+        total: boards.nico.weeks,
+        jp: key
+      };
+    });
+  }
+
+  /** 卡片外壳：把两种来源整理成同一个形状 */
+  #cardOf(kind, id, build) {
+    const { info, boards, total, jp } = build();
+    const variants = new Map();
+    for (const name of ['weekly', 'legend', 'annual', 'nico']) {
+      for (const a of boards[name]?.appearances || []) {
+        if (!a.bvid) continue;
+        if (!variants.has(a.bvid)) variants.set(a.bvid, []);
+        variants.get(a.bvid).push({ board: name, issue: a.issue });
+      }
+    }
+    return {
+      kind,
+      id,
+      title: info.title || '',
+      titleAlt: info.titleAlt || '',
+      producers: info.producers || [],
+      vocalists: info.vocalists || [],
+      boards,
+      totalWeeks: total,
+      matchedTitle: jp,
+      variants: [...variants.entries()].map(([bvid, at]) => ({ bvid, at }))
+    };
+  }
+
+  #boardStats(name, key) {
+    const board = this.boards[name];
+    const hist = board?.history.get(key) || [];
+    if (!hist.length) return { weeks: 0, best: null, first: null, last: null, appearances: [] };
+    return {
+      weeks: hist.length,
+      best: hist.reduce((m, h) => Math.min(m, h.rank), 99),
+      first: hist[0].issue,
+      last: hist[hist.length - 1].issue,
+      appearances: hist.map((h) => ({ issue: h.issue, date: h.date, rank: h.rank, bvid: h.bvid }))
+    };
+  }
+
+  #nicoStats(key) {
+    const hist = this.nico.history.get(key) || [];
+    if (!hist.length) return { weeks: 0, best: null, first: null, last: null, appearances: [] };
+    return {
+      weeks: hist.length,
+      // 正文自报的在榜周数可能比我们抓到的历史更久（188 期之外还有）
+      reported: hist[hist.length - 1].weeks ?? null,
+      best: hist.reduce((m, h) => Math.min(m, h.rank), 99),
+      first: hist[0].issue,
+      last: hist[hist.length - 1].issue,
+      appearances: hist.map((h) => ({ issue: h.issue, date: h.date, rank: h.rank, bvid: h.bvid }))
+    };
+  }
+
+  /**
+   * 跨榜搜索：曲名 / 译名 / P 主 都能搜。
+   * 同名的 ニコニコ 曲目如果已经对上了 B 榜曲子就不重复出现 —— 那本来就是同一首歌。
+   */
+  findSongs(q, limit = 40) {
+    this.ensure();
+    const needle = normTitle(q);
+    const head = String(q || '').trim().toLowerCase();
+    const items = [];
+
+    for (const [id, info] of this.songInfo) {
+      const hay = normTitle(info.title) + ' ' + normTitle(info.titleAlt);
+      const prod = (info.producers || []).map((x) => x.name || x).join(' ').toLowerCase();
+      if (head && hay.indexOf(needle) < 0 && prod.indexOf(head) < 0) continue;
+      const counts = {};
+      let total = 0;
+      for (const name of ['weekly', 'legend', 'annual']) {
+        counts[name] = (this.boards[name].history.get(id) || []).length;
+        total += counts[name];
+      }
+      const jp = info.titleAlt || info.title;
+      const nk = this.nicoByTitle.get(normTitle(jp));
+      counts.nico = nk ? (this.nico.history.get(nk) || []).length : 0;
+      items.push({
+        kind: 'b', id, title: info.title, titleAlt: info.titleAlt,
+        producers: info.producers || [], counts, total: total + counts.nico
+      });
+    }
+
+    // 只在 ニコニコ 榜上有的曲子
+    const seen = new Set(items.map((x) => normTitle(x.titleAlt || x.title)));
+    for (const [key, hist] of this.nico.history) {
+      const nk = normTitle(key);
+      if (!nk || seen.has(nk) || this.nicoToB.has(nk)) continue;
+      if (needle && nk.indexOf(needle) < 0) continue;
+      if (!hist.length) continue;
+      const last = hist[hist.length - 1];
+      items.push({
+        kind: 'n', id: key, title: key, titleAlt: '',
+        producers: [], counts: { weekly: 0, legend: 0, annual: 0, nico: hist.length }, total: hist.length
+      });
+      seen.add(nk);
+      void last;
+    }
+
+    items.sort((a, b) => b.total - a.total || a.title.localeCompare(b.title));
+    return { total: items.length, items: items.slice(0, limit) };
   }
 
   /** 某张榜的曲目上榜记录（曲目详情页与抽屉用） */

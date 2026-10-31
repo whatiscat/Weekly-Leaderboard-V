@@ -228,7 +228,7 @@ async function main() {
     // ---- 附榜 B：ニコニコ VOCALOID TOP20（另一个 UP 主、另一套期号）----
     // 先切榜：N 榜是**另一套视图**，不切换的话它整块是收起的（这是刻意的）
     const switchCount = await evaluate("document.querySelectorAll('#chartSwitch .cs').length");
-    check('顶栏有 B / N 两个切榜按钮', switchCount === 2, switchCount + ' 个');
+    check('顶栏有 B / N / 单曲 三个切榜按钮', switchCount === 3, switchCount + ' 个');
     await evaluate("document.querySelector('#chartSwitch .cs[data-chart=n]').click()");
     await waitFor("document.getElementById('nicoSec') && !document.getElementById('nicoSec').hidden && document.querySelectorAll('#nicoRows .row').length > 0");
     await sleep(500);
@@ -387,6 +387,43 @@ async function main() {
     await shot('console-check.png');
     await evaluate("document.getElementById('consoleClose').click()");
     await waitFor("!document.getElementById('console').classList.contains('on')");
+
+    // ---- 单曲档案：一首曲子跨四条榜 ----
+    await evaluate("document.querySelector('#chartSwitch .cs[data-chart=song]').click()");
+    await waitFor("!document.getElementById('songSec').hidden && document.querySelectorAll('#songPick .song-item').length > 0");
+    await waitFor("document.querySelectorAll('#songDetail .sc-panel').length === 4", 30000);
+    await sleep(700);
+    const song = await evaluate(`(function(){
+      return { pick: document.querySelectorAll('#songPick .song-item').length,
+        title: document.querySelector('#songDetail .sc-head h3').textContent,
+        kpis: [].map.call(document.querySelectorAll('#songDetail .sc-kpi b'), function (b) { return b.textContent; }),
+        panels: [].map.call(document.querySelectorAll('#songDetail .sc-panel h4'), function (h) { return h.textContent; }),
+        charts: document.querySelectorAll('#songDetail svg.chart').length,
+        bOff: document.getElementById('boardSec').hidden,
+        nicoOff: document.getElementById('nicoSec').hidden };
+    })()`);
+    check('单曲视图把 B / N 两块都收起来', song.bOff && song.nicoOff, JSON.stringify({ b: song.bOff, n: song.nicoOff }));
+    check('单曲列表按在榜期数排序且自动选中第一首', song.pick > 0 && song.title.length > 0, song.pick + ' 首 · 当前 ' + song.title);
+    check('单曲档案有四条榜的 KPI 与面板', song.kpis.length === 4 && song.panels.length === 4, song.kpis.join(' / '));
+    check('单曲档案画出各榜走势', song.charts >= 1, song.charts + ' 张图 · ' + song.panels.join(' | '));
+    await shot('song-detail.png');
+
+    // 只在 N 榜出现的曲子：B 那三块要如实写"没上过"，而不是留空或报错
+    await evaluate("(function(){var i=document.getElementById('sq'); i.value='フォニイ'; i.dispatchEvent(new Event('input'));})()");
+    await waitFor("document.querySelectorAll('#songPick .song-item').length === 1 && document.querySelector('#songPick .song-item .t').textContent === 'フォニイ'");
+    await evaluate("document.querySelector('#songPick .song-item').click()");
+    await waitFor("document.querySelector('#songDetail .sc-head h3').textContent === 'フォニイ'");
+    await sleep(500);
+    const nicoOnly = await evaluate(`(function(){
+      return { kpis: [].map.call(document.querySelectorAll('#songDetail .sc-kpi b'), function (b) { return b.textContent; }),
+        text: document.getElementById('songDetail').textContent };
+    })()`);
+    check('N 榜独有的曲子：B 那三栏如实写没上过', nicoOnly.kpis.slice(0, 3).every(function (x) { return x === '—'; }) && nicoOnly.text.indexOf('没上过这条榜') >= 0,
+      JSON.stringify(nicoOnly.kpis));
+    await shot('song-nico.png');
+
+    await evaluate("document.querySelector('#chartSwitch .cs[data-chart=b]').click()");
+    await waitFor("!document.getElementById('boardSec').hidden");
 
     // 移动端
     await send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 2, mobile: true });

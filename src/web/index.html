@@ -60,6 +60,9 @@
         <button type="button" class="cs" role="tab" aria-selected="false" aria-controls="nicoSec" data-chart="n">
           <b>N 榜</b><span>ニコニコ TOP20</span>
         </button>
+        <button type="button" class="cs" role="tab" aria-selected="false" aria-controls="songSec" data-chart="song">
+          <b>单曲</b><span>跨榜档案</span>
+        </button>
       </div>
     </div>
 
@@ -121,6 +124,7 @@
       </span><span class="tail">· 数据看板</span>
     </h1>
     <h1 id="pageTitleN" hidden>ニコニコ VOCALOID SONGS TOP20</h1>
+    <h1 id="pageTitleS" hidden>单曲档案</h1>
     <p id="pageSub">正在加载…</p>
   </div>
 
@@ -246,6 +250,24 @@
         <div class="chart-card" id="nicoChartCard"></div>
       </div>
     </section>
+  </section>
+
+  <!-- 单曲档案：以一首曲子为中心，把四条榜上的记录摊在一起看。
+       跨榜靠**曲名**对齐（Biliboard 用 song.id，ニコニコ 用曲名），匹配不到的如实写"没上过"。 -->
+  <section id="songSec" hidden aria-labelledby="songTitle">
+    <div class="sec-head">
+      <h3 id="songTitle">曲目</h3>
+      <div class="desc">搜曲名 / 译名 / P 主 · 左边点一首，右边是它在这四条榜上的全部记录</div>
+      <div class="right" id="songMeta"></div>
+    </div>
+    <div class="song-archive">
+      <div class="song-list">
+        <label class="sr-only" for="sq">搜索歌曲</label>
+        <input id="sq" placeholder="搜索曲名 / 译名 / P 主…" autocomplete="off">
+        <div class="items" id="songPick"></div>
+      </div>
+      <div id="songDetail"><div class="chart-card"><div class="sc-empty">左侧选一首曲子</div></div></div>
+    </div>
   </section>
 
   <footer id="footer"></footer>

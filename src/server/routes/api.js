@@ -84,6 +84,24 @@ export function registerApiRoutes(router, repo, cfg, log) {
   /* ---------- 设置抽屉：命令行那几件事的网页版 ----------
    * 只认白名单里的名字（console.js 的 ACTIONS），不接受任意命令。
    * 长任务启动后返回现状，前端轮询 GET /api/console；短任务直接返回文本。 */
+  /* ---------- 单曲档案：一首曲子跨四条榜 ---------- */
+  router.get('/api/find', (req, res, params, url) => {
+    const q = url.searchParams.get('q') || '';
+    const limit = Math.min(100, Math.max(1, Number(url.searchParams.get('limit')) || 40));
+    json(req, res, 200, repo.findSongs(q, limit));
+  });
+
+  // key = "b:15" / "n:アンノウン・マザーグース"（走 query 是避免中文路径的编码坑）
+  router.get('/api/song-card', (req, res, params, url) => {
+    const raw = String(url.searchParams.get('key') || '');
+    const sep = raw.indexOf(':');
+    const kind = sep > 0 ? raw.slice(0, sep) : 'b';
+    const id = sep > 0 ? raw.slice(sep + 1) : raw;
+    const data = kind === 'n' ? repo.nicoCard(id) : repo.songCard(id);
+    if (!data) return json(req, res, 404, { error: 'song_not_found', message: '没有这首曲子：' + id });
+    json(req, res, 200, data);
+  });
+
   router.get('/api/console', (req, res) => {
     json(req, res, 200, { actions: consoleActions(), job: consoleStatus() });
   });
