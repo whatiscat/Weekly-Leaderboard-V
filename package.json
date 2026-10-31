@@ -24,6 +24,7 @@
     "test": "node --test",
     "check": "node scripts/check.mjs",
     "package": "node scripts/package.mjs",
+    "package:exe": "node scripts/sea/build.mjs",
     "serve:bg": "powershell -ExecutionPolicy Bypass -File scripts/serve-bg.ps1",
     "serve:stop": "powershell -ExecutionPolicy Bypass -File scripts/serve-bg.ps1 -Stop",
     "serve:status": "powershell -ExecutionPolicy Bypass -File scripts/serve-bg.ps1 -Status"

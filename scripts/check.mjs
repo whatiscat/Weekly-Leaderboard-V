@@ -30,7 +30,8 @@ function walk(dir, out = []) {
 }
 
 const files = walk(ROOT);
-const scripts = files.filter((f) => /\.(js|mjs)$/.test(f));
+// .cjs 也要查：打进单文件 exe 的引导代码就是 .cjs，它坏了 exe 一启动就崩
+const scripts = files.filter((f) => /\.(js|mjs|cjs)$/.test(f));
 const jsonFiles = files.filter((f) => f.endsWith('.json') && !f.includes(path.join('data', '')));
 
 let failed = 0;

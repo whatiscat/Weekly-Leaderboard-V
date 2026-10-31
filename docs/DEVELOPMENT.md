@@ -572,12 +572,55 @@ powershell -ExecutionPolicy Bypass -File scripts\register-task.ps1 -Remove
 ```
 
 ```bash
-npm run package   # → dist/术力口周榜-便携版.zip
+npm run package   # → dist/术力口周榜-便携版.zip（目标机器要有 Node）
 ```
 
 解压后双击「启动.cmd」：检查 Node → 起服务 → 开浏览器；首次运行询问是否添加每周三自动更新。
 
 已发布版本：[Releases](https://github.com/whatiscat/Weekly-Leaderboard-V/releases)
+
+## 单文件 exe（Node SEA）
+
+```bash
+npm run package:exe   # → dist/术力口周榜.exe（约 83 MB，自带 Node）
+```
+
+目标机器不需要装 Node，双击就起服务并开浏览器。用的是 Node 自带的
+[Single Executable Application](https://nodejs.org/api/single-executable-applications.html)，
+**没有引入任何第三方依赖**，也**没有为打包改过一行应用源码**。
+
+### exe 是怎么拼出来的
+
+1. `scripts/sea/build.mjs` 把 `src/ config/ data/ package.json README.md` 打成一个 tar.gz
+   （29 MB → 1.7 MB）；
+2. 生成 `sea-config.json`，调 `node --experimental-sea-config` 得到 blob ——
+   引导脚本 `scripts/sea/bootstrap.cjs` 加两个 asset（payload 与 build.json）；
+3. 复制 `node.exe`，把保险丝 `NODE_SEA_FUSE_fce680…​:0` 的末位改成 `1`；
+4. `scripts/sea/seal.ps1` 用 Win32 `UpdateResourceW` 把 blob 写进 PE 资源 named `NODE_SEA_BLOB`、
+   类型 `RT_RCDATA(10)`。
+
+第 4 步就是 `postject` 干的活。本项目零第三方依赖，所以不装它 —— PowerShell 调 Win32 就够，
+50 行。这里有两个坑值得记一笔：
+
+- **资源类型必须是 `RT_RCDATA(10)` 而不是字符串 `NODE_SEA`**（后者是 macOS 的段名）。
+  类型写错不会报错，只会让 Node 找不到 blob，启动直接 access violation。
+- **保险丝必须拨到 `1`**。它是一段藏在 .rdata 里的字符串常量，Node 读的是冒号后面那一位。
+
+### 运行时怎么跑起来
+
+`bootstrap.cjs` 做三件事：把 payload 解到 `%LOCALAPPDATA%\术力口周榜\`、`chdir` 过去、
+把 `src/cli.js` 当 ESM `import()` 起来（SEA 里动态 import 外部文件是可用的）。
+
+解出来的目录就是**一个普通的项目根**，`src/config.js` 照旧以它为 ROOT，`data/` `logs/` 都在下面。
+所以应用侧完全不知道自己在 exe 里跑：`npm start` 与双击 exe 走的是同一份代码、同一套路径规则。
+
+`data/` 与 `config/` 只在**缺失时**写入：换一版 exe 只重建 `src/`，用户更新过的数据不会被覆盖；
+`.build` 里记着 payload 的哈希，内容没变就不重新解包。
+
+### 为什么不是 pkg / nexe
+
+都要装包，而且 `pkg` 已停止维护。SEA 是 Node 官方机制，本项目的零依赖约束下最合适。
+
 
 ## devtools/
 

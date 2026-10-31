@@ -109,6 +109,18 @@ npm run status     # 数据文件与最近一次跑批
 npm run doctor     # 体检：数据、网络、目录
 ```
 
+## 打包
+
+两种产物，目标机器都不需要装任何依赖：
+
+```bash
+npm run package       # 便携版目录 + zip（目标机器要有 Node）
+npm run package:exe   # 单个 exe，自带 Node，双击即用
+```
+
+单文件版约 83 MB，第一次启动会把自己解到 `%LOCALAPPDATA%\术力口周榜\`（约 30 MB，只解一次），
+之后更新数据都写在那里。原理见 [开发文档](docs/DEVELOPMENT.md#单文件-exe-node-sea)。
+
 ## 数据来源
 
 - **榜单本身**：B 站 [Bili-Board_Atel](https://space.bilibili.com/3546800279522160) 的每周文字版；
