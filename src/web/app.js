@@ -564,6 +564,7 @@
     var isAnnual = state.board === 'annual';
     var boardEl = document.querySelector('#boardSec .board');
     if (boardEl) boardEl.classList.toggle('no-spark', isAnnual);
+    $('prevHead').textContent = prevWord();
     $('boardDesc').textContent = isAnnual
       ? '点击任意一行查看该曲在年榜上的历年名次与视频'
       : '点击任意一行查看名次走势与视频预览';
@@ -653,6 +654,12 @@
     });
   }
 
+  /* "上一期"在不同榜上不是同一个东西：周榜与传说曲榜一周一期，年榜半年一期。
+     措辞跟着榜走，别让年榜上写着"上周"。 */
+  function prevWord() {
+    return state.board === 'annual' ? '上期' : '上周';
+  }
+
   /* ---------- 概览 ---------- */
   function renderHero(data) {
     var champ = data.rows[0] || {};
@@ -678,12 +685,12 @@
       + (champ.titleAlt ? '<div class="alt">' + esc(champ.titleAlt) + '</div>' : '')
       + '<div class="tags">' + esc(names(champ.producers) || '—') + (champ.vocalists && champ.vocalists.length ? ' · ' + esc(names(champ.vocalists)) : '') + '</div>'
       + '<div class="meta"><span>在榜 ' + champ.weeks + ' 期</span><span>最高 #' + champ.best + '</span>'
-      + '<span>' + (champ.prev ? '上周 #' + champ.prev : '上周未上榜') + '</span>'
+      + '<span>' + (champ.prev ? prevWord() + ' #' + champ.prev : prevWord() + '未上榜') + '</span>'
       + (data.champStreak > 1 ? '<span style="color:var(--warn-ink)">已连冠 ' + data.champStreak + ' 期</span>' : '')
       + '</div></div>';
 
     h += '<div class="hero-side">'
-      + (side.prevChampion ? '<div class="side-item"><span>上周冠军</span><b>' + esc(side.prevChampion.title) + '</b><em>' + (side.prevChampion.rank ? '本期 #' + side.prevChampion.rank : '本期未上榜') + '</em></div>' : '')
+      + (side.prevChampion ? '<div class="side-item"><span>' + prevWord() + '冠军</span><b>' + esc(side.prevChampion.title) + '</b><em>' + (side.prevChampion.rank ? '本期 #' + side.prevChampion.rank : '本期未上榜') + '</em></div>' : '')
       + (side.longest ? '<div class="side-item"><span>在榜最久</span><b>' + esc(side.longest.title) + '</b><em>累计 ' + side.longest.weeks + ' 期</em></div>' : '')
       + '</div></div>';
 
@@ -779,7 +786,7 @@
     $('p-up').innerHTML = '<h4><span>上升最快</span><span>' + data.kpi.ups + '</span></h4>'
       + (ins.ups.length ? '<ul>' + ins.ups.map(function (x) { return li(x.title, '▲' + x.delta, 'delta-up'); }).join('') + '</ul>' : '<p>本期无明显上升</p>');
     $('p-down').innerHTML = '<h4><span>跌出榜单</span><span>' + ins.outs.length + '</span></h4>'
-      + (ins.outs.length ? '<ul>' + ins.outs.map(function (x) { return li(x.title, '上周 #' + x.rank, 'delta-down'); }).join('') + '</ul>' : '<p>上周曲目全部在榜</p>');
+      + (ins.outs.length ? '<ul>' + ins.outs.map(function (x) { return li(x.title, prevWord() + ' #' + x.rank, 'delta-down'); }).join('') + '</ul>' : '<p>上周曲目全部在榜</p>');
     window.DshMotion.animate(document.querySelector('#insightSec .grid3'), { animate: true });
   }
 

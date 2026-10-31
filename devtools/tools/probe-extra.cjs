@@ -160,11 +160,17 @@ async function main() {
       return { rows: document.querySelectorAll('#rows .row').length,
         opts: document.querySelectorAll('#issueSel option').length,
         sub: document.getElementById('pageSub').textContent,
-        champs: document.getElementById('champMeta').textContent };
+        champs: document.getElementById('champMeta').textContent,
+        prev: document.getElementById('prevHead').textContent,
+        hero: document.querySelector('#hero .champ .meta').textContent,
+        side: document.querySelector('#hero .hero-side .side-item span').textContent };
     })()`);
     check('切到年榜后行数与期次范围跟着换', annual.rows === 50 && annual.opts === 5 && annual.sub.indexOf('第 1–5 期') >= 0,
       annual.rows + ' 行 / ' + annual.opts + ' 期可选 / ' + annual.sub.slice(0, 24));
     check('年榜有自己的冠军段', annual.champs.indexOf('段冠军') >= 0, annual.champs);
+    // 年榜半年一期，写"上周"是错的：表头 / 冠军卡 / 侧栏三处都得跟着变
+    check('年榜口径写"上期"而不是"上周"', annual.prev === '上期' && annual.hero.indexOf('上期') >= 0 && annual.side.indexOf('上期') >= 0,
+      '表头 ' + annual.prev + ' · 冠军卡 ' + annual.hero.slice(-16));
 
     // 年榜第 3 期是 100 行
     await evaluate("(function(){var s=document.getElementById('issueSel'); s.value='3'; s.dispatchEvent(new Event('change'));})()");
@@ -197,6 +203,8 @@ async function main() {
     await evaluate("document.querySelector('#boardMenu button[data-board=weekly]').click()");
     await waitFor("document.getElementById('boardPickLabel').textContent === '周榜' && document.querySelectorAll('#rows .row').length > 0");
     await waitFor("!document.getElementById('trendSec').hidden");
+    await waitFor("document.getElementById('prevHead').textContent === '上周'");
+    check('切回周榜后口径恢复成"上周"', true, '表头 上周');
 
     // ---- 走势区间：默认最近 30 期，可改成任意起止 ----
     await waitFor("document.getElementById('rangeFrom').options.length > 0");
