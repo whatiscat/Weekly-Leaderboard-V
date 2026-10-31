@@ -11,6 +11,7 @@ data/state.json
 data/.lock
 data/failures.json
 data/covers-failures.json
+data/nico-failures.json
 
 # 构建产物（便携包）
 dist/

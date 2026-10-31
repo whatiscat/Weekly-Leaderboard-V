@@ -1,0 +1,203 @@
+{
+  "id": "861567012199989304",
+  "title": "【2023/11/08 第49期】Billboard JAPAN「NICONICO VOCALOID歌曲TOP20」",
+  "date": "2023-11-08",
+  "issue": 49,
+  "period": {
+    "from": "2023/10/30",
+    "to": "2023/11/05"
+  },
+  "cv": 27573399,
+  "type": "DYNAMIC_TYPE_ARTICLE",
+  "entries": [
+    {
+      "rank": 1,
+      "title": "人マニア",
+      "producer": "原口沙輔",
+      "lastRank": 1,
+      "weeks": 13,
+      "aid": "361894110",
+      "bvid": "BV1194y1C7n8"
+    },
+    {
+      "rank": 2,
+      "title": "アイサイト･ラブ",
+      "producer": "D.J.ァネイロ",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "322775452",
+      "bvid": "BV1vw411q7xH"
+    },
+    {
+      "rank": 3,
+      "title": "ワーニングタイム",
+      "producer": "youまん",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "832900570",
+      "bvid": "BV1Lg4y1R7XL"
+    },
+    {
+      "rank": 4,
+      "title": "ホン・デ・ジュ",
+      "producer": "芝（バーミーズ）",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "620468446",
+      "bvid": "BV1884y197zN"
+    },
+    {
+      "rank": 5,
+      "title": "ハイド・アンド・シーフ",
+      "producer": "ヤマギシコージ",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "747985818",
+      "bvid": "BV1PC4y1J7CR"
+    },
+    {
+      "rank": 6,
+      "title": "拝啓",
+      "producer": "Early",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "",
+      "bvid": ""
+    },
+    {
+      "rank": 7,
+      "title": "Q。",
+      "producer": "Aira",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "790397617",
+      "bvid": "BV1jy4y1c7fM"
+    },
+    {
+      "rank": 8,
+      "title": "電脳学級会で会いましょう",
+      "producer": "いよわ",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "280427351",
+      "bvid": "BV1Cc411d7pr"
+    },
+    {
+      "rank": 9,
+      "title": "幾何学",
+      "producer": "OLDUCT",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "",
+      "bvid": ""
+    },
+    {
+      "rank": 10,
+      "title": "シティポップファンクラブ",
+      "producer": "TakoyakiKZY",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "875453353",
+      "bvid": "BV19N4y167QK"
+    },
+    {
+      "rank": 11,
+      "title": "sheer love",
+      "producer": "ユシナ",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "",
+      "bvid": ""
+    },
+    {
+      "rank": 12,
+      "title": "Happy Halloween",
+      "producer": "Junky",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "1609484",
+      "bvid": "BV1jx411P7k8"
+    },
+    {
+      "rank": 13,
+      "title": "からっぽへ",
+      "producer": "＜非公開＞",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "832931388",
+      "bvid": "BV14g4y1R7HR"
+    },
+    {
+      "rank": 14,
+      "title": "🀇🀏🀐🀘🀙🀡🀀🀁🀂🀃🀆🀅🀄🀄ガール",
+      "producer": "TakoyakiKZY",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "917982566",
+      "bvid": "BV15u4y1a74x"
+    },
+    {
+      "rank": 15,
+      "title": "上人**阿闍梨色色即即穹穹籬阿呆踊",
+      "producer": "＜非公開＞",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "535463334",
+      "bvid": "BV1tM411Q7kW"
+    },
+    {
+      "rank": 16,
+      "title": "『エラーコード』",
+      "producer": "ノル",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "747898452",
+      "bvid": "BV1UC4y1E7ux"
+    },
+    {
+      "rank": 17,
+      "title": "ゼロトーキング",
+      "producer": "はるまきごはん",
+      "lastRank": 2,
+      "weeks": 2,
+      "aid": "235005565",
+      "bvid": "BV1Se411R7KQ"
+    },
+    {
+      "rank": 18,
+      "title": "しね",
+      "producer": "園長P",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "747893885",
+      "bvid": "BV17C4y1H79Q"
+    },
+    {
+      "rank": 19,
+      "title": "セルフフィクサー",
+      "producer": "りくさん",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "662887465",
+      "bvid": "BV1qa4y1X7Cp"
+    },
+    {
+      "rank": 20,
+      "title": "きゅうくらりん",
+      "producer": "いよわ",
+      "lastRank": 4,
+      "weeks": 48,
+      "aid": "720249917",
+      "bvid": "BV1MQ4y1a7JY"
+    }
+  ],
+  "source": "article",
+  "payload": {
+    "kind": "html",
+    "data": "<p><span class=\"font-size-16\">Billboard JAPAN 自2022年12月7日起与 NICONICO 合作，推出“ニコニコ VOCALOID SONGS TOP20” （NICONICO VOCALOID歌曲TOP20）。本排行综合视频播放，弹幕，收藏，点赞，相关衍生作品（翻唱，翻跳，演奏等）数量、播放数、弹幕数、收藏数、点赞数等数据，与 Billboard JAPAN 自主开发的独立系数相乘，生成排名前20的榜单。</span></p><p><span class=\"font-size-16\">统计对象包括各种使用歌声合成软件/音声合成软件（VOCALOID、UTAU、CeVIO、歌うボイスロイド、NEUTRINO、SynthesizerV等）进行制作的原创作品。 <br></span></p><p><span class=\"color-lblue-04 font-size-16\">本期统计时段为2023/10/30-2023/11/05，本期视频版可点下方链接查看。</span><br></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/6c251bb07b90cc6e9fa6e8c8541e63b012446725.png\" width=\"1320\" height=\"188\" data-size=\"33105\" aid=\"450652818\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p>上期（第48期）可点下方链接查看。 </p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/c590ae0f30f882d6f8e1d92b59ca8b1812446725.png\" width=\"1320\" height=\"188\" data-size=\"34654\" aid=\"407805798\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><figure contenteditable=\"false\" class=\"img-box\"><img src=\"//i0.hdslb.com/bfs/article/card/e2f64addc5b6bb3d801254ccaa5f5e2d12446725.png\" width=\"1320\" height=\"224\" data-size=\"32498\" aid=\"27423875\" class=\"article-card\" type=\"normal\"></figure><p><br></p><p><span class=\"font-size-20\">第20位  きゅうくらりん/いよわ</span>  </p><p><span class=\"font-size-16\">上周：   4        在榜周数：48</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/431a03dbec54f1748cd1acc783b5bf6612446725.png\" width=\"1320\" height=\"188\" data-size=\"31437\" aid=\"720249917\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第19位  セルフフィクサー/りくさん</span><br></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1    </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/863ef6ae002058635c9a97fecd40b45712446725.png\" width=\"1320\" height=\"188\" data-size=\"28454\" aid=\"662887465\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第18位  しね/園長P</span><br></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1    </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/b2784c7c3c54427033b44a18bb96574e12446725.png\" width=\"1320\" height=\"188\" data-size=\"9034\" aid=\"747893885\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-20\"></span><br></p><p><span class=\"font-size-20\">第17位  ゼロトーキング/はるまきごはん </span><br></p><p><span class=\"font-size-16\">上周：   2        在榜周数：2</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/00ecf30a0abaf2f1bced3f78c182cfe812446725.png\" width=\"1320\" height=\"188\" data-size=\"49792\" aid=\"235005565\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第16位  『エラーコード』/ノル</span><br></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1  </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/4a5482db42e01cf2058bacb2fecd7e7812446725.png\" width=\"1320\" height=\"188\" data-size=\"27714\" aid=\"747898452\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第15位  上人**阿闍梨色色即即穹穹籬阿呆踊/＜非公開＞</span><br></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1  </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/f239d10fb5c887405303e94c769919e312446725.png\" width=\"1320\" height=\"188\" data-size=\"13037\" aid=\"535463334\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第14位  🀇🀏🀐🀘🀙🀡🀀🀁🀂🀃🀆🀅🀄🀄ガール/TakoyakiKZY</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1  </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/69d485e6ae4104945d565315c84a47fe12446725.png\" width=\"1320\" height=\"188\" data-size=\"27492\" aid=\"917982566\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第13位  からっぽへ/＜非公開＞</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1  </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/cff02281b6e0590dcb06853bb133187d12446725.png\" width=\"1320\" height=\"188\" data-size=\"27303\" aid=\"832931388\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第12位  Happy Halloween/Junky</span><br></p><p><span class=\"font-size-16\">上周：   —       在榜周数：1 </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/93b1fa8d0d284d08b2aa74f5838f6ce412446725.png\" width=\"1320\" height=\"188\" data-size=\"35680\" aid=\"1609484\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第11位  sheer love/ユシナ</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1  </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/6121de709151bc199efa94b9f4cf96ff12446725.png\" width=\"1320\" height=\"192\" data-size=\"58359\" aid=\"920482291,918094091\" class=\"video-card column\" type=\"column\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第10位  シティポップファンクラブ/TakoyakiKZY</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1  </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/f082d541c63142a293a27200e5b9d68412446725.png\" width=\"1320\" height=\"188\" data-size=\"15318\" aid=\"875453353\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-20\"></span><br></p><p><span class=\"font-size-20\">第9位  幾何学/OLDUCT</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1  </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/094f0ee48a36f2fdb200147c98dd94d512446725.png\" width=\"1320\" height=\"192\" data-size=\"21322\" aid=\"407994591,235600676\" class=\"video-card column\" type=\"column\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第8位  電脳学級会で会いましょう/いよわ</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/816169aedf62f5f0ed665cfabe6812d912446725.png\" width=\"1320\" height=\"188\" data-size=\"31224\" aid=\"280427351\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第7位  Q。/Aira</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/cb310815f4a05437bc6e456581a7468712446725.png\" width=\"1320\" height=\"188\" data-size=\"27274\" aid=\"790397617\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第6位  拝啓/Early</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/921715a41210185caf588c499d633e6512446725.png\" width=\"1320\" height=\"192\" data-size=\"46013\" aid=\"535416927,365616072\" class=\"video-card column\" type=\"column\"></figure><p><br></p><p><span class=\"font-size-20\">第5位  ハイド・アンド・シーフ/ヤマギシコージ</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/d291d44055c23697b2b235820351e98c12446725.png\" width=\"1320\" height=\"188\" data-size=\"27674\" aid=\"747985818\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第4位  ホン・デ・ジュ/芝（バーミーズ）</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/340dd603b4c8aa33a24f6c97aa519b4912446725.png\" width=\"1320\" height=\"188\" data-size=\"10284\" aid=\"620468446\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第3位  ワーニングタイム/youまん</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/21f617e3cc325212f88a77497ec1cf9912446725.png\" width=\"1320\" height=\"188\" data-size=\"8093\" aid=\"832900570\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第2位  アイサイト･ラブ/D.J.ァネイロ</span></p><p><span class=\"font-size-16\">上周：—<span class=\"color-lblue-04\">（NEW!）</span>     在榜周数：1</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/069187aabc20f4f84ff5225f4314ea3512446725.png\" width=\"1320\" height=\"188\" data-size=\"26659\" aid=\"322775452\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第1位  人マニア/原口沙輔 </span></p><p><span class=\"font-size-16\">上周：   1       在榜周数：13  </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/article/card/5c3fdc04d72d719d93e155b5512daf1b12446725.png\" width=\"1320\" height=\"188\" data-size=\"29754\" aid=\"361894110\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p>"
+  },
+  "missing": [],
+  "complete": true,
+  "warnings": [],
+  "fetchedAt": "2026-10-27T16:50:33.800Z"
+}

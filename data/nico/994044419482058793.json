@@ -1,0 +1,203 @@
+{
+  "id": "994044419482058793",
+  "title": "【2024/10/30 第87期】Billboard JAPAN「NICONICO VOCALOID歌曲TOP20」",
+  "date": "2024-10-30",
+  "issue": 87,
+  "period": {
+    "from": "2024/10/21",
+    "to": "2024/10/27"
+  },
+  "cv": 39632707,
+  "type": "DYNAMIC_TYPE_ARTICLE",
+  "entries": [
+    {
+      "rank": 1,
+      "title": "化けの花",
+      "producer": "なきそ",
+      "lastRank": 7,
+      "weeks": 2,
+      "aid": "113339170692670",
+      "bvid": "BV12xyaYHEm2"
+    },
+    {
+      "rank": 2,
+      "title": "メズマライザー",
+      "producer": "サツキ",
+      "lastRank": 2,
+      "weeks": 14,
+      "aid": "1254639592",
+      "bvid": "BV15J4m1A7qy"
+    },
+    {
+      "rank": 3,
+      "title": "Summering",
+      "producer": "じん",
+      "lastRank": 3,
+      "weeks": 4,
+      "aid": "113242919668207",
+      "bvid": "BV1RixQe8ESr"
+    },
+    {
+      "rank": 4,
+      "title": "オーバーライド",
+      "producer": "吉田夜世",
+      "lastRank": 5,
+      "weeks": 30,
+      "aid": "923476216",
+      "bvid": "BV1xT4y1p7Wk"
+    },
+    {
+      "rank": 5,
+      "title": "ネバーランド",
+      "producer": "DECO*27",
+      "lastRank": 4,
+      "weeks": 2,
+      "aid": "113275534776457",
+      "bvid": "BV1Re2wYHEPh"
+    },
+    {
+      "rank": 6,
+      "title": "ラビットホール",
+      "producer": "DECO*27",
+      "lastRank": 1,
+      "weeks": 54,
+      "aid": "656214120",
+      "bvid": "BV1aa4y1u7Ct"
+    },
+    {
+      "rank": 7,
+      "title": "フォニイ",
+      "producer": "ツミキ",
+      "lastRank": 10,
+      "weeks": 79,
+      "aid": "205988503",
+      "bvid": "BV1ih411e7gn"
+    },
+    {
+      "rank": 8,
+      "title": "テレキャスタービーボーイ(long ver.)",
+      "producer": "すりぃ",
+      "lastRank": 14,
+      "weeks": 25,
+      "aid": "499587679",
+      "bvid": "BV12K411K7Gr"
+    },
+    {
+      "rank": 9,
+      "title": "アンノウン・マザーグース",
+      "producer": "wowaka",
+      "lastRank": 20,
+      "weeks": 57,
+      "aid": "13673279",
+      "bvid": "BV1hx411b7CZ"
+    },
+    {
+      "rank": 10,
+      "title": "神っぽいな",
+      "producer": "ピノキオピー",
+      "lastRank": 8,
+      "weeks": 71,
+      "aid": "890496283",
+      "bvid": "BV1iP4y1Y7NE"
+    },
+    {
+      "rank": 11,
+      "title": "熱異常",
+      "producer": "いよわ",
+      "lastRank": 15,
+      "weeks": 5,
+      "aid": "773781060",
+      "bvid": "BV1R14y187kf"
+    },
+    {
+      "rank": 12,
+      "title": "混沌ブギ",
+      "producer": "jon-YAKITORY",
+      "lastRank": 9,
+      "weeks": 28,
+      "aid": "317798516",
+      "bvid": "BV1TP411Y7bt"
+    },
+    {
+      "rank": 13,
+      "title": "贅沢と君とカプチーノ",
+      "producer": "shikisai",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "113334808546890",
+      "bvid": "BV1VUCZYBEb2"
+    },
+    {
+      "rank": 14,
+      "title": "きゅうくらりん",
+      "producer": "いよわ",
+      "lastRank": null,
+      "weeks": 83,
+      "aid": "720249917",
+      "bvid": "BV1MQ4y1a7JY"
+    },
+    {
+      "rank": 15,
+      "title": "ドーナツホール",
+      "producer": "ハチ",
+      "lastRank": 11,
+      "weeks": 6,
+      "aid": "813800",
+      "bvid": "BV1Hs411o7NN"
+    },
+    {
+      "rank": 16,
+      "title": "のだ",
+      "producer": "大漠波新",
+      "lastRank": 17,
+      "weeks": 19,
+      "aid": "705527176",
+      "bvid": "BV1fQ4y1J7Ga"
+    },
+    {
+      "rank": 17,
+      "title": "イガク",
+      "producer": "原口沙輔",
+      "lastRank": 18,
+      "weeks": 23,
+      "aid": "1850845020",
+      "bvid": "BV1pW421N7oe"
+    },
+    {
+      "rank": 18,
+      "title": "少女レイ",
+      "producer": "みきとP",
+      "lastRank": null,
+      "weeks": 15,
+      "aid": "27304533",
+      "bvid": "BV1Rs411N7Aq"
+    },
+    {
+      "rank": 19,
+      "title": "春嵐",
+      "producer": "john",
+      "lastRank": null,
+      "weeks": 41,
+      "aid": "78340727",
+      "bvid": "BV1cJ411q7GF"
+    },
+    {
+      "rank": 20,
+      "title": "狂笑トリックスターズ",
+      "producer": "OSTER project",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "113367507273403",
+      "bvid": "BV15zyUY2EMj"
+    }
+  ],
+  "source": "article",
+  "payload": {
+    "kind": "html",
+    "data": "<p><span class=\"font-size-16\">Billboard JAPAN 自2022年12月7日起与 ニコニコ 合作，推出“ニコニコ VOCALOID SONGS TOP20” （NICONICO VOCALOID歌曲TOP20）。本排行综合ニコニコ播放数，弹幕数，收藏数，点赞数，相关衍生作品（翻唱，翻跳，演奏等）数量、播放数、弹幕数、收藏数、点赞数等数据，结合Billboard JAPAN 自主开发的独立系数算出总点数，生成排名前20的榜单。</span></p><p><span class=\"font-size-16\">统计对象为：在ニコニコ投稿，锁定VOCALOID或相关活动（ボカコレ等）tag，且使用歌声合成软件/音声合成软件（VOCALOID、UTAU、CeVIO、歌うボイスロイド、NEUTRINO、SynthesizerV等）进行制作的原创作品或本家重制作品。  <br></span></p><p><span class=\"color-blue-03 font-size-16\">本期统计时段为2024/10/21-2024/10/27，本期视频版可点下方链接查看。 </span><br></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/5e005e96439820ad48705ebd0afb99b412446725.png\" width=\"1320\" height=\"188\" data-size=\"38699\" aid=\"113395340738821\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-16\">上期（第86期）可点下方链接查看。</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/d426a97e396b17cdf7379c05d48f82a512446725.png\" width=\"1320\" height=\"188\" data-size=\"34264\" aid=\"113355612226532\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/7898666ba88f788149b96f9c7b1d446512446725.png\" width=\"1320\" height=\"224\" data-size=\"25342\" aid=\"39545144\" class=\"article-card\" type=\"normal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><br></p><p><span class=\"font-size-20\">第20位  狂笑トリックスターズ/OSTER project</span></p><p><span class=\"font-size-16\">上周： —<span class=\"color-blue-03 font-size-16\">（NEW!）</span>     在榜周数：1    </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/a7a7ad37a2f2df2ead061ed01f5937f312446725.png\" width=\"1320\" height=\"188\" data-size=\"39631\" aid=\"113367507273403\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-20\"></span><br></p><p><span class=\"font-size-20\">第19位  春嵐/john</span></p><p><span class=\"font-size-16\">上周：   —         在榜周数：41</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/d0d412b18a07bf7b49920e9c91b1b3e712446725.png\" width=\"1320\" height=\"188\" data-size=\"52565\" aid=\"78340727\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第18位  少女レイ/みきとP</span></p><p><span class=\"font-size-16\">上周：   —         在榜周数：15</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/7bc05d69270607d088bbd1c1b34b878a12446725.png\" width=\"1320\" height=\"188\" data-size=\"42564\" aid=\"27304533\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第17位  イガク/原口沙輔</span></p><p><span class=\"font-size-16\">上周：    18        在榜周数：23</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/bf4d34e62c058984946aadad9ee7bae712446725.png\" width=\"1320\" height=\"188\" data-size=\"40471\" aid=\"1850845020\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第16位  のだ/大漠波新</span></p><p><span class=\"font-size-16\">上周：    17        在榜周数：19</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/f42d5d607bf85d236c94a9b07faafa0c12446725.png\" width=\"1320\" height=\"188\" data-size=\"53084\" aid=\"705527176\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第15位  ドーナツホール/ハチ</span></p><p><span class=\"font-size-16\">上周：    11        在榜周数：6</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/3c8b8347d92b4c43488f768b0e82b33912446725.png\" width=\"1320\" height=\"188\" data-size=\"25821\" aid=\"813800\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第14位  きゅうくらりん/いよわ</span></p><p><span class=\"font-size-16\">上周：   —         在榜周数：83</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/4b6a6e85671a96e2c8448937fa85059112446725.png\" width=\"1320\" height=\"188\" data-size=\"31437\" aid=\"720249917\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第13位  贅沢と君とカプチーノ/shikisai</span></p><p><span class=\"font-size-16\">上周：   —         在榜周数：1</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/23ce584cb4cceebb941a0a0115efb05c12446725.png\" width=\"1320\" height=\"188\" data-size=\"54984\" aid=\"113334808546890\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第12位  混沌ブギ/jon-YAKITORY</span></p><p><span class=\"font-size-16\">上周：     9         在榜周数：28</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/599a9b324f8f994dffa96bfe1284003a12446725.png\" width=\"1320\" height=\"188\" data-size=\"29779\" aid=\"317798516\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-20\"><br></span></p><p><span class=\"font-size-20\">第11</span><span class=\"font-size-20\">位</span><span class=\"font-size-20\">  </span><span class=\"font-size-20\">熱異常</span><span class=\"font-size-20\">/</span><span class=\"font-size-20\">いよわ</span><span class=\"font-size-16\"></span></p><p><span class=\"font-size-16\">上周：    15        在榜周数：5</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/d3e59bd30ed073f38aa34fa4c1cb9e2012446725.png\" width=\"1320\" height=\"188\" data-size=\"38589\" aid=\"773781060\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第10位  神っぽいな/ピノキオピー</span></p><p><span class=\"font-size-16\">上周：     8         在榜周数：71</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/db33f030fa3b0a896c1e67e16cfafc3d12446725.png\" width=\"1320\" height=\"188\" data-size=\"41111\" aid=\"890496283\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第9位  アンノウン・マザーグース/wowaka</span></p><p><span class=\"font-size-16\">上周：    20        在榜周数：57</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/170941a6850da34f4ee3088e31b7a75d12446725.png\" width=\"1320\" height=\"188\" data-size=\"17841\" aid=\"13673279\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第8位  テレキャスタービーボーイ(long ver.)/すりぃ</span></p><p><span class=\"font-size-16\">上周：    14        在榜周数：25</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/a8b306c0a8ed353e342f0bf734195e0912446725.png\" width=\"1320\" height=\"188\" data-size=\"45398\" aid=\"499587679\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第7位  フォニイ/ツミキ</span></p><p><span class=\"font-size-16\">上周：    10        在榜周数：79</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/a52598355b291d174a0e9653358fab4b12446725.png\" width=\"1320\" height=\"188\" data-size=\"46598\" aid=\"205988503\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第6位  ラビットホール/DECO*27</span></p><p><span class=\"font-size-16\">上周：     1         在榜周数：54</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/04acf9f2bba6bd143e0b50d4d911de1312446725.png\" width=\"1320\" height=\"188\" data-size=\"43434\" aid=\"656214120\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第5位  ネバーランド/DECO*27</span></p><p><span class=\"font-size-16\">上周：     4         在榜周数：2</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/7ea3abbf17454b8f68bd05212918d2e012446725.png\" width=\"1320\" height=\"188\" data-size=\"42477\" aid=\"113275534776457\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第4位  オーバーライド/吉田夜世</span></p><p><span class=\"font-size-16\">上周：     5         在榜周数：30</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/f991796e669577c18c522f1d7e0ff90612446725.png\" width=\"1320\" height=\"188\" data-size=\"36240\" aid=\"923476216\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第3位  Summering/じん</span></p><p><span class=\"font-size-16\">上周：     3         在榜周数：4</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/f10686956fe720fe9be2376435f5b40512446725.png\" width=\"1320\" height=\"188\" data-size=\"34984\" aid=\"113242919668207\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第2位  メズマライザー/サツキ</span></p><p><span class=\"font-size-16\">上周：     2         在榜周数：14</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/405e448cc8ca3574a985f92963acb16f12446725.png\" width=\"1320\" height=\"188\" data-size=\"40014\" aid=\"1254639592\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第1位  化けの花/なきそ</span></p><p><span class=\"font-size-16\">上周：     7         在榜周数：2</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/ba51cd9cf15faafe8355706714857c2012446725.png\" width=\"1320\" height=\"188\" data-size=\"58356\" aid=\"113339170692670\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p>"
+  },
+  "missing": [],
+  "complete": true,
+  "warnings": [],
+  "fetchedAt": "2026-10-27T16:25:45.319Z"
+}

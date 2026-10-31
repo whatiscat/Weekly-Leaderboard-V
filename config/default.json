@@ -13,7 +13,18 @@
     "raw": "data/raw",
     "data": "data",
     "logs": "logs",
-    "state": "data/state.json"
+    "state": "data/state.json",
+    "nico": "data/nico"
+  },
+  "nico": {
+    "enabled": true,
+    "mid": "12446725",
+    "name": "Elvansphere",
+    "spaceUrl": "https://space.bilibili.com/12446725",
+    "title": "ニコニコ VOCALOID SONGS TOP20",
+    "note": "Billboard JAPAN × ニコニコ 的 VOCALOID 周榜，由 Elvansphere 译制转载；正文自带「上周名次 / 在榜周数」，因此帖子本身就是这份数据的权威来源",
+    "maxPages": 20,
+    "covers": true
   },
   "http": {
     "userAgentDesktop": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Safari/537.36 Edg/155.0.0.0",

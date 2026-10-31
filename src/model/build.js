@@ -15,6 +15,71 @@ function slimStats(s) {
   return { views: s.views ?? 0, likes: s.likes ?? 0, coins: s.coins ?? 0, favorites: s.favorites ?? 0 };
 }
 
+/** 曲目行 → 榜单行：某些期次的 history 行里 producers/vocalists 是空的，用曲目主记录兜底 */
+function rowOf(song, h) {
+  return {
+    ...h,
+    songId: song.id,
+    producers: h.producers?.length ? h.producers : song.producers,
+    vocalists: h.vocalists?.length ? h.vocalists : song.vocalists
+  };
+}
+
+/**
+ * 附榜（传说曲周榜 board 2 / 年榜 board 3）→ 期次数组。
+ *
+ * 这两个榜和主榜是**三条彼此独立的期号序列**：传说曲榜的第 84 期与周榜第 84 期
+ * 只是数字碰巧一样，日期与内容毫无关系。所以它们各自成表，不做任何跨榜对齐。
+ *
+ * 期次元数据（日期、榜单视频 BV）来自 data/boards/issues-<board>.json。
+ * 那份文件缺失时（年榜目前就没有独立的期次表）退化到用曲目行里的 year/week
+ * 拼一个最简表：宁可少一列日期，也不要整块附榜是空的 —— 名次本身就在曲目库里，
+ * 没有理由因为"缺一个发布日期"就让它显示不出来。
+ */
+export function buildBoard(songs, boardId, issueMeta) {
+  const byIssue = new Map();
+  for (const song of songs) {
+    for (const h of song.history || []) {
+      if (h.boardId !== boardId) continue;
+      if (!byIssue.has(h.issueId)) byIssue.set(h.issueId, []);
+      byIssue.get(h.issueId).push(rowOf(song, h));
+    }
+  }
+
+  const metaById = new Map((issueMeta || []).map((m) => [m.issue_id, m]));
+  const ids = [...new Set([...byIssue.keys(), ...metaById.keys()])].sort((a, b) => a - b);
+  const list = [];
+  for (const id of ids) {
+    const rows = (byIssue.get(id) || []).slice().sort((a, b) => a.rank - b.rank);
+    // 只有期次、没有行的期：上游还没补数据，不出空表
+    if (!rows.length) continue;
+    const m = metaById.get(id) || {};
+    list.push({
+      issue: id,
+      year: m.year ?? rows[0].year ?? null,
+      week: m.week ?? rows[0].week ?? null,
+      date: dateFromTs(m.video_pubdate || m.end_date) || null,
+      videoBvid: m.video_bvid || '',
+      // 官方声明的条数（年榜 50/100 都可能），用于"这期是不是满员"的判断；缺就为空
+      declared: Number.isInteger(m.video_count) && m.video_count > 0 ? m.video_count : null,
+      count: rows.length,
+      entries: rows.map(entryOf)
+    });
+  }
+  return list;
+}
+
+/** 一张榜的规模摘要（写进 /api/meta，页脚与 report 用得上） */
+function boardSummary(list) {
+  const full = list || [];
+  return {
+    issues: full.length,
+    first: full[0]?.issue ?? null,
+    last: full.at(-1)?.issue ?? null,
+    entries: full.reduce((n, it) => n + it.entries.length, 0)
+  };
+}
+
 function entryOf(row) {
   return {
     rank: row.rank,
@@ -43,15 +108,15 @@ export function buildDataset(rawRecords, boards, config) {
   const songs = boards?.songs || [];
   const issueMeta = boards?.issues?.weekly || [];
   const legendMeta = boards?.issues?.legend || [];
+  const annualMeta = boards?.issues?.annual || [];
 
-  // 期次 → 行
+  // 期次 → 行（主榜 board 1）
   const rowsByIssue = new Map();
   for (const song of songs) {
     for (const h of song.history || []) {
       if (h.boardId !== 1) continue;
-      const row = { ...h, songId: song.id, producers: h.producers?.length ? h.producers : song.producers, vocalists: h.vocalists?.length ? h.vocalists : song.vocalists };
       if (!rowsByIssue.has(h.issueId)) rowsByIssue.set(h.issueId, []);
-      rowsByIssue.get(h.issueId).push(row);
+      rowsByIssue.get(h.issueId).push(rowOf(song, h));
     }
   }
 
@@ -139,25 +204,9 @@ export function buildDataset(rawRecords, boards, config) {
     }
   }
 
-  // 传说曲附榜：最近若干期
-  const legendRows = new Map();
-  for (const song of songs) {
-    for (const h of song.history || []) {
-      if (h.boardId !== 2) continue;
-      if (!legendRows.has(h.issueId)) legendRows.set(h.issueId, []);
-      legendRows.get(h.issueId).push({ ...h, songId: song.id });
-    }
-  }
-  const legend = legendMeta
-    .slice()
-    .sort((a, b) => a.issue_id - b.issue_id)
-    .map((m) => {
-      const rows = (legendRows.get(m.issue_id) || []).sort((a, b) => a.rank - b.rank);
-      return rows.length
-        ? { issue: m.issue_id, date: dateFromTs(m.video_pubdate || m.end_date), champion: rows[0].titleCn || rows[0].title, championId: rows[0].songId, videoBvid: m.video_bvid, count: rows.length }
-        : null;
-    })
-    .filter(Boolean);
+  // 附榜：传说曲周榜(board 2) / 年榜(board 3)，各自成表、各自独立期号
+  const legend = buildBoard(songs, 2, legendMeta);
+  const annual = buildBoard(songs, 3, annualMeta);
 
   // 缺名：以官方声明的 video_count 为准，**不要写死 20**。
   // 有两期（第 63、73 期）官方就只有 19 首，写死 20 会把它们误报成缺一名，
@@ -202,6 +251,12 @@ export function buildDataset(rawRecords, boards, config) {
       readList: 'https://www.bilibili.com/read/readlist/rl954223'
     },
     charts: { first: issues[0]?.issue ?? null, last: issues.at(-1)?.issue ?? null },
+    // 三条榜各自多大规模：附榜为空时页面上不出现该区块，而不是出现一个空表
+    boards: {
+      weekly: boardSummary(issues),
+      legend: boardSummary(legend),
+      annual: boardSummary(annual)
+    },
     alignment: {
       issues: alignment.issues,
       ranks: alignment.ranks,
@@ -225,5 +280,5 @@ export function buildDataset(rawRecords, boards, config) {
     }
   };
 
-  return { meta, issues, legend, stats: summarize(issues), alignment: alignment.rows };
+  return { meta, issues, legend, annual, stats: summarize(issues), alignment: alignment.rows };
 }

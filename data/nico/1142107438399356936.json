@@ -1,0 +1,4583 @@
+{
+  "id": "1142107438399356936",
+  "title": "【2025/12/03】ニコニコ VOCALOID SONGS TOP20",
+  "date": "2025-12-03",
+  "issue": 144,
+  "period": {
+    "from": "2025/11/24",
+    "to": "2025/11/30"
+  },
+  "cv": 0,
+  "type": "",
+  "entries": [
+    {
+      "rank": 1,
+      "title": "ミジ子の恋",
+      "producer": "いよわ",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "115604564483497",
+      "bvid": "BV1KkUCBWE6b"
+    },
+    {
+      "rank": 2,
+      "title": "いたい",
+      "producer": "＜非公開＞",
+      "lastRank": 19,
+      "weeks": 2,
+      "aid": "115587753707438",
+      "bvid": "BV1FPUjBvEey"
+    },
+    {
+      "rank": 3,
+      "title": "散歩の邪魔",
+      "producer": "いよわ",
+      "lastRank": 12,
+      "weeks": 2,
+      "aid": "115588290578649",
+      "bvid": "BV1pLULBMEfS"
+    },
+    {
+      "rank": 4,
+      "title": "ぜったいだった！！！！",
+      "producer": "内緒の秘密",
+      "lastRank": 1,
+      "weeks": 2,
+      "aid": "115587351052644",
+      "bvid": "BV1RjUjBxEFi"
+    },
+    {
+      "rank": 5,
+      "title": "●◎",
+      "producer": "２●◎３",
+      "lastRank": 9,
+      "weeks": 2,
+      "aid": "115587401451318",
+      "bvid": "BV1NiUjBCEFf"
+    },
+    {
+      "rank": 6,
+      "title": "レーテー",
+      "producer": "Aira",
+      "lastRank": 20,
+      "weeks": 2,
+      "aid": "115587619492064",
+      "bvid": "BV1TQULBCEic"
+    },
+    {
+      "rank": 7,
+      "title": "RUMBLE",
+      "producer": "ゆのコン",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "115588491904991",
+      "bvid": "BV1ZVUEBKEG1"
+    },
+    {
+      "rank": 8,
+      "title": "ユニークエンド",
+      "producer": "雨良 Amala",
+      "lastRank": 2,
+      "weeks": 2,
+      "aid": "115604346442687",
+      "bvid": "BV1X1U6B9EUE"
+    },
+    {
+      "rank": 9,
+      "title": "メズマライザー",
+      "producer": "サツキ",
+      "lastRank": 7,
+      "weeks": 69,
+      "aid": "1254639592",
+      "bvid": "BV15J4m1A7qy"
+    },
+    {
+      "rank": 10,
+      "title": "さいはてに花",
+      "producer": "ぬゆり",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "115588357687424",
+      "bvid": "BV1AcUEBLE4i"
+    },
+    {
+      "rank": 11,
+      "title": "あれない",
+      "producer": "青栗鼠",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "115588072608699",
+      "bvid": "BV1MgULBkE34"
+    },
+    {
+      "rank": 12,
+      "title": "いますぐ輪廻",
+      "producer": "なきそ",
+      "lastRank": null,
+      "weeks": 17,
+      "aid": "114952954187731",
+      "bvid": "BV1phhHz8EPF"
+    },
+    {
+      "rank": 13,
+      "title": "くるみ割り女王",
+      "producer": "ナナホシ管弦楽団",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "115588307420505",
+      "bvid": "BV1sfU7B2Ewd"
+    },
+    {
+      "rank": 14,
+      "title": "モニタリング",
+      "producer": "DECO*27",
+      "lastRank": null,
+      "weeks": 51,
+      "aid": "113474931986942",
+      "bvid": "BV1qDUPYKEzf"
+    },
+    {
+      "rank": 15,
+      "title": "アイマイ・モカ",
+      "producer": "OSTER project",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "115615671065559",
+      "bvid": "BV1xxUYBsE7h"
+    },
+    {
+      "rank": 16,
+      "title": "ループザルーム",
+      "producer": "ルシノ",
+      "lastRank": 6,
+      "weeks": 2,
+      "aid": "115587200063090",
+      "bvid": "BV13BUVByEZN"
+    },
+    {
+      "rank": 17,
+      "title": "PPPP",
+      "producer": "TAK",
+      "lastRank": null,
+      "weeks": 5,
+      "aid": "115218906680047",
+      "bvid": "BV1yKpxz9EQ9"
+    },
+    {
+      "rank": 18,
+      "title": "ころしちゃった!",
+      "producer": "夏山よつぎ",
+      "lastRank": null,
+      "weeks": 4,
+      "aid": "114613937050248",
+      "bvid": "BV1Uy7Sz7EfR"
+    },
+    {
+      "rank": 19,
+      "title": "セルハーム",
+      "producer": "youまん",
+      "lastRank": 10,
+      "weeks": 2,
+      "aid": "115587216902607",
+      "bvid": "BV1hqUVBLEhs"
+    },
+    {
+      "rank": 20,
+      "title": "グミたべよ",
+      "producer": "おいしくできたよ",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "115599447690168",
+      "bvid": "BV1vZUTBvEFy"
+    }
+  ],
+  "source": "opus",
+  "payload": {
+    "kind": "paragraphs",
+    "data": [
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "Billboard JAPAN 自2022年12月7日起与 ニコニコ 合作，推出“ニコニコ VOCALOID SONGS TOP20” （NICONICO VOCALOID歌曲TOP20）。本排行综合ニコニコ播放数，弹幕数，收藏数，点赞数，相关衍生作品（翻唱，翻跳，演奏等）数量、播放数、弹幕数、收藏数、点赞数等数据，结合Billboard JAPAN 自主开发的独立系数算出总点数，生成排名前20的榜单。",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "统计对象为：在ニコニコGenre:音楽・サウンド投稿，带VOCALOID或者相关活动tag，使用歌声合成引擎/音声合成引擎/混合型合成引擎进行制作的原创或本家重制作品。",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "本期统计时段为2025/11/24-2025/11/30，本期视频版可点下方链接查看",
+                "font_size": 17,
+                "color": "#0b84ed",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "。",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115654292146111",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115654292146111",
+              "head_text": "",
+              "title": "Billboard术力口周榜 2025/12/03 2025年第49周（第144期）",
+              "desc_second": "13.5万观看 1879弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1ejSeBVEBd",
+              "cover": "http://i2.hdslb.com/bfs/archive/8963ef220fc6f9509c88901223efbccd32e3d367.jpg",
+              "duration": "10:53",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "1879",
+                "play": "13.5万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上期（第143期）可点下方链接查看。 ",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115614362372418",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115614362372418",
+              "head_text": "",
+              "title": "Billboard术力口周榜 2025/11/26 2025年第48周（第143期）",
+              "desc_second": "16.6万观看 2133弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1dBUhBqE1x",
+              "cover": "http://i1.hdslb.com/bfs/archive/cbe6728f78c9d46c143ddf921f6bda59ff4f2692.jpg",
+              "duration": "10:56",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "2133",
+                "play": "16.6万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_OPUS",
+            "oid": "43877972",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": {
+              "title": "【2025/11/26】ニコニコ VOCALOID SONGS TOP20",
+              "author": {
+                "mid": "12446725",
+                "name": "Elvansphere"
+              },
+              "stat": {
+                "view": "33033",
+                "reply": "22"
+              },
+              "jump_url": "//www.bilibili.com/read/cv43877972/",
+              "cover": "https://i0.hdslb.com/bfs/new_dyn/47b0f7195ababbca30a0faf67a18f9cc12446725.jpg",
+              "cover_dark": "",
+              "is_only_fans": false,
+              "button": null,
+              "tag_text": "专栏",
+              "cover_count": 1
+            },
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第20位 グミたべよ/おいしくできたよ",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —         在榜周数：1",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115599447690168",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115599447690168",
+              "head_text": "",
+              "title": "グミたべよ / 重音テト【おいしくできだよ】",
+              "desc_second": "3144观看 2弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1vZUTBvEFy",
+              "cover": "http://i0.hdslb.com/bfs/archive/bdb41ebd6cff5fc85d5e3544d8dfb42cae6b92ac.jpg",
+              "duration": "03:04",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "2",
+                "play": "3144",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第19位 セルハーム/youまん",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 10         在榜周数：2",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115587216902607",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115587216902607",
+              "head_text": "",
+              "title": "【GUMI】セルハーム【youまん】",
+              "desc_second": "3.8万观看 48弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1hqUVBLEhs",
+              "cover": "http://i2.hdslb.com/bfs/archive/a958139428db97460798f2179a04de9b8f2048e6.jpg",
+              "duration": "01:35",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "48",
+                "play": "3.8万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第18位 ころしちゃった!/夏山よつぎ",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —         在榜周数：4",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "114613937050248",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "114613937050248",
+              "head_text": "",
+              "title": "Messed up! / MIKU",
+              "desc_second": "150.8万观看 3297弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1Uy7Sz7EfR",
+              "cover": "http://i1.hdslb.com/bfs/archive/5e8dbcec265dabecce7ade1a9049f5ec84ca0af2.jpg",
+              "duration": "03:16",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "3297",
+                "play": "150.8万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第17位 PPPP/TAK",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —         在榜周数：5",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115218906680047",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115218906680047",
+              "head_text": "",
+              "title": "【初音ミク、重音テト】PPPP【TAK】",
+              "desc_second": "7万观看 81弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1yKpxz9EQ9",
+              "cover": "http://i1.hdslb.com/bfs/archive/b7c69784645070c259c49a29db221dd17dd8d89f.jpg",
+              "duration": "02:37",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "81",
+                "play": "7万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第16位 ループザルーム/ルシノ",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 6           在榜周数：2",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115587200063090",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115587200063090",
+              "head_text": "",
+              "title": "【初音ミク】循环之室【ルシノ】",
+              "desc_second": "10.5万观看 45弹幕",
+              "jump_url": "//www.bilibili.com/video/BV13BUVByEZN",
+              "cover": "http://i0.hdslb.com/bfs/archive/590682cf1c04c1d52d0d20fa27de34c677424920.jpg",
+              "duration": "02:15",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "45",
+                "play": "10.5万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第15位 アイマイ・モカ/OSTER project",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —         在榜周数：1",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115615671065559",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115615671065559",
+              "head_text": "",
+              "title": "【宮舞モカ】暧昧摩卡【OSTER project】",
+              "desc_second": "1.7万观看 6弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1xxUYBsE7h",
+              "cover": "http://i0.hdslb.com/bfs/archive/c6fdfc41a116ab878ae068aabd2ced527c178445.jpg",
+              "duration": "03:04",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "6",
+                "play": "1.7万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115588475194204",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115588475194204",
+              "head_text": "",
+              "title": "【宮舞モカ】アイマイ・モカ（暧昧・茉歌）【OSTER project】",
+              "desc_second": "3181观看 1弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1j5UEBiEkB",
+              "cover": "http://i0.hdslb.com/bfs/archive/f6dc7fa22926d7668c3f634af69db4f436fe647b.jpg",
+              "duration": "03:01",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "1",
+                "play": "3181",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第14位 モニタリング/DECO*27",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —         在榜周数：51",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "113474931986942",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "113474931986942",
+              "head_text": "",
+              "title": "DECO*27 - モニタリング feat. 初音ミク",
+              "desc_second": "2944.4万观看 20.6万弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1qDUPYKEzf",
+              "cover": "http://i2.hdslb.com/bfs/archive/cb57a835ced66703577b203f8dff9075dc2bc95b.jpg",
+              "duration": "03:02",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "20.6万",
+                "play": "2944.4万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第13位 くるみ割り女王/ナナホシ管弦楽団",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "（NEW!） ",
+                "font_size": 17,
+                "color": "#0b84ed",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "在榜周数：1 ",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115588307420505",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115588307420505",
+              "head_text": "",
+              "title": "【鏡音リン】胡桃夹子女王【ナナホシ管弦楽団】",
+              "desc_second": "8.7万观看 69弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1sfU7B2Ewd",
+              "cover": "http://i0.hdslb.com/bfs/archive/4e39c095ff1f93917b79c650b5fbd011e447c6a1.jpg",
+              "duration": "02:21",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "69",
+                "play": "8.7万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第12位 いますぐ輪廻/なきそ",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —         在榜周数：17",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "114952954187731",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "114952954187731",
+              "head_text": "",
+              "title": "【初音ミク】いますぐ輪廻（即刻轮回）【なきそ】",
+              "desc_second": "1129.6万观看 5.3万弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1phhHz8EPF",
+              "cover": "http://i0.hdslb.com/bfs/archive/7ef814b3a46b4555d1e3aec905bb622e4d4521ac.jpg",
+              "duration": "02:03",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "5.3万",
+                "play": "1129.6万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第11位 あれない/青栗鼠",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —         在榜周数：1",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115588072608699",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115588072608699",
+              "head_text": "",
+              "title": "【歌愛ユキ】あれない【青栗鼠】",
+              "desc_second": "2.6万观看 47弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1MgULBkE34",
+              "cover": "http://i2.hdslb.com/bfs/archive/44293640970aaec107ee5f34fb51bc6f1402c9cc.jpg",
+              "duration": "02:21",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "47",
+                "play": "2.6万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第10位 さいはてに花/ぬゆり",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —         在榜周数：1",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115588357687424",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115588357687424",
+              "head_text": "",
+              "title": "【初音ミク】さいはてに花（天涯之花）【ぬゆり】",
+              "desc_second": "2.4万观看 10弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1AcUEBLE4i",
+              "cover": "http://i0.hdslb.com/bfs/archive/f6dc7fa22926d7668c3f634af69db4f436fe647b.jpg",
+              "duration": "03:32",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "10",
+                "play": "2.4万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第9位 メズマライザー/サツキ",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 7           在榜周数：69",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "1254639592",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "1254639592",
+              "head_text": "",
+              "title": "【官方投稿】メズマライザー / 初音ミク・重音テトSV",
+              "desc_second": "2338.6万观看 7.5万弹幕",
+              "jump_url": "//www.bilibili.com/video/BV15J4m1A7qy",
+              "cover": "http://i0.hdslb.com/bfs/archive/c4496e1c95132a8dd859f9ad52d92a7e58efec75.jpg",
+              "duration": "02:38",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "7.5万",
+                "play": "2338.6万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第8位 ユニークエンド/雨良 Amala",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 2            在榜周数：2",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115604346442687",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115604346442687",
+              "head_text": "",
+              "title": "【初音ミク】UniqueEnd【雨良 Amala】",
+              "desc_second": "2319观看 5弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1X1U6B9EUE",
+              "cover": "http://i1.hdslb.com/bfs/archive/cb2240deb0023b8756d1e6303eac1fa343d3c353.jpg",
+              "duration": "03:17",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "5",
+                "play": "2319",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115587250527225",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115587250527225",
+              "head_text": "",
+              "title": "【初音ミク】独特的结局【雨良 Amala】",
+              "desc_second": "7447观看 1弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1eJUjBsE5v",
+              "cover": "http://i0.hdslb.com/bfs/archive/590682cf1c04c1d52d0d20fa27de34c677424920.jpg",
+              "duration": "03:18",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "1",
+                "play": "7447",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第7位 RUMBLE/ゆのコン",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —         在榜周数：1",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115588491904991",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115588491904991",
+              "head_text": "",
+              "title": "【VY1, v flower】RUMBLE【雄之助・あばらや・晴いちばん・ざんぎ・Fujiyama・椎乃味醂】",
+              "desc_second": "3.7万观看 75弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1ZVUEBKEG1",
+              "cover": "http://i2.hdslb.com/bfs/archive/a958139428db97460798f2179a04de9b8f2048e6.jpg",
+              "duration": "03:26",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "75",
+                "play": "3.7万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第6位 レーテー/Aira",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 20         在榜周数：2",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115587619492064",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115587619492064",
+              "head_text": "",
+              "title": "【IA, 雨衣】Lethe【Aira】",
+              "desc_second": "4万观看 121弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1TQULBCEic",
+              "cover": "http://i2.hdslb.com/bfs/archive/44293640970aaec107ee5f34fb51bc6f1402c9cc.jpg",
+              "duration": "02:29",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "121",
+                "play": "4万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第5位 ●◎/２●◎３",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 9            在榜周数：2",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115587401451318",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115587401451318",
+              "head_text": "",
+              "title": "【初音ミク, 重音テト】●◎【Mylta、VOLTA、原口沙輔、椎乃味醂】",
+              "desc_second": "10.1万观看 79弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1NiUjBCEFf",
+              "cover": "http://i2.hdslb.com/bfs/archive/a958139428db97460798f2179a04de9b8f2048e6.jpg",
+              "duration": "03:01",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "79",
+                "play": "10.1万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第4位 ぜったいだった！！！！/内緒の秘密",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 1            在榜周数：2",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115587351052644",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115587351052644",
+              "head_text": "",
+              "title": "【IA, 初音ミク】ぜったいだった！！！！【内緒の秘密】",
+              "desc_second": "9298观看 0弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1RjUjBxEFi",
+              "cover": "http://i2.hdslb.com/bfs/archive/a958139428db97460798f2179a04de9b8f2048e6.jpg",
+              "duration": "03:51",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "0",
+                "play": "9298",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第3位 散歩の邪魔/いよわ",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 12           在榜周数：2",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115588290578649",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115588290578649",
+              "head_text": "",
+              "title": "【春日部つむぎ】散歩の邪魔【いよわ】",
+              "desc_second": "4.3万观看 7弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1pLULBMEfS",
+              "cover": "http://i2.hdslb.com/bfs/archive/a958139428db97460798f2179a04de9b8f2048e6.jpg",
+              "duration": "03:01",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "7",
+                "play": "4.3万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第2位 いたい/＜非公開＞",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 19           在榜周数：2",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115587753707438",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115587753707438",
+              "head_text": "",
+              "title": "【初音ミク】いたい【作者未公开】",
+              "desc_second": "6万观看 48弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1FPUjBvEey",
+              "cover": "http://i2.hdslb.com/bfs/archive/a958139428db97460798f2179a04de9b8f2048e6.jpg",
+              "duration": "04:27",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "48",
+                "play": "6万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第1位 ミジ子の恋/いよわ",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": true,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —         在榜周数：1",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_UGC",
+            "oid": "115604564483497",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": {
+              "id_str": "115604564483497",
+              "head_text": "",
+              "title": "【役ついな】水蚤之恋【いよわ】【中文CC字幕】",
+              "desc_second": "5.1万观看 95弹幕",
+              "jump_url": "//www.bilibili.com/video/BV1KkUCBWE6b",
+              "cover": "http://i2.hdslb.com/bfs/archive/44293640970aaec107ee5f34fb51bc6f1402c9cc.jpg",
+              "duration": "04:08",
+              "multi_line": true,
+              "stat": {
+                "danmaku": "95",
+                "play": "5.1万",
+                "vt": ""
+              }
+            },
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": null,
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      }
+    ]
+  },
+  "missing": [],
+  "complete": true,
+  "warnings": [],
+  "fetchedAt": "2026-10-27T16:23:50.890Z"
+}

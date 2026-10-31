@@ -1,0 +1,203 @@
+{
+  "id": "991446827538579479",
+  "title": "【2024/10/23 第86期】Billboard JAPAN「NICONICO VOCALOID歌曲TOP20」",
+  "date": "2024-10-23",
+  "issue": 86,
+  "period": {
+    "from": "2024/10/14",
+    "to": "2024/10/20"
+  },
+  "cv": 39545144,
+  "type": "DYNAMIC_TYPE_ARTICLE",
+  "entries": [
+    {
+      "rank": 1,
+      "title": "ラビットホール",
+      "producer": "DECO*27",
+      "lastRank": 11,
+      "weeks": 53,
+      "aid": "656214120",
+      "bvid": "BV1aa4y1u7Ct"
+    },
+    {
+      "rank": 2,
+      "title": "メズマライザー",
+      "producer": "サツキ",
+      "lastRank": 3,
+      "weeks": 13,
+      "aid": "1254639592",
+      "bvid": "BV15J4m1A7qy"
+    },
+    {
+      "rank": 3,
+      "title": "Summering",
+      "producer": "じん",
+      "lastRank": 2,
+      "weeks": 3,
+      "aid": "113242919668207",
+      "bvid": "BV1RixQe8ESr"
+    },
+    {
+      "rank": 4,
+      "title": "ネバーランド",
+      "producer": "DECO*27",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "113275534776457",
+      "bvid": "BV1Re2wYHEPh"
+    },
+    {
+      "rank": 5,
+      "title": "オーバーライド",
+      "producer": "吉田夜世",
+      "lastRank": 5,
+      "weeks": 29,
+      "aid": "923476216",
+      "bvid": "BV1xT4y1p7Wk"
+    },
+    {
+      "rank": 6,
+      "title": "ドーナツホール 2024",
+      "producer": "ハチ",
+      "lastRank": 1,
+      "weeks": 3,
+      "aid": "113223793640666",
+      "bvid": "BV1zcxUeoEv2"
+    },
+    {
+      "rank": 7,
+      "title": "化けの花",
+      "producer": "なきそ",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "113339170692670",
+      "bvid": "BV12xyaYHEm2"
+    },
+    {
+      "rank": 8,
+      "title": "神っぽいな",
+      "producer": "ピノキオピー",
+      "lastRank": null,
+      "weeks": 70,
+      "aid": "890496283",
+      "bvid": "BV1iP4y1Y7NE"
+    },
+    {
+      "rank": 9,
+      "title": "混沌ブギ",
+      "producer": "jon-YAKITORY",
+      "lastRank": 12,
+      "weeks": 27,
+      "aid": "317798516",
+      "bvid": "BV1TP411Y7bt"
+    },
+    {
+      "rank": 10,
+      "title": "フォニイ",
+      "producer": "ツミキ",
+      "lastRank": 10,
+      "weeks": 78,
+      "aid": "205988503",
+      "bvid": "BV1ih411e7gn"
+    },
+    {
+      "rank": 11,
+      "title": "ドーナツホール",
+      "producer": "ハチ",
+      "lastRank": 7,
+      "weeks": 5,
+      "aid": "813800",
+      "bvid": "BV1Hs411o7NN"
+    },
+    {
+      "rank": 12,
+      "title": "外のヒト",
+      "producer": "原口沙輔",
+      "lastRank": 4,
+      "weeks": 2,
+      "aid": "113283688367642",
+      "bvid": "BV19Y2VYDEYk"
+    },
+    {
+      "rank": 13,
+      "title": "げんてん",
+      "producer": "大漠波新",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "113321084718629",
+      "bvid": "BV1xXyAYgEDF"
+    },
+    {
+      "rank": 14,
+      "title": "テレキャスタービーボーイ(long ver.)",
+      "producer": "すりぃ",
+      "lastRank": 15,
+      "weeks": 24,
+      "aid": "499587679",
+      "bvid": "BV12K411K7Gr"
+    },
+    {
+      "rank": 15,
+      "title": "熱異常",
+      "producer": "いよわ",
+      "lastRank": 18,
+      "weeks": 4,
+      "aid": "773781060",
+      "bvid": "BV1R14y187kf"
+    },
+    {
+      "rank": 16,
+      "title": "エンパープル",
+      "producer": "はるまきごはん",
+      "lastRank": 6,
+      "weeks": 2,
+      "aid": "1955813867",
+      "bvid": "BV1vy411z7yg"
+    },
+    {
+      "rank": 17,
+      "title": "のだ",
+      "producer": "大漠波新",
+      "lastRank": 13,
+      "weeks": 18,
+      "aid": "705527176",
+      "bvid": "BV1fQ4y1J7Ga"
+    },
+    {
+      "rank": 18,
+      "title": "イガク",
+      "producer": "原口沙輔",
+      "lastRank": 16,
+      "weeks": 22,
+      "aid": "1850845020",
+      "bvid": "BV1pW421N7oe"
+    },
+    {
+      "rank": 19,
+      "title": "㋰責任集合体",
+      "producer": "マサラダ",
+      "lastRank": null,
+      "weeks": 10,
+      "aid": "1904434315",
+      "bvid": "BV1gS411c78m"
+    },
+    {
+      "rank": 20,
+      "title": "アンノウン・マザーグース",
+      "producer": "wowaka",
+      "lastRank": 19,
+      "weeks": 56,
+      "aid": "13673279",
+      "bvid": "BV1hx411b7CZ"
+    }
+  ],
+  "source": "article",
+  "payload": {
+    "kind": "html",
+    "data": "<p><span class=\"font-size-16\">Billboard JAPAN 自2022年12月7日起与 ニコニコ 合作，推出“ニコニコ VOCALOID SONGS TOP20” （NICONICO VOCALOID歌曲TOP20）。本排行综合ニコニコ播放数，弹幕数，收藏数，点赞数，相关衍生作品（翻唱，翻跳，演奏等）数量、播放数、弹幕数、收藏数、点赞数等数据，结合Billboard JAPAN 自主开发的独立系数算出总点数，生成排名前20的榜单。</span></p><p><span class=\"font-size-16\">统计对象为：在ニコニコ投稿，锁定VOCALOID或相关活动（ボカコレ等）tag，且使用歌声合成软件/音声合成软件（VOCALOID、UTAU、CeVIO、歌うボイスロイド、NEUTRINO、SynthesizerV等）进行制作的原创作品或本家重制作品。  </span></p><p><span class=\"color-blue-03 font-size-16\">本期统计时段为2024/10/14-2024/10/20，本期视频版可点下方链接查看。 </span> </p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/726255497142f74ebb55f43a366f89ef12446725.png\" width=\"1320\" height=\"188\" data-size=\"34872\" aid=\"113355612226532\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"><br></span></p><p><span class=\"font-size-16\">上期（第85期）可点下方链接查看。 </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/6d97cb0e34dd6d22c2fbaa8437fb738b12446725.png\" width=\"1320\" height=\"188\" data-size=\"32804\" aid=\"113315867001646\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/460f2050c63b97064030a4a2bfa3f62612446725.png\" width=\"1320\" height=\"224\" data-size=\"25092\" aid=\"39453605\" class=\"article-card\" type=\"normal\"></figure><p><br></p><p><br></p><p><span class=\"font-size-20\">第20位  アンノウン・マザーグース/wowaka</span></p><p><span class=\"font-size-16\">上周：    19        在榜周数：56</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/07e18b6a5ee2012c9d279b606dd0a42f12446725.png\" width=\"1320\" height=\"188\" data-size=\"17841\" aid=\"13673279\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第19位  ㋰責任集合体/マサラダ</span></p><p><span class=\"font-size-16\">上周：   —         在榜周数：10</span> </p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/7848ddf0bb77c0f8b3b0086d0382947512446725.png\" width=\"1320\" height=\"188\" data-size=\"49037\" aid=\"1904434315\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第18位  イガク/原口沙輔</span></p><p><span class=\"font-size-16\">上周：    16        在榜周数：22</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/16a5b7a8e5152b7cfe3f0f1d752d2a0412446725.png\" width=\"1320\" height=\"188\" data-size=\"42252\" aid=\"1850845020\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第17位  のだ/大漠波新</span></p><p><span class=\"font-size-16\">上周：    13        在榜周数：18</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/92ebdac92c5a59d4b8f26b3071cce1ab12446725.png\" width=\"1320\" height=\"188\" data-size=\"51647\" aid=\"705527176\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第16位  エンパープル/はるまきごはん</span></p><p><span class=\"font-size-16\">上周：     6         在榜周数：2 </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/ba28c215fb11439d52fb32878158bd1b12446725.png\" width=\"1320\" height=\"188\" data-size=\"40320\" aid=\"1955813867\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第15位  熱異常/いよわ</span></p><p><span class=\"font-size-16\">上周：    18        在榜周数：4</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/48b209689d5a2e0bb3261d8680cbcc4e12446725.png\" width=\"1320\" height=\"188\" data-size=\"38589\" aid=\"773781060\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第14位  テレキャスタービーボーイ(long ver.)/すりぃ</span></p><p><span class=\"font-size-16\">上周：    15        在榜周数：24</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/e7463be0f434dc5ac920b5bc8e970f4312446725.png\" width=\"1320\" height=\"188\" data-size=\"45398\" aid=\"499587679\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第13位  げんてん/大漠波新</span></p><p><span class=\"font-size-16\">上周： —<span class=\"color-blue-03 font-size-16\">（NEW!）</span>     在榜周数：1   </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/2238f8497dcc6500ca2f182c3e0fbd1d12446725.png\" width=\"1320\" height=\"188\" data-size=\"46045\" aid=\"113321084718629\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第12位  外のヒト/原口沙輔</span></p><p><span class=\"font-size-16\">上周：     4         在榜周数：2 </span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/f4f2fdcbdc7baac9c686b7854d937cdb12446725.png\" width=\"1320\" height=\"188\" data-size=\"39190\" aid=\"113283688367642\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第11位  ドーナツホール/ハチ</span></p><p><span class=\"font-size-16\">上周：     7         在榜周数：5</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/8b334e8dca9001f74fa5b3b158d764ef12446725.png\" width=\"1320\" height=\"188\" data-size=\"25821\" aid=\"813800\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"> </span><br></p><p><span class=\"font-size-20\">第10位  フォニイ/ツミキ</span></p><p><span class=\"font-size-16\">上周：    10        在榜周数：78</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/cad6f268c1e87ba8ce809623762f3cfb12446725.png\" width=\"1320\" height=\"188\" data-size=\"46320\" aid=\"205988503\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第9位  混沌ブギ/jon-YAKITORY</span></p><p><span class=\"font-size-16\">上周：    12        在榜周数：27</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/60919aab59e02c2e98ecd1ab6a07bd5012446725.png\" width=\"1320\" height=\"188\" data-size=\"29779\" aid=\"317798516\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第8位  神っぽいな/ピノキオピー</span></p><p><span class=\"font-size-16\">上周：   —         在榜周数：70</span> </p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/6ac120c91ac4ec7ca700ddbee20aaa4612446725.png\" width=\"1320\" height=\"188\" data-size=\"41111\" aid=\"890496283\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第7位  化けの花/なきそ</span></p><p><span class=\"font-size-16\">上周： —<span class=\"color-blue-03 font-size-16\">（NEW!）</span>     在榜周数：1</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/7bce0a2788b061064110be27a96db2e112446725.png\" width=\"1320\" height=\"188\" data-size=\"57549\" aid=\"113339170692670\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第6位  ドーナツホール 2024/ハチ</span></p><p><span class=\"font-size-16\">上周：     1         在榜周数：3</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/dcb615916f0d2ac933b660099915480612446725.png\" width=\"1320\" height=\"188\" data-size=\"50499\" aid=\"113223793640666\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第5位  オーバーライド/吉田夜世</span></p><p><span class=\"font-size-16\">上周：     5         在榜周数：29</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/5af7869edc155a637f9dfdd1f7d632a812446725.png\" width=\"1320\" height=\"188\" data-size=\"36095\" aid=\"923476216\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"> </span><br></p><p><span class=\"font-size-20\">第4位  ネバーランド/DECO*27</span></p><p><span class=\"font-size-16\">上周： —<span class=\"color-blue-03 font-size-16\">（NEW!）</span>     在榜周数：1</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/aab494f60ae6aa4d6d63ea8f687edadf12446725.png\" width=\"1320\" height=\"188\" data-size=\"42477\" aid=\"113275534776457\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第3位  Summering/じん</span></p><p><span class=\"font-size-16\">上周：     2         在榜周数：3</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/a63b19fa84d7b054bd985edaa2b4f56e12446725.png\" width=\"1320\" height=\"188\" data-size=\"35036\" aid=\"113242919668207\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p><p><span class=\"font-size-20\">第2位  メズマライザー/サツキ</span></p><p><span class=\"font-size-16\">上周：     3         在榜周数：13</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/8dbc41de910db0d9c04b9d54403ee2ee12446725.png\" width=\"1320\" height=\"188\" data-size=\"39672\" aid=\"1254639592\" class=\"video-card nomal\" type=\"nomal\"></figure><p><span class=\"font-size-16\"></span><br></p><p><span class=\"font-size-20\">第1位  ラビットホール/DECO*27</span></p><p><span class=\"font-size-16\">上周：    11        在榜周数：53</span></p><figure class=\"img-box\" contenteditable=\"false\"><img src=\"//i0.hdslb.com/bfs/new_dyn/card/d05938e69530baf82ec4fdee92a3de0b12446725.png\" width=\"1320\" height=\"188\" data-size=\"43434\" aid=\"656214120\" class=\"video-card nomal\" type=\"nomal\"></figure><p><br></p>"
+  },
+  "missing": [],
+  "complete": true,
+  "warnings": [],
+  "fetchedAt": "2026-10-27T16:26:18.219Z"
+}

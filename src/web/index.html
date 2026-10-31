@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="referrer" content="no-referrer">
-<meta name="description" content="术力口周榜数据看板：逐期名次、涨跌、冠军段、曲目走势与传说曲附榜。">
+<meta name="description" content="术力口周榜数据看板：逐期名次、涨跌、冠军段、曲目走势，附传说曲周榜与年榜。">
 <meta name="theme-color" content="#0e0f13" id="theme-color-meta">
 <title>术力口周榜 · 数据看板</title>
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -42,22 +42,40 @@
 <header class="topbar">
   <div class="bar">
     <!-- 徽标：一枚 6×6 像素字形（上升的四根柱子 + 起点那一格强调色）。
-         与 favicon.svg 同源，像素边缘靠 shape-rendering: crispEdges 保住。 -->
-    <a class="brand" href="#top" aria-label="回到页面顶部">
+         与 favicon.svg 同源，像素边缘靠 shape-rendering: crispEdges 保住。
+         徽标右边是**榜单切换**：B 榜（Biliboard 术力口周榜）↔ N 榜（ニコニコ TOP20）。
+         两条榜来源、期号、曲目身份都不一样，所以这是"换一整套视图"，不是筛选 —— 
+         切换会同时换掉标题、页脚、侧栏入口，而不是只过滤表格。 -->
+    <div class="brand">
       <svg class="brand-mark" viewBox="0 0 6 6" shape-rendering="crispEdges" aria-hidden="true" focusable="false">
         <rect x="2" y="3" width="1" height="2"/>
         <rect x="3" y="2" width="1" height="3"/>
         <rect x="4" y="1" width="1" height="4"/>
         <rect class="on" x="1" y="4" width="1" height="1"/>
       </svg>
-      <span class="name">术力口周榜<small>数据看板</small></span>
-    </a>
+      <div class="charts" id="chartSwitch" role="tablist" aria-label="切换榜单">
+        <button type="button" class="cs on" role="tab" aria-selected="true" aria-controls="boardSec" data-chart="b">
+          <b>B 榜</b><span>术力口周榜</span>
+        </button>
+        <button type="button" class="cs" role="tab" aria-selected="false" aria-controls="nicoSec" data-chart="n">
+          <b>N 榜</b><span>ニコニコ TOP20</span>
+        </button>
+      </div>
+    </div>
 
     <div class="actions">
       <a class="btn" id="linkSpace" target="_blank" rel="noopener">B 站主页</a>
       <a class="btn" id="linkRead" target="_blank" rel="noopener">文字版文集</a>
-      <a class="btn" href="https://biliboard.uk" target="_blank" rel="noopener">收录公示</a>
-      <a class="btn" href="/api/csv" download>下载 CSV</a>
+      <a class="btn" id="linkBoard" href="https://biliboard.uk" target="_blank" rel="noopener">收录公示</a>
+      <a class="btn" id="linkCsv" href="/api/csv" download>下载 CSV</a>
+
+      <button class="btn" id="consoleBtn" type="button" aria-haspopup="dialog" aria-controls="console" aria-expanded="false" title="设置：同步 / 抓帖 / 报告 / 体检">
+        <svg class="ico-cog" viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" focusable="false">
+          <circle cx="8" cy="8" r="2.4" fill="none" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M8 1.6v1.6M8 12.8v1.6M14.4 8h-1.6M3.2 8H1.6M12.5 3.5l-1.1 1.1M4.6 11.4l-1.1 1.1M12.5 12.5l-1.1-1.1M4.6 4.6 3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        <span class="lbl">设置</span>
+      </button>
 
       <div class="theme">
         <button class="btn" id="themeBtn" type="button" aria-haspopup="true" aria-expanded="false" aria-label="主题">
@@ -75,7 +93,7 @@
         </div>
       </div>
 
-      <button class="btn primary" id="refreshBtn" type="button" title="重新加载最新数据">
+      <button class="btn primary" id="refreshBtn" type="button" title="从 B 站重新抓取（同步官方库 + 抓帖 + 附榜），跑完自动刷新页面数据">
         <span class="ico" aria-hidden="true">⟳</span><span class="lbl">刷新</span>
       </button>
     </div>
@@ -84,7 +102,25 @@
 
 <main class="wrap">
   <div class="page-head">
-    <h1 id="pageTitle">术力口周榜 · 数据看板</h1>
+    <!-- B 站有三条榜（周榜 / 传说曲周榜 / 年榜），页面上只有一条的位置，
+         所以把"周榜"两个字做成下拉：切的是**整页**（概览、榜单、看点、冠军、走势全换），
+         不是给表格加个筛选。N 榜在顶栏切换，走到那边时这里换成那条榜的名字。 -->
+    <h1 id="pageTitle">
+      <span>术力口</span><span class="pick">
+        <button type="button" class="pick-btn" id="boardPick" aria-haspopup="menu" aria-expanded="false" aria-label="选择榜单">
+          <span id="boardPickLabel">周榜</span>
+          <svg class="pick-caret" viewBox="0 0 10 10" width="13" height="13" aria-hidden="true" focusable="false">
+            <path d="M2.2 3.9 5 6.7l2.8-2.8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="pick-menu" id="boardMenu" role="menu" aria-label="选择榜单" hidden>
+          <button type="button" role="menuitemradio" data-board="weekly" aria-checked="true">周榜</button>
+          <button type="button" role="menuitemradio" data-board="legend" aria-checked="false">传说榜</button>
+          <button type="button" role="menuitemradio" data-board="annual" aria-checked="false">年榜</button>
+        </div>
+      </span><span class="tail">· 数据看板</span>
+    </h1>
+    <h1 id="pageTitleN" hidden>ニコニコ VOCALOID SONGS TOP20</h1>
     <p id="pageSub">正在加载…</p>
   </div>
 
@@ -93,7 +129,7 @@
   <section id="boardSec" aria-labelledby="boardTitle">
     <div class="sec-head">
       <h3 id="boardTitle">本期榜单</h3>
-      <div class="desc">点击任意一行查看名次走势与视频预览</div>
+      <div class="desc" id="boardDesc">点击任意一行查看名次走势与视频预览</div>
       <div class="right" id="boardMeta"></div>
     </div>
     <div class="toolbar" id="toolbar"></div>
@@ -128,7 +164,12 @@
   <section id="trendSec" aria-labelledby="trendTitle">
     <div class="sec-head">
       <h3 id="trendTitle">歌曲走势</h3>
-      <div class="desc">名次越高越靠上；断点表示该期未上榜</div>
+      <div class="desc" id="trendDesc">名次越高越靠上；断点表示该期未上榜</div>
+      <div class="right range">
+        <label class="rr"><span>从</span><select id="rangeFrom" class="sel sm" aria-label="走势起始期"></select></label>
+        <label class="rr"><span>到</span><select id="rangeTo" class="sel sm" aria-label="走势结束期"></select></label>
+        <button class="btn sm" id="rangeReset" type="button" title="回到最近 30 期">近 30 期</button>
+      </div>
     </div>
     <div class="trend-wrap">
       <div class="song-list">
@@ -140,16 +181,91 @@
     </div>
   </section>
 
-  <section id="legendSec" hidden aria-labelledby="legendTitle">
+  <!-- 附榜：ニコニコ VOCALOID SONGS TOP20。
+       这是**另一条榜**：另一个 UP 主、另一个平台、另一套期号，跟上面的周榜没有对齐关系。
+       数据来自 UP 主每周的文字版（正文自带上周名次与在榜周数），没有官方曲目库。 -->
+  <section id="nicoSec" hidden aria-labelledby="nicoTitle">
+    <!-- 与 B 榜同构的冠军卡：大字曲名 + 在榜信息 + 侧栏 + 五个 KPI。
+         结构复用 .hero 那一套类名，所以两条榜的"本期概览"长得一样、
+         也不会因为各自维护一套卡片样式而慢慢走样。 -->
+    <div class="hero" id="nicoHero"><div class="skeleton hero-sk"></div></div>
+
     <div class="sec-head">
-      <h3 id="legendTitle">附：传说曲周榜</h3>
-      <div class="desc">同账号发布的另一条榜单，期号独立</div>
+      <!-- 标题在上面的 h1 里（切到 N 榜时 h1 就是这条榜的名字），这里只写"本期榜单"，
+           与 B 榜那一块的区块标题保持一致 -->
+      <h3 id="nicoTitle">本期榜单</h3>
+      <div class="desc">Billboard JAPAN × ニコニコ · 由 <a id="nicoAuthor" target="_blank" rel="noopener">—</a> 译制转载</div>
+      <div class="right" id="nicoMeta"></div>
     </div>
-    <div class="board"><table class="ltable"><thead><tr><th>期号</th><th>日期</th><th>本期冠军</th><th>链接</th></tr></thead><tbody id="legendBody"></tbody></table></div>
+    <div class="toolbar" id="nicoToolbar"></div>
+    <div class="board">
+      <div class="board-head" aria-hidden="true"><div>名次</div><div>变化</div><div>封面</div><div>歌曲</div><div>近 30 期</div><div>上周</div><div>在榜</div></div>
+      <div id="nicoRows"><div class="skeleton row-sk"></div></div>
+    </div>
+    <div class="note">另一条榜：ニコニコ 上的原创 VOCALOID 周榜，期号与主榜互不相干 · 涨跌与在榜周数取自文字版正文</div>
+
+    <!-- 下面三块与 B 榜同名同构（看点 / 冠军榜 / 走势），只是数据源换成这条榜。
+         它们是 #nicoSec 的子区块，切回 B 榜时整块跟着收起，不需要单独显隐。 -->
+    <section id="nicoInsightSec" aria-labelledby="nicoInsightTitle">
+      <div class="sec-head">
+        <h3 id="nicoInsightTitle">本期看点</h3>
+        <div class="desc">相对上一期的榜单流动</div>
+      </div>
+      <div class="grid3">
+        <div class="panel" id="n-new"></div>
+        <div class="panel" id="n-up"></div>
+        <div class="panel" id="n-down"></div>
+      </div>
+    </section>
+
+    <section id="nicoChampSec" aria-labelledby="nicoChampTitle">
+      <div class="sec-head">
+        <h3 id="nicoChampTitle">冠军榜</h3>
+        <div class="desc">连续夺冠合并为一段</div>
+        <div class="right" id="nicoChampMeta"></div>
+      </div>
+      <div class="champ-list" id="nicoChamps"></div>
+    </section>
+
+    <section id="nicoTrendSec" aria-labelledby="nicoTrendTitle">
+      <div class="sec-head">
+        <h3 id="nicoTrendTitle">歌曲走势</h3>
+        <div class="desc">名次越高越靠上；断点表示该期未上榜</div>
+        <div class="right range">
+          <label class="rr"><span>从</span><select id="nicoRangeFrom" class="sel sm" aria-label="走势起始期"></select></label>
+          <label class="rr"><span>到</span><select id="nicoRangeTo" class="sel sm" aria-label="走势结束期"></select></label>
+          <button class="btn sm" id="nicoRangeReset" type="button" title="回到最近 30 期">近 30 期</button>
+        </div>
+      </div>
+      <div class="trend-wrap">
+        <div class="song-list">
+          <label class="sr-only" for="nq">搜索歌曲</label>
+          <input id="nq" placeholder="搜索歌曲…" autocomplete="off">
+          <div class="items" id="nicoSongItems"></div>
+        </div>
+        <div class="chart-card" id="nicoChartCard"></div>
+      </div>
+    </section>
   </section>
 
   <footer id="footer"></footer>
 </main>
+
+<!-- 设置抽屉：把命令行那几件事搬到网页上。
+     后端只认白名单里的任务名（src/server/console.js），这里不是一个"执行任意命令"的入口。 -->
+<div class="overlay" id="consoleOverlay"></div>
+<aside class="drawer console" id="console" role="dialog" aria-modal="true" aria-labelledby="consoleTitle" aria-hidden="true">
+  <button class="close" id="consoleClose" type="button" aria-label="关闭">×</button>
+  <div class="d-body">
+    <div class="d-head">
+      <h3 id="consoleTitle">设置</h3>
+      <div class="alt">同步 / 抓帖 / 诊断 —— 每个按钮对应一条 CLI 命令</div>
+    </div>
+    <div class="c-actions" id="consoleActions"></div>
+    <div class="c-out-head"><span id="consoleState">输出</span><button class="c-clear" id="consoleClear" type="button">清空</button></div>
+    <pre class="c-out" id="consoleOut" aria-live="polite"></pre>
+  </div>
+</aside>
 
 <noscript>
   <div class="noscript">

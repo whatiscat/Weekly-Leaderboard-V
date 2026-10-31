@@ -18,7 +18,7 @@ export class BoardClient {
     this.lastAt = Date.now();
   }
 
-  async json(pathname, { retries = 4 } = {}) {
+  async json(pathname, { retries = 4, timeoutMs = 20000 } = {}) {
     let attempt = 0;
     for (;;) {
       attempt++;
@@ -31,7 +31,7 @@ export class BoardClient {
       try {
         this.stats.requests++;
         const ctrl = new AbortController();
-        const timer = setTimeout(() => ctrl.abort(), 20000);
+        const timer = setTimeout(() => ctrl.abort(), timeoutMs);
         const res = await fetch(BASE + pathname, {
           headers: { Accept: 'application/json', 'User-Agent': 'Mozilla/5.0 (compatible; bbw/1.0)' },
           signal: ctrl.signal
@@ -52,8 +52,8 @@ export class BoardClient {
     return this.json('/api/public/boards');
   }
 
-  issues(boardId) {
-    return this.json('/api/public/boards/' + boardId + '/issues');
+  issues(boardId, opts = {}) {
+    return this.json('/api/public/boards/' + boardId + '/issues', opts);
   }
 
   rankings(boardId, issueId) {

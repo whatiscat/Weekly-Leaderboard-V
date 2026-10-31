@@ -16697,6 +16697,45 @@
       },
       {
         "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 16,
+        "bvid": "BV1qDUPYKEzf",
+        "title": "モニタリング",
+        "titleCn": "视奸",
+        "producers": [
+          {
+            "id": 79,
+            "name": "DECO*27"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1732204800,
+        "stats": {
+          "views": 121770,
+          "likes": 2401,
+          "coins": 1448,
+          "favorites": 2495,
+          "score": 209838
+        },
+        "score": "-13.0%",
+        "lastRank": 13,
+        "weeksOnBoard": 81,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "down",
+          "diff": 3
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
         "issueId": 84,
         "year": 2026,
         "week": 43,
@@ -22097,6 +22136,49 @@
         "rankChange": {
           "kind": "up",
           "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 19,
+        "bvid": "BV1SfK9zPEL3",
+        "title": "T氏の話を信じるな",
+        "titleCn": "不要听那姓T的话",
+        "producers": [
+          {
+            "id": 557,
+            "name": "ピノキオピー"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          },
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1750953600,
+        "stats": {
+          "views": 106603,
+          "likes": 2498,
+          "coins": 1707,
+          "favorites": 2460,
+          "score": 202207
+        },
+        "score": "-12.2%",
+        "lastRank": 15,
+        "weeksOnBoard": 70,
+        "peakRank": 2,
+        "rankChange": {
+          "kind": "down",
+          "diff": 4
         },
         "specialStatus": null
       },
@@ -68013,6 +68095,45 @@
     "history": [
       {
         "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 18,
+        "bvid": "BV1hs411W7uR",
+        "title": "妄想感傷代償連盟",
+        "titleCn": "妄想感伤代偿联盟",
+        "producers": [
+          {
+            "id": 79,
+            "name": "DECO*27"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1479398400,
+        "stats": {
+          "views": 146728,
+          "likes": 3786,
+          "coins": 1171,
+          "favorites": 4923,
+          "score": 267061
+        },
+        "score": "-11.4%",
+        "lastRank": 18,
+        "weeksOnBoard": 17,
+        "peakRank": 16,
+        "rankChange": {
+          "kind": "same",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 1,
         "issueId": 124,
         "year": 2026,
         "week": 43,
@@ -68631,6 +68752,45 @@
         "peakRank": 20,
         "rankChange": {
           "kind": "up",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 8,
+        "bvid": "BV1hs411W7uR",
+        "title": "妄想感傷代償連盟",
+        "titleCn": "妄想感伤代偿联盟",
+        "producers": [
+          {
+            "id": 79,
+            "name": "DECO*27"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1479398400,
+        "stats": {
+          "views": 146728,
+          "likes": 3786,
+          "coins": 1171,
+          "favorites": 4923,
+          "score": 267061
+        },
+        "score": "-11.4%",
+        "lastRank": 8,
+        "weeksOnBoard": 59,
+        "peakRank": 4,
+        "rankChange": {
+          "kind": "same",
           "diff": 0
         },
         "specialStatus": null
@@ -84712,6 +84872,84 @@
     ],
     "history": [
       {
+        "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 13,
+        "bvid": "BV1d44y1z7EB",
+        "title": "ノンブレス・オブリージュ",
+        "titleCn": "无呼吸义务",
+        "producers": [
+          {
+            "id": 557,
+            "name": "ピノキオピー"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1622563200,
+        "stats": {
+          "views": 100434,
+          "likes": 4929,
+          "coins": 3977,
+          "favorites": 4802,
+          "score": 306561
+        },
+        "score": "+67.2%",
+        "lastRank": null,
+        "weeksOnBoard": 1,
+        "peakRank": 13,
+        "rankChange": {
+          "kind": "up",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 5,
+        "bvid": "BV1d44y1z7EB",
+        "title": "ノンブレス・オブリージュ",
+        "titleCn": "无呼吸义务",
+        "producers": [
+          {
+            "id": 557,
+            "name": "ピノキオピー"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1622563200,
+        "stats": {
+          "views": 100434,
+          "likes": 4929,
+          "coins": 3977,
+          "favorites": 4802,
+          "score": 306561
+        },
+        "score": "+67.2%",
+        "lastRank": null,
+        "weeksOnBoard": 3,
+        "peakRank": 5,
+        "rankChange": {
+          "kind": "up",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
         "boardId": 2,
         "issueId": 36,
         "year": 2025,
@@ -98983,6 +99221,45 @@
     "history": [
       {
         "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 16,
+        "bvid": "BV1z7gPzXEzJ",
+        "title": "バカみたいに",
+        "titleCn": "像个笨蛋一样",
+        "producers": [
+          {
+            "id": 630,
+            "name": "カササギ"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1752681600,
+        "stats": {
+          "views": 161292,
+          "likes": 3218,
+          "coins": 1730,
+          "favorites": 4345,
+          "score": 288021
+        },
+        "score": "-14.6%",
+        "lastRank": 15,
+        "weeksOnBoard": 32,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "down",
+          "diff": 1
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 1,
         "issueId": 124,
         "year": 2026,
         "week": 43,
@@ -100186,6 +100463,45 @@
         "peakRank": 7,
         "rankChange": {
           "kind": "up",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 6,
+        "bvid": "BV1z7gPzXEzJ",
+        "title": "バカみたいに",
+        "titleCn": "像个笨蛋一样",
+        "producers": [
+          {
+            "id": 630,
+            "name": "カササギ"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1752681600,
+        "stats": {
+          "views": 161292,
+          "likes": 3218,
+          "coins": 1730,
+          "favorites": 4345,
+          "score": 288021
+        },
+        "score": "-14.6%",
+        "lastRank": 6,
+        "weeksOnBoard": 26,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "same",
           "diff": 0
         },
         "specialStatus": null
@@ -140230,6 +140546,45 @@
     "history": [
       {
         "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 8,
+        "bvid": "BV15HFVz1EvM",
+        "title": "月が綺麗ねと言われたい！",
+        "titleCn": "好想听你说月色真美！",
+        "producers": [
+          {
+            "id": 630,
+            "name": "カササギ"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1770048000,
+        "stats": {
+          "views": 238873,
+          "likes": 5181,
+          "coins": 3472,
+          "favorites": 6401,
+          "score": 454591
+        },
+        "score": "-8.6%",
+        "lastRank": 9,
+        "weeksOnBoard": 38,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "up",
+          "diff": 1
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 1,
         "issueId": 124,
         "year": 2026,
         "week": 43,
@@ -141668,6 +142023,45 @@
         "rankChange": {
           "kind": "up",
           "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 4,
+        "bvid": "BV15HFVz1EvM",
+        "title": "月が綺麗ねと言われたい！",
+        "titleCn": "好想听你说月色真美！",
+        "producers": [
+          {
+            "id": 630,
+            "name": "カササギ"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1770048000,
+        "stats": {
+          "views": 238873,
+          "likes": 5181,
+          "coins": 3472,
+          "favorites": 6401,
+          "score": 454591
+        },
+        "score": "-8.6%",
+        "lastRank": 5,
+        "weeksOnBoard": 34,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "up",
+          "diff": 1
         },
         "specialStatus": null
       },
@@ -145526,6 +145920,45 @@
     "history": [
       {
         "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 17,
+        "bvid": "BV1JrgA6MEMG",
+        "title": "分かっちゃいないね",
+        "titleCn": "根本不明白吧",
+        "producers": [
+          {
+            "id": 1695,
+            "name": "monet"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 33,
+            "name": "花隈千冬"
+          }
+        ],
+        "pubtime": 1786678305,
+        "stats": {
+          "views": 109496,
+          "likes": 6224,
+          "coins": 1790,
+          "favorites": 6094,
+          "score": 273278
+        },
+        "score": "-9.3%",
+        "lastRank": 19,
+        "weeksOnBoard": 13,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "up",
+          "diff": 2
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 1,
         "issueId": 124,
         "year": 2026,
         "week": 43,
@@ -145989,6 +146422,45 @@
         "rankChange": {
           "kind": "up",
           "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 7,
+        "bvid": "BV1JrgA6MEMG",
+        "title": "分かっちゃいないね",
+        "titleCn": "根本不明白吧",
+        "producers": [
+          {
+            "id": 1695,
+            "name": "monet"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 33,
+            "name": "花隈千冬"
+          }
+        ],
+        "pubtime": 1786678305,
+        "stats": {
+          "views": 109496,
+          "likes": 6224,
+          "coins": 1790,
+          "favorites": 6094,
+          "score": 273278
+        },
+        "score": "-9.3%",
+        "lastRank": 9,
+        "weeksOnBoard": 10,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "up",
+          "diff": 2
         },
         "specialStatus": null
       },
@@ -149281,6 +149753,45 @@
       },
       {
         "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 13,
+        "bvid": "BV1jbp26JEA8",
+        "title": "シャルル",
+        "titleCn": "Charles",
+        "producers": [
+          {
+            "id": 973,
+            "name": "バルーン"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 21,
+            "name": "flower"
+          }
+        ],
+        "pubtime": 1792054800,
+        "stats": {
+          "views": 42361,
+          "likes": 8897,
+          "coins": 2444,
+          "favorites": 4649,
+          "score": 212107
+        },
+        "score": "-76.5%",
+        "lastRank": 3,
+        "weeksOnBoard": 2,
+        "peakRank": 3,
+        "rankChange": {
+          "kind": "down",
+          "diff": 10
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
         "issueId": 84,
         "year": 2026,
         "week": 43,
@@ -149527,6 +150038,49 @@
         "rankChange": {
           "kind": "new",
           "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 15,
+        "bvid": "BV1Btj36rE1C",
+        "title": "PPPP",
+        "titleCn": "PPPP",
+        "producers": [
+          {
+            "id": 662,
+            "name": "TAK"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          },
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1781606549,
+        "stats": {
+          "views": 95759,
+          "likes": 4028,
+          "coins": 1462,
+          "favorites": 3960,
+          "score": 211103
+        },
+        "score": "-7.2%",
+        "lastRank": 16,
+        "weeksOnBoard": 2,
+        "peakRank": 15,
+        "rankChange": {
+          "kind": "up",
+          "diff": 1
         },
         "specialStatus": null
       },
@@ -154928,6 +155482,45 @@
       },
       {
         "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 12,
+        "bvid": "BV1dyoDBCEWU",
+        "title": "처형박수",
+        "titleCn": "处刑鼓掌",
+        "producers": [
+          {
+            "id": 635,
+            "name": "TRAP CHICK"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1777094112,
+        "stats": {
+          "views": 125189,
+          "likes": 2935,
+          "coins": 1416,
+          "favorites": 3036,
+          "score": 222014
+        },
+        "score": "-12.3%",
+        "lastRank": 12,
+        "weeksOnBoard": 31,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "same",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
         "issueId": 84,
         "year": 2026,
         "week": 43,
@@ -157157,6 +157750,45 @@
         "peakRank": 4,
         "rankChange": {
           "kind": "up",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 11,
+        "bvid": "BV1o58Q6UEik",
+        "title": "ブレインロット",
+        "titleCn": "脑蚀",
+        "producers": [
+          {
+            "id": 566,
+            "name": "東京真中"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1787727600,
+        "stats": {
+          "views": 97406,
+          "likes": 5697,
+          "coins": 1982,
+          "favorites": 4234,
+          "score": 237467
+        },
+        "score": "-16.4%",
+        "lastRank": 11,
+        "weeksOnBoard": 31,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "same",
           "diff": 0
         },
         "specialStatus": null
@@ -167722,6 +168354,45 @@
       },
       {
         "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 17,
+        "bvid": "BV1Kc9HB6EoQ",
+        "title": "求＆影",
+        "titleCn": "求与影",
+        "producers": [
+          {
+            "id": 568,
+            "name": "ぴーなた"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1775061176,
+        "stats": {
+          "views": 113074,
+          "likes": 2571,
+          "coins": 1726,
+          "favorites": 2357,
+          "score": 207922
+        },
+        "score": "-4.2%",
+        "lastRank": null,
+        "weeksOnBoard": 39,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "up",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
         "issueId": 83,
         "year": 2026,
         "week": 42,
@@ -175633,6 +176304,49 @@
       },
       {
         "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 18,
+        "bvid": "BV1SKLD6NEdC",
+        "title": "numb numb",
+        "titleCn": "麻麻木木",
+        "producers": [
+          {
+            "id": 662,
+            "name": "TAK"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          },
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1781675534,
+        "stats": {
+          "views": 82633,
+          "likes": 4637,
+          "coins": 1736,
+          "favorites": 3845,
+          "score": 206299
+        },
+        "score": "-8.2%",
+        "lastRank": 18,
+        "weeksOnBoard": 19,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "same",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
         "issueId": 84,
         "year": 2026,
         "week": 43,
@@ -178368,6 +179082,49 @@
         "rankChange": {
           "kind": "new",
           "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 14,
+        "bvid": "BV1GzV36pE5h",
+        "title": "承認してください ジーニーさん",
+        "titleCn": "请批准吧灯神先生!",
+        "producers": [
+          {
+            "id": 635,
+            "name": "TRAP CHICK"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 5,
+            "name": "重音テト"
+          },
+          {
+            "id": 8,
+            "name": "音街ウナ"
+          }
+        ],
+        "pubtime": 1780136128,
+        "stats": {
+          "views": 124986,
+          "likes": 3651,
+          "coins": 1085,
+          "favorites": 2853,
+          "score": 211284
+        },
+        "score": "-5.8%",
+        "lastRank": 19,
+        "weeksOnBoard": 21,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "up",
+          "diff": 5
         },
         "specialStatus": null
       },
@@ -183629,6 +184386,49 @@
     "history": [
       {
         "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 19,
+        "bvid": "BV1Vo3C6VEY5",
+        "title": "アクマバライ",
+        "titleCn": "驱魔",
+        "producers": [
+          {
+            "id": 4857,
+            "name": "うちのボカロは様子がおかしい"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          },
+          {
+            "id": 3,
+            "name": "雨衣"
+          }
+        ],
+        "pubtime": 1785492000,
+        "stats": {
+          "views": 133104,
+          "likes": 3935,
+          "coins": 1724,
+          "favorites": 3723,
+          "score": 252474
+        },
+        "score": "-15.8%",
+        "lastRank": 20,
+        "weeksOnBoard": 13,
+        "peakRank": 7,
+        "rankChange": {
+          "kind": "up",
+          "diff": 1
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 1,
         "issueId": 124,
         "year": 2026,
         "week": 43,
@@ -184140,6 +184940,49 @@
         "rankChange": {
           "kind": "new",
           "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 9,
+        "bvid": "BV1Vo3C6VEY5",
+        "title": "アクマバライ",
+        "titleCn": "驱魔",
+        "producers": [
+          {
+            "id": 4857,
+            "name": "うちのボカロは様子がおかしい"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          },
+          {
+            "id": 3,
+            "name": "雨衣"
+          }
+        ],
+        "pubtime": 1785492000,
+        "stats": {
+          "views": 133104,
+          "likes": 3935,
+          "coins": 1724,
+          "favorites": 3723,
+          "score": 252474
+        },
+        "score": "-15.8%",
+        "lastRank": 10,
+        "weeksOnBoard": 10,
+        "peakRank": 3,
+        "rankChange": {
+          "kind": "up",
+          "diff": 1
         },
         "specialStatus": null
       },
@@ -184827,6 +185670,45 @@
         "rankChange": {
           "kind": "new",
           "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 20,
+        "bvid": "BV1xF3467Etw",
+        "title": "ワンダー ",
+        "titleCn": "奇景",
+        "producers": [
+          {
+            "id": 590,
+            "name": "r-906"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1785409961,
+        "stats": {
+          "views": 80290,
+          "likes": 3810,
+          "coins": 1632,
+          "favorites": 3172,
+          "score": 188260
+        },
+        "score": "-17.1%",
+        "lastRank": 17,
+        "weeksOnBoard": 11,
+        "peakRank": 8,
+        "rankChange": {
+          "kind": "down",
+          "diff": 3
         },
         "specialStatus": null
       },
@@ -190347,6 +191229,45 @@
     "history": [
       {
         "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 6,
+        "bvid": "BV1HKhU6pEnX",
+        "title": "Lostinsummer",
+        "titleCn": "困于盛夏",
+        "producers": [
+          {
+            "id": 3952,
+            "name": "Yowane"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1790350100,
+        "stats": {
+          "views": 130118,
+          "likes": 13326,
+          "coins": 5145,
+          "favorites": 11741,
+          "score": 500561
+        },
+        "score": "-17.2%",
+        "lastRank": 8,
+        "weeksOnBoard": 5,
+        "peakRank": 3,
+        "rankChange": {
+          "kind": "up",
+          "diff": 2
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 1,
         "issueId": 124,
         "year": 2026,
         "week": 43,
@@ -190586,6 +191507,45 @@
     "history": [
       {
         "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 20,
+        "bvid": "BV1T8hy6JE2k",
+        "title": "チューチュードレイン",
+        "titleCn": "啾啾吸干",
+        "producers": [
+          {
+            "id": 574,
+            "name": "Chenomio"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 37,
+            "name": "奕夕"
+          }
+        ],
+        "pubtime": 1790334000,
+        "stats": {
+          "views": 111823,
+          "likes": 7188,
+          "coins": 1467,
+          "favorites": 4548,
+          "score": 245617
+        },
+        "score": "-23.7%",
+        "lastRank": 16,
+        "weeksOnBoard": 5,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "down",
+          "diff": 4
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 1,
         "issueId": 124,
         "year": 2026,
         "week": 43,
@@ -190742,6 +191702,45 @@
       },
       {
         "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 10,
+        "bvid": "BV1T8hy6JE2k",
+        "title": "チューチュードレイン",
+        "titleCn": "啾啾吸干",
+        "producers": [
+          {
+            "id": 574,
+            "name": "Chenomio"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 37,
+            "name": "奕夕"
+          }
+        ],
+        "pubtime": 1790334000,
+        "stats": {
+          "views": 111823,
+          "likes": 7188,
+          "coins": 1467,
+          "favorites": 4548,
+          "score": 245617
+        },
+        "score": "-23.7%",
+        "lastRank": 7,
+        "weeksOnBoard": 2,
+        "peakRank": 7,
+        "rankChange": {
+          "kind": "down",
+          "diff": 3
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
         "issueId": 84,
         "year": 2026,
         "week": 43,
@@ -190864,6 +191863,45 @@
     "history": [
       {
         "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 7,
+        "bvid": "BV1y6hq6bEv9",
+        "title": "Displayholic",
+        "titleCn": "展示中毒",
+        "producers": [
+          {
+            "id": 571,
+            "name": "AnythingBecomeMoe"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1790586000,
+        "stats": {
+          "views": 236717,
+          "likes": 10896,
+          "coins": 2693,
+          "favorites": 7753,
+          "score": 466490
+        },
+        "score": "-25.0%",
+        "lastRank": 7,
+        "weeksOnBoard": 4,
+        "peakRank": 2,
+        "rankChange": {
+          "kind": "same",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 1,
         "issueId": 124,
         "year": 2026,
         "week": 43,
@@ -190981,6 +192019,45 @@
       },
       {
         "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 3,
+        "bvid": "BV1y6hq6bEv9",
+        "title": "Displayholic",
+        "titleCn": "展示中毒",
+        "producers": [
+          {
+            "id": 571,
+            "name": "AnythingBecomeMoe"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1790586000,
+        "stats": {
+          "views": 236717,
+          "likes": 10896,
+          "coins": 2693,
+          "favorites": 7753,
+          "score": 466490
+        },
+        "score": "-25.0%",
+        "lastRank": 4,
+        "weeksOnBoard": 3,
+        "peakRank": 2,
+        "rankChange": {
+          "kind": "up",
+          "diff": 1
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
         "issueId": 84,
         "year": 2026,
         "week": 43,
@@ -191081,6 +192158,45 @@
     "history": [
       {
         "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 9,
+        "bvid": "BV1VhH46WEZj",
+        "title": "花腐誕生",
+        "titleCn": "花腐诞生",
+        "producers": [
+          {
+            "id": 3840,
+            "name": "小鷹CORE"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1791201015,
+        "stats": {
+          "views": 97326,
+          "likes": 12831,
+          "coins": 4576,
+          "favorites": 10334,
+          "score": 428109
+        },
+        "score": "+11.5%",
+        "lastRank": 13,
+        "weeksOnBoard": 3,
+        "peakRank": 9,
+        "rankChange": {
+          "kind": "up",
+          "diff": 4
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 1,
         "issueId": 124,
         "year": 2026,
         "week": 43,
@@ -191179,6 +192295,45 @@
       }
     ],
     "history": [
+      {
+        "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 11,
+        "bvid": "BV1mDHH6PEfK",
+        "title": "キューピッド",
+        "titleCn": "丘比特",
+        "producers": [
+          {
+            "id": 1616,
+            "name": "翌川屿芊"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1791177027,
+        "stats": {
+          "views": 104170,
+          "likes": 12222,
+          "coins": 2452,
+          "favorites": 9769,
+          "score": 360931
+        },
+        "score": "-13.4%",
+        "lastRank": 11,
+        "weeksOnBoard": 3,
+        "peakRank": 9,
+        "rankChange": {
+          "kind": "same",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
       {
         "boardId": 1,
         "issueId": 124,
@@ -191283,6 +192438,49 @@
       }
     ],
     "history": [
+      {
+        "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 3,
+        "bvid": "BV1UGa961Ejt",
+        "title": "えねみぃ",
+        "titleCn": "敌人",
+        "producers": [
+          {
+            "id": 557,
+            "name": "ピノキオピー"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          },
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1790935200,
+        "stats": {
+          "views": 328368,
+          "likes": 21983,
+          "coins": 5341,
+          "favorites": 9052,
+          "score": 690327
+        },
+        "score": "-41.6%",
+        "lastRank": 3,
+        "weeksOnBoard": 4,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "same",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
       {
         "boardId": 1,
         "issueId": 124,
@@ -191408,6 +192606,49 @@
         "peakRank": 1,
         "rankChange": {
           "kind": "new",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 2,
+        "bvid": "BV1UGa961Ejt",
+        "title": "えねみぃ",
+        "titleCn": "敌人",
+        "producers": [
+          {
+            "id": 557,
+            "name": "ピノキオピー"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          },
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1790935200,
+        "stats": {
+          "views": 328368,
+          "likes": 21983,
+          "coins": 5341,
+          "favorites": 9052,
+          "score": 690327
+        },
+        "score": "-41.6%",
+        "lastRank": 2,
+        "weeksOnBoard": 4,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "same",
           "diff": 0
         },
         "specialStatus": null
@@ -191787,6 +193028,45 @@
     "history": [
       {
         "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 5,
+        "bvid": "BV1z4JX6PESh",
+        "title": "0 Heart",
+        "titleCn": "0好感度",
+        "producers": [
+          {
+            "id": 4510,
+            "name": "sasaki"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1792144841,
+        "stats": {
+          "views": 160304,
+          "likes": 17895,
+          "coins": 3198,
+          "favorites": 13753,
+          "score": 516224
+        },
+        "score": "-56.8%",
+        "lastRank": 2,
+        "weeksOnBoard": 2,
+        "peakRank": 2,
+        "rankChange": {
+          "kind": "down",
+          "diff": 3
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 1,
         "issueId": 124,
         "year": 2026,
         "week": 43,
@@ -191907,6 +193187,45 @@
       }
     ],
     "history": [
+      {
+        "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 10,
+        "bvid": "BV1N6ph6dE6f",
+        "title": "ゆめ",
+        "titleCn": "梦",
+        "producers": [
+          {
+            "id": 556,
+            "name": "d0tc0mmie"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1791594600,
+        "stats": {
+          "views": 117660,
+          "likes": 11621,
+          "coins": 3819,
+          "favorites": 8479,
+          "score": 394278
+        },
+        "score": "-57.5%",
+        "lastRank": 5,
+        "weeksOnBoard": 3,
+        "peakRank": 2,
+        "rankChange": {
+          "kind": "down",
+          "diff": 5
+        },
+        "specialStatus": null
+      },
       {
         "boardId": 1,
         "issueId": 124,
@@ -192363,6 +193682,45 @@
       }
     ],
     "history": [
+      {
+        "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 4,
+        "bvid": "BV1k5pc6wECQ",
+        "title": "Our ボカロ keeps growing",
+        "titleCn": "我们术力口正在蒸蒸日上",
+        "producers": [
+          {
+            "id": 5834,
+            "name": "RUSTY_ZIP"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1791267300,
+        "stats": {
+          "views": 167257,
+          "likes": 24119,
+          "coins": 8196,
+          "favorites": 12571,
+          "score": 674059
+        },
+        "score": "-31.0%",
+        "lastRank": 4,
+        "weeksOnBoard": 3,
+        "peakRank": 4,
+        "rankChange": {
+          "kind": "same",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
       {
         "boardId": 1,
         "issueId": 124,
@@ -193587,6 +194945,49 @@
       },
       {
         "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 1,
+        "bvid": "BV1rjJq6REW9",
+        "title": "シスターに懺悔を",
+        "titleCn": "向修女忏悔吧",
+        "producers": [
+          {
+            "id": 597,
+            "name": "廃原メモリ"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 5,
+            "name": "重音テト"
+          },
+          {
+            "id": 7,
+            "name": "足立レイ"
+          }
+        ],
+        "pubtime": 1792234800,
+        "stats": {
+          "views": 419155,
+          "likes": 35999,
+          "coins": 17173,
+          "favorites": 25425,
+          "score": 1423717
+        },
+        "score": "-46.1%",
+        "lastRank": 1,
+        "weeksOnBoard": 12,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "same",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 1,
         "issueId": 124,
         "year": 2026,
         "week": 43,
@@ -193630,6 +195031,49 @@
       },
       {
         "boardId": 2,
+        "issueId": 85,
+        "year": 2026,
+        "week": 44,
+        "rank": 1,
+        "bvid": "BV1rjJq6REW9",
+        "title": "シスターに懺悔を",
+        "titleCn": "向修女忏悔吧",
+        "producers": [
+          {
+            "id": 597,
+            "name": "廃原メモリ"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 5,
+            "name": "重音テト"
+          },
+          {
+            "id": 7,
+            "name": "足立レイ"
+          }
+        ],
+        "pubtime": 1792234800,
+        "stats": {
+          "views": 419155,
+          "likes": 35999,
+          "coins": 17173,
+          "favorites": 25425,
+          "score": 1423717
+        },
+        "score": "-46.1%",
+        "lastRank": 1,
+        "weeksOnBoard": 16,
+        "peakRank": 1,
+        "rankChange": {
+          "kind": "same",
+          "diff": 0
+        },
+        "specialStatus": null
+      },
+      {
+        "boardId": 2,
         "issueId": 84,
         "year": 2026,
         "week": 43,
@@ -193665,6 +195109,282 @@
         "lastRank": null,
         "weeksOnBoard": 15,
         "peakRank": 1,
+        "rankChange": {
+          "kind": "new",
+          "diff": 0
+        },
+        "specialStatus": null
+      }
+    ]
+  },
+  {
+    "id": 14952,
+    "bvid": "BV1senq6TERG",
+    "title": "NONSTOP ERROR CLINIC!",
+    "titleCn": "",
+    "pubtime": 1792814400,
+    "firstRecordedAt": 1792814400,
+    "producers": [
+      {
+        "id": 4552,
+        "name": "JESSIE"
+      }
+    ],
+    "vocalists": [
+      {
+        "id": 2,
+        "name": "初音ミク"
+      },
+      {
+        "id": 7,
+        "name": "足立レイ"
+      },
+      {
+        "id": 5,
+        "name": "重音テト"
+      }
+    ],
+    "history": [
+      {
+        "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 15,
+        "bvid": "BV1senq6TERG",
+        "title": "NONSTOP ERROR CLINIC!",
+        "titleCn": "",
+        "producers": [
+          {
+            "id": 4552,
+            "name": "JESSIE"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          },
+          {
+            "id": 7,
+            "name": "足立レイ"
+          },
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1792814400,
+        "stats": {
+          "views": 53494,
+          "likes": 8316,
+          "coins": 1447,
+          "favorites": 8265,
+          "score": 292419
+        },
+        "score": "--%",
+        "lastRank": null,
+        "weeksOnBoard": 1,
+        "peakRank": 15,
+        "rankChange": {
+          "kind": "new",
+          "diff": 0
+        },
+        "specialStatus": null
+      }
+    ]
+  },
+  {
+    "id": 14963,
+    "bvid": "BV11xnh6EE4T",
+    "title": "ルルージュ",
+    "titleCn": "绯红",
+    "pubtime": 1792754507,
+    "firstRecordedAt": 1792754507,
+    "producers": [
+      {
+        "id": 260,
+        "name": "MIMI"
+      }
+    ],
+    "vocalists": [
+      {
+        "id": 2,
+        "name": "初音ミク"
+      }
+    ],
+    "history": [
+      {
+        "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 14,
+        "bvid": "BV11xnh6EE4T",
+        "title": "ルルージュ",
+        "titleCn": "绯红",
+        "producers": [
+          {
+            "id": 260,
+            "name": "MIMI"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1792754507,
+        "stats": {
+          "views": 37463,
+          "likes": 10709,
+          "coins": 3877,
+          "favorites": 6062,
+          "score": 300236
+        },
+        "score": "--%",
+        "lastRank": null,
+        "weeksOnBoard": 1,
+        "peakRank": 14,
+        "rankChange": {
+          "kind": "new",
+          "diff": 0
+        },
+        "specialStatus": null
+      }
+    ]
+  },
+  {
+    "id": 14966,
+    "bvid": "BV1banN6EE1n",
+    "title": "Schrodinger's Me",
+    "titleCn": "薛定谔的我",
+    "pubtime": 1792753200,
+    "firstRecordedAt": 1792753200,
+    "producers": [
+      {
+        "id": 574,
+        "name": "Chenomio"
+      },
+      {
+        "id": 556,
+        "name": "d0tc0mmie"
+      }
+    ],
+    "vocalists": [
+      {
+        "id": 1,
+        "name": "GUMI"
+      },
+      {
+        "id": 5,
+        "name": "重音テト"
+      }
+    ],
+    "history": [
+      {
+        "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 2,
+        "bvid": "BV1banN6EE1n",
+        "title": "Schrodinger's Me",
+        "titleCn": "薛定谔的我",
+        "producers": [
+          {
+            "id": 574,
+            "name": "Chenomio"
+          },
+          {
+            "id": 556,
+            "name": "d0tc0mmie"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 1,
+            "name": "GUMI"
+          },
+          {
+            "id": 5,
+            "name": "重音テト"
+          }
+        ],
+        "pubtime": 1792753200,
+        "stats": {
+          "views": 125932,
+          "likes": 26467,
+          "coins": 8757,
+          "favorites": 17630,
+          "score": 810541
+        },
+        "score": "--%",
+        "lastRank": null,
+        "weeksOnBoard": 1,
+        "peakRank": 2,
+        "rankChange": {
+          "kind": "new",
+          "diff": 0
+        },
+        "specialStatus": null
+      }
+    ]
+  },
+  {
+    "id": 14988,
+    "bvid": "BV1qYnm6mEKS",
+    "title": "LEGENDS",
+    "titleCn": "",
+    "pubtime": 1792662639,
+    "firstRecordedAt": 1792662639,
+    "producers": [
+      {
+        "id": 361,
+        "name": "ryo"
+      }
+    ],
+    "vocalists": [
+      {
+        "id": 2,
+        "name": "初音ミク"
+      }
+    ],
+    "history": [
+      {
+        "boardId": 1,
+        "issueId": 125,
+        "year": 2026,
+        "week": 44,
+        "rank": 12,
+        "bvid": "BV1qYnm6mEKS",
+        "title": "LEGENDS",
+        "titleCn": "",
+        "producers": [
+          {
+            "id": 361,
+            "name": "ryo"
+          }
+        ],
+        "vocalists": [
+          {
+            "id": 2,
+            "name": "初音ミク"
+          }
+        ],
+        "pubtime": 1792662639,
+        "stats": {
+          "views": 88721,
+          "likes": 18211,
+          "coins": 1161,
+          "favorites": 7063,
+          "score": 312901
+        },
+        "score": "--%",
+        "lastRank": null,
+        "weeksOnBoard": 1,
+        "peakRank": 12,
         "rankChange": {
           "kind": "new",
           "diff": 0

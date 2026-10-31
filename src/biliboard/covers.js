@@ -1,6 +1,8 @@
 import path from 'node:path';
 import { readJson, writeJson } from '../util/fsx.js';
 import { sleep } from '../logger.js';
+import { API } from '../bili/endpoints.js';
+import { bv2av } from '../util/av.js';
 
 const PROXY = 'https://biliboard.uk/api/provider/biliimg/bvid/';
 
@@ -117,6 +119,89 @@ export async function resolveCovers(bvids, cfg, log, { concurrency = 3, interval
     '封面直链完成：新增 ' + (Object.keys(map).length - before) + '，失败 ' + failed +
     (failed ? '（' + RETRY_AFTER_DAYS + ' 天后再试）' : '') + '，累计 ' + Object.keys(map).length
   );
+  return map;
+}
+
+/**
+ * 把「已经拿到的封面」并进缓存（零请求）。
+ *
+ * 附榜的 opus 页面内嵌段落 JSON 里，每个视频卡片都带 cover 直链 —— 抓正文时
+ * 封面是白捡的。没有理由把这些扔掉，再回头一个一个去问稿件接口。
+ */
+export function mergeCoverPairs(pairs, cfg, log) {
+  const file = path.join(cfg.paths.data, 'covers.json');
+  const map = readJson(file, {}) || {};
+  let added = 0;
+  for (const p of pairs || []) {
+    if (!p || !p.bvid || !p.cover || map[p.bvid]) continue;
+    map[p.bvid] = normalize(p.cover);
+    added++;
+  }
+  if (added) {
+    writeJson(file, map);
+    log?.info('附榜封面：从正文里直接收录 ' + added + ' 条（未发请求）');
+  }
+  return added;
+}
+
+/**
+ * 用 B 站稿件接口解析封面（附榜用）。
+ *
+ * 主榜的封面走 biliboard 的图片代理（一次 302 拿到直链）；附榜的视频不在
+ * 那个曲目库里，只能问 B 站自己：x/web-interface/view 返回 pic，格式与
+ * 直链完全一致，仍然写进同一个 data/covers.json，页面侧不需要区分来源。
+ *
+ * 请求走调用方的 BiliClient：那里有全局最小间隔、退避和 Cookie，
+ * 不必为封面另写一套限流（另写一套就等于把风控概率翻倍）。
+ */
+export async function resolveVideoCovers(client, bvids, cfg, log) {
+  const file = path.join(cfg.paths.data, 'covers.json');
+  const failFile = path.join(cfg.paths.data, FAIL_FILE);
+  const map = readJson(file, {}) || {};
+  const failures = readJson(failFile, {}) || {};
+
+  const unresolved = [...new Set(bvids.filter(Boolean))].filter((b) => !map[b]);
+  const missing = unresolved.filter((b) => shouldRetry(failures[b]));
+  if (!missing.length) {
+    log?.info('附榜封面已是最新' + (unresolved.length ? '（' + unresolved.length + ' 个在冷却中）' : ''));
+    return map;
+  }
+  log?.info('解析附榜封面：' + missing.length + ' 个新稿件');
+
+  let done = 0;
+  let ok = 0;
+  let stopped = 0;
+  for (const bvid of missing) {
+    // 被删稿件会一路重试（每次 20s 超时 + 退避），几十个就能把一轮跑上半小时。
+    // 到点收工，剩下的留到下次 —— 反正失败已经记进冷却表了。
+    if (client.deadline && Date.now() > client.deadline) { stopped = missing.length - done; break; }
+    const aid = bv2av(bvid);
+    done++;
+    if (!aid) { failures[bvid] = new Date().toISOString(); continue; }
+    try {
+      const res = await client.api(API.videoView, { aid: String(aid) }, { sign: false, referer: 'https://www.bilibili.com/video/' + bvid });
+      const pic = res?.data?.pic;
+      if (pic) {
+        map[bvid] = normalize(pic);
+        delete failures[bvid];
+        ok++;
+      } else {
+        failures[bvid] = new Date().toISOString();
+      }
+    } catch (err) {
+      // 稿件被删 / 私有：记进冷却，7 天内不再撞它（和主榜共用一个失败表）
+      failures[bvid] = new Date().toISOString();
+      log?.debug('附榜封面失败 ' + bvid + '：' + err.message);
+    }
+    if (done % 100 === 0) {
+      writeJson(file, map);
+      writeJson(failFile, failures);
+      log?.info('附榜封面 ' + done + '/' + missing.length + '（成功 ' + ok + '）');
+    }
+  }
+  writeJson(file, map);
+  writeJson(failFile, failures);
+  log?.info('附榜封面完成：新增 ' + ok + ' / ' + missing.length + (stopped ? '（超时，剩余 ' + stopped + ' 个留待下次）' : ''));
   return map;
 }
 

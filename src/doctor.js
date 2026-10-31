@@ -32,9 +32,17 @@ export async function doctor(cfg, log) {
   const rawCount = fs.existsSync(rawDir) ? fs.readdirSync(rawDir).filter((f) => f.endsWith('.json')).length : 0;
   const songs = readJson(path.join(boardsDir, 'songs.json'), []) || [];
   const issuesMeta = readJson(path.join(boardsDir, 'issues-1.json'), []) || [];
+  const legendMeta = readJson(path.join(boardsDir, 'issues-2.json'), []) || [];
+  const annualMeta = readJson(path.join(boardsDir, 'issues-3.json'), []) || [];
   const covers = readJson(path.join(cfg.paths.data, 'covers.json'), {}) || {};
   const webIndex = path.join(cfg.paths.web, 'index.html');
+  const nicoCount = cfg.nico?.enabled && fs.existsSync(cfg.paths.nico)
+    ? fs.readdirSync(cfg.paths.nico).filter((f) => f.endsWith('.json')).length
+    : 0;
   lines.push('数据：官方期次 ' + issuesMeta.length + ' 期 · 曲目 ' + songs.length + ' 首 · 封面直链 ' + Object.keys(covers).length + ' 条 · 帖子 ' + rawCount + ' 期');
+  lines.push('附榜 B：ニコニコ ' + (nicoCount
+    ? nicoCount + ' 期（' + cfg.nico.title + '）'
+    : (cfg.nico?.enabled ? '还没抓 —— 运行 node src/cli.js nico' : '未启用（config.nico.enabled）')));
   lines.push('前端：' + (fs.existsSync(webIndex) ? 'src/web 就绪' : '缺少 src/web/index.html'));
 
   // 完整性：缺名次是数据本身的状态（如实报告），曲目库落后于榜单则是"该同步了"
@@ -52,6 +60,18 @@ export async function doctor(cfg, log) {
       lines.push('  ⚠ 曲目库最高只到第 ' + latest.latestInSongs + ' 期，榜单已到第 ' + latest.latestIssue + ' 期');
       issues.push('曲目库可能不是最新：运行 node src/cli.js sync --full');
     }
+
+    // 附榜：名次只来自曲目库的 board 2 / 3 行，所以「缺期」意味着曲目库没跟上，
+    // 而不是抓取失败。年榜的期次表是可选的（取不到就用曲目行合成），不作问题上报。
+    const legendCov = describeCoverage(songs, legendMeta, { boardId: 2 });
+    const annualRows = songs.reduce((n, s) => n + (s.history || []).filter((h) => h.boardId === 3).length, 0);
+    lines.push('附榜 A：传说曲周榜 ' + legendMeta.length + ' 期（名次齐全 ' + legendCov.completeIssues + '/' + legendCov.totalIssues + '）· 年榜 '
+      + (annualMeta.length ? annualMeta.length + ' 期' : '无独立期次表') + ' / 曲目库 ' + annualRows + ' 条');
+    if (legendCov.incomplete.length) {
+      lines.push('  传说曲周榜缺行：' + legendCov.incomplete.slice(0, 6).map((x) => '第 ' + x.issue + ' 期 ' + x.have + '/' + x.expected).join('、')
+        + (legendCov.incomplete.length > 6 ? ' …' : ''));
+    }
+    if (!annualRows) issues.push('曲目库里没有年榜(board 3)记录：附榜的年榜会是空的');
   }
   if (!songs.length) issues.push('缺少 data/boards/songs.json —— 先运行 node src/cli.js sync --full');
   if (!issuesMeta.length) issues.push('缺少 data/boards/issues-1.json —— 先运行 node src/cli.js sync');

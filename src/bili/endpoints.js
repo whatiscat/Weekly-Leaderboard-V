@@ -4,7 +4,9 @@ export const API = {
   opusFeed: 'https://api.bilibili.com/x/polymer/web-dynamic/v1/opus/feed/space',
   opusDetail: 'https://api.bilibili.com/x/polymer/web-dynamic/v1/opus/detail',
   dynamicDetail: 'https://api.bilibili.com/x/polymer/web-dynamic/v1/detail',
-  articleView: 'https://api.bilibili.com/x/article/view'
+  articleView: 'https://api.bilibili.com/x/article/view',
+  /** 稿件详情（aid → bvid / 封面 pic）。附榜的封面解析用，不需要 WBI 签名 */
+  videoView: 'https://api.bilibili.com/x/web-interface/view'
 };
 
 export const WEB = {

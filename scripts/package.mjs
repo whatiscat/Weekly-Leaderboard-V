@@ -45,6 +45,7 @@ copy('config/local.example.json', path.join(OUT, 'config/local.example.json'));
 // 数据（不含运行态）
 copy('data/boards', path.join(OUT, 'data/boards'));
 copy('data/raw', path.join(OUT, 'data/raw'));
+copy('data/nico', path.join(OUT, 'data/nico'));
 if (fs.existsSync(path.join(ROOT, 'data/covers.json'))) copy('data/covers.json', path.join(OUT, 'data/covers.json'));
 
 // 计划任务脚本

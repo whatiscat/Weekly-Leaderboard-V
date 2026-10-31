@@ -113,6 +113,19 @@ async function main() {
     await send('Input.dispatchKeyEvent', { type: 'keyUp', key: k, windowsVirtualKeyCode: code, nativeVirtualKeyCode: code });
   };
 
+  /* 等条件成立，别用固定 sleep 赌加载速度。
+     实测：服务端刚 reload 完时，页面可能 3 秒后连 <body> 都还没解析完，
+     固定 sleep 会把"还没加载好"伪装成"功能坏了"。 */
+  const waitFor = async (expr, timeout = 20000) => {
+    const t0 = Date.now();
+    for (;;) {
+      const ok = await evaluate('(function(){try{return !!(' + expr + ')}catch(e){return false}})()');
+      if (ok) return true;
+      if (Date.now() - t0 > timeout) return false;
+      await sleep(200);
+    }
+  };
+
   const checks = [];
   const check = (name, pass, detail) => checks.push({ name, pass: !!pass, detail });
 
@@ -124,7 +137,9 @@ async function main() {
     await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'no-preference' }] });
     await send('Emulation.setDeviceMetricsOverride', { width: 1440, height: 960, deviceScaleFactor: 1, mobile: false });
     await send('Page.navigate', { url: base });
-    await sleep(2000);
+    const ready = await waitFor("document.querySelectorAll('#rows .row').length > 0 && document.querySelector('.song-item')");
+    check('页面在 20s 内渲染出主榜', ready, ready ? 'ok' : '超时');
+    await sleep(300);
 
     const desk = await evaluate(`(function(){
       var rows = [].slice.call(document.querySelectorAll('#rows .row')).slice(0, 4);
@@ -144,29 +159,36 @@ async function main() {
     check('像素徽标跟随文字色', desk.markFill !== 'rgb(0, 0, 0)', desk.markFill);
     await shot('shot-dark.png');
 
-    // 走势图：点第一首后立刻抓描线中间态
+    // 走势图：描线只有几百毫秒，固定 sleep 会踩空（快机器上已经画完、慢机器上还没开始）。
+    // 正确做法是**轮询中间态**：抓到 0 < dashoffset < 1 就算真的在画。
     await evaluate("document.querySelector('.song-item').click()");
-    await sleep(120);
-    const chart = await evaluate(`(function(){
-      var line = document.querySelector('.trend-line');
-      var svg = document.querySelector('svg.chart');
-      return { drawing: svg ? svg.classList.contains('is-drawing') : false,
-        dasharray: line ? getComputedStyle(line).strokeDasharray : null,
-        dashoffset: line ? getComputedStyle(line).strokeDashoffset : null,
-        dots: document.querySelectorAll('.trend-dot').length };
-    })()`);
-    check('走势图在描线', chart.drawing && parseFloat(chart.dashoffset) > 0 && parseFloat(chart.dashoffset) < 1, 'dashoffset=' + chart.dashoffset);
+    let chart = null;
+    for (let i = 0; i < 30; i++) {
+      chart = await evaluate(`(function(){
+        var line = document.querySelector('.trend-line');
+        var svg = document.querySelector('svg.chart');
+        return { drawing: svg ? svg.classList.contains('is-drawing') : false,
+          dasharray: line ? getComputedStyle(line).strokeDasharray : null,
+          dashoffset: line ? getComputedStyle(line).strokeDashoffset : null,
+          dots: document.querySelectorAll('.trend-dot').length };
+      })()`);
+      const off = parseFloat(chart.dashoffset);
+      if (off > 0 && off < 1) break;
+      await sleep(35);
+    }
+    check('走势图在描线', parseFloat(chart.dashoffset) > 0 && parseFloat(chart.dashoffset) < 1, 'dashoffset=' + chart.dashoffset);
     check('走势图圆点已生成', chart.dots > 0, chart.dots + ' 个');
     await sleep(800);
     await shot('shot-chart.png');
 
     // 抽屉：点开 → Esc → 焦点回到来处
+    // 抽屉是点开之后才异步取单曲详情的，固定 sleep 会抓到"还没打开"的那一刻
     await evaluate("document.querySelector('#rows .row').focus(); document.querySelector('#rows .row').click()");
-    await sleep(600);
+    await waitFor("document.getElementById('drawer') && document.getElementById('drawer').classList.contains('on') && document.body.classList.contains('is-locked')");
     const open = await evaluate("(function(){ var d=document.getElementById('drawer'); return { on: d.classList.contains('on'), locked: document.body.classList.contains('is-locked'), focus: document.activeElement.id }; })()");
     check('抽屉打开并锁滚动', open.on && open.locked, JSON.stringify(open));
     await key('Escape', 27);
-    await sleep(500);
+    await waitFor("!document.getElementById('drawer').classList.contains('on')");
     const closed = await evaluate("(function(){ return { on: document.getElementById('drawer').classList.contains('on'), back: document.activeElement.classList.contains('row') }; })()");
     check('Esc 关闭并把焦点还回原行', !closed.on && closed.back, JSON.stringify(closed));
 
@@ -191,7 +213,8 @@ async function main() {
     // 移动端
     await send('Emulation.setDeviceMetricsOverride', { width: 390, height: 844, deviceScaleFactor: 2, mobile: true });
     await send('Page.navigate', { url: base });
-    await sleep(2000);
+    await waitFor("document.querySelectorAll('#rows .row').length > 0 && document.querySelector('.sel')");
+    await sleep(300);
     const mobile = await evaluate(`(function(){
       var sel = document.querySelector('.sel');
       return { rows: document.querySelectorAll('#rows .row').length,
@@ -207,7 +230,8 @@ async function main() {
     await send('Emulation.setEmulatedMedia', { features: [{ name: 'prefers-reduced-motion', value: 'reduce' }] });
     await send('Emulation.setDeviceMetricsOverride', { width: 1440, height: 960, deviceScaleFactor: 1, mobile: false });
     await send('Page.reload');
-    await sleep(1800);
+    await waitFor("document.querySelectorAll('#rows .row').length > 0");
+    await sleep(300);
     const reduced = await evaluate(`(function(){
       var row = document.querySelector('#rows .row');
       var cs = row ? getComputedStyle(row) : null;

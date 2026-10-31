@@ -1,5 +1,16 @@
 [
   {
+    "id": 229,
+    "board_id": 2,
+    "issue_id": 85,
+    "year": 2026,
+    "week": 44,
+    "video_count": 20,
+    "end_date": 1793030400,
+    "video_bvid": null,
+    "video_pubdate": null
+  },
+  {
     "id": 227,
     "board_id": 2,
     "issue_id": 84,
@@ -7,8 +18,8 @@
     "week": 43,
     "video_count": 20,
     "end_date": 1792425600,
-    "video_bvid": null,
-    "video_pubdate": null
+    "video_bvid": "BV1Rfnx6nEra",
+    "video_pubdate": 1792749600
   },
   {
     "id": 225,

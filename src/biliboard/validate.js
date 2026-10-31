@@ -24,13 +24,19 @@ function isInt(v) {
   return Number.isInteger(v);
 }
 
-/** 期次列表：不能为空、不能有重复期号、不能比已有的少 */
-export function checkIssues(list, prev = [], label = '期次') {
+/**
+ * 期次列表：不能为空、不能有重复期号、不能比已有的少。
+ *
+ * optional=true 的榜单（目前是年榜）允许为空：那条接口可能根本不存在，
+ * 或者上游还没发布第一期。此时"空"不是故障，而是事实 —— 曲目库里
+ * board 3 的行照样能拼出期次表（见 src/model/build.js 的 buildBoard）。
+ */
+export function checkIssues(list, prev = [], label = '期次', { optional = false } = {}) {
   const errors = [];
   if (!Array.isArray(list)) {
     return ['上游返回的' + label + '不是数组（实际 ' + typeof list + '）'];
   }
-  if (!list.length) errors.push(label + '为空：上游可能正在维护或接口行为变了');
+  if (!list.length && !optional) errors.push(label + '为空：上游可能正在维护或接口行为变了');
 
   const seen = new Set();
   let badRows = 0;
@@ -56,10 +62,16 @@ export function checkIssues(list, prev = [], label = '期次') {
  *
  * 名次上限按榜单区分：上游库里除了周榜(1)、传说曲周榜(2)，还有年榜(3)。
  * 年榜名次能到 100，一刀切成 1–20 会把整份曲目库判成"脏数据"（实测踩过：
- * 200 条年榜行直接把同步拦死）。本项目只展示 board 1/2，但原始行照样保留 ——
- * 将来加年榜视图时不用重新抓一遍。
+ * 200 条年榜行直接把同步拦死）。三张榜现在都会展示，上限照样不能共用一套。
  */
-const BOARD_RANK_LIMIT = { 1: 20, 2: 20 };
+const BOARD_RANK_LIMIT = { 1: 20, 2: 20, 3: 100 };
+const BOARD_NAME = { 1: '周榜', 2: '传说曲周榜', 3: '年榜' };
+
+function rankHint() {
+  return Object.entries(BOARD_RANK_LIMIT)
+    .map(([id, limit]) => (BOARD_NAME[id] || 'board ' + id) + ' 1–' + limit)
+    .join(' / ');
+}
 
 export function checkSongs(songs, { prevCount = 0 } = {}) {
   const errors = [];
@@ -83,7 +95,7 @@ export function checkSongs(songs, { prevCount = 0 } = {}) {
   }
   if (badRows) errors.push('曲目库里 ' + badRows + ' 条记录缺少合法的 id / issueId');
   if (noHistory) errors.push('曲目库里 ' + noHistory + ' 首没有任何上榜记录（不该出现在曲目库）');
-  if (badRanks) errors.push('曲目库里有 ' + badRanks + ' 条名次越界（周榜/传说曲周榜应为 1–20）');
+  if (badRanks) errors.push('曲目库里有 ' + badRanks + ' 条名次越界（' + rankHint() + '）');
 
   // 合并逻辑只会往 byId 里加，条数**不可能**变少；变少说明基线文件被破坏或全量抓取提前中断
   if (prevCount && songs.length < prevCount) {
@@ -96,7 +108,7 @@ export function checkSongs(songs, { prevCount = 0 } = {}) {
  * 曲目库与期次表的一致性（只报警告，不拦写）：
  * 这类偏差通常是上游补数据 / 删数据造成的，硬拦会让日常同步直接不可用。
  */
-export function describeCoverage(songs, issues) {
+export function describeCoverage(songs, issues, { boardId = 1 } = {}) {
   const issueIds = new Set(issues.map((i) => i.issue_id));
   // 每期收「名次集合」而不是行数：同一期同一个名次出现两次时，
   // 行数会把「满员」算出来，但页面上并不会多出一行 —— 只有去重后的名次才算数。
@@ -107,7 +119,7 @@ export function describeCoverage(songs, issues) {
 
   for (const s of songs) {
     for (const h of s.history || []) {
-      if (h.boardId !== 1) continue;
+      if (h.boardId !== boardId) continue;
       rows++;
       if (!issueIds.has(h.issueId)) { orphanRows++; continue; }
       if (!perIssue.has(h.issueId)) perIssue.set(h.issueId, new Set());
@@ -168,8 +180,9 @@ export function checkLatest(songs, issues, { lag = 1 } = {}) {
 export function inspectSync({ issues, songs, prevIssues = [], prevSongsCount = 0, extraIssues = [] }) {
   const errors = [
     ...checkIssues(issues, prevIssues, '周榜期次'),
-    // 附榜（传说曲周榜）是另一张表，缩水同样要拦 —— 它比周榜短，但一样是覆盖写
-    ...extraIssues.flatMap((x) => checkIssues(x.list, x.prev, x.label)),
+    // 附榜（传说曲周榜 / 年榜）是另外两张表，缩水同样要拦 —— 它们比周榜短，但一样是覆盖写。
+    // optional 的那张允许为空（接口不存在时由曲目库兜底，不是故障）。
+    ...extraIssues.flatMap((x) => checkIssues(x.list, x.prev, x.label, { optional: Boolean(x.optional) })),
     ...checkSongs(songs, { prevCount: prevSongsCount })
   ];
   const coverage = describeCoverage(songs, issues);

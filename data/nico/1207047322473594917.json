@@ -1,0 +1,5710 @@
+{
+  "id": "1207047322473594917",
+  "title": "【2026/05/27】ニコニコ VOCALOID SONGS TOP20",
+  "date": "2026-05-27",
+  "issue": 169,
+  "period": {
+    "from": "2026/05/18",
+    "to": "2026/05/24"
+  },
+  "cv": 0,
+  "type": "",
+  "entries": [
+    {
+      "rank": 1,
+      "title": "歌姫失格",
+      "producer": "ピノキオピー",
+      "lastRank": 1,
+      "weeks": 2,
+      "aid": "116553718765633",
+      "bvid": "BV1Fo5s6GEgK"
+    },
+    {
+      "rank": 2,
+      "title": "ソラの議事録",
+      "producer": "MIMI",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "116611633649841",
+      "bvid": "BV18GL866Eun"
+    },
+    {
+      "rank": 3,
+      "title": "サイバーサンダーサイダー",
+      "producer": "EZFG",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "137013",
+      "bvid": "BV1Tx411w7Rj"
+    },
+    {
+      "rank": 4,
+      "title": "メモリー",
+      "producer": "大漠波新",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "116617639889006",
+      "bvid": "BV1v8Gt6zEU6"
+    },
+    {
+      "rank": 5,
+      "title": "ループザルーム",
+      "producer": "ルシノ",
+      "lastRank": 7,
+      "weeks": 22,
+      "aid": "115752338194968",
+      "bvid": "BV1zBq6BuEyH"
+    },
+    {
+      "rank": 6,
+      "title": "ブレインロット",
+      "producer": "東京真中",
+      "lastRank": 6,
+      "weeks": 14,
+      "aid": "116103552437316",
+      "bvid": "BV1a9fgBAEwW"
+    },
+    {
+      "rank": 7,
+      "title": "メズマライザー",
+      "producer": "サツキ",
+      "lastRank": 3,
+      "weeks": 92,
+      "aid": "1254639592",
+      "bvid": "BV15J4m1A7qy"
+    },
+    {
+      "rank": 8,
+      "title": "星界ちゃんの角瓶ガブ飲み暴騒曲",
+      "producer": "南ノ南",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "116606231381011",
+      "bvid": "BV1muLU6sEKP"
+    },
+    {
+      "rank": 9,
+      "title": "星に一番近い場所",
+      "producer": "TOKOTOKO（西沢さんP）",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "",
+      "bvid": ""
+    },
+    {
+      "rank": 10,
+      "title": "クラックラッカ",
+      "producer": "きさら",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "116600896232309",
+      "bvid": "BV1ycL66ZEqg"
+    },
+    {
+      "rank": 11,
+      "title": "モニタリング",
+      "producer": "DECO*27",
+      "lastRank": 13,
+      "weeks": 69,
+      "aid": "113474931986942",
+      "bvid": "BV1qDUPYKEzf"
+    },
+    {
+      "rank": 12,
+      "title": "いますぐ輪廻",
+      "producer": "なきそ",
+      "lastRank": 8,
+      "weeks": 38,
+      "aid": "114952954187731",
+      "bvid": "BV1phhHz8EPF"
+    },
+    {
+      "rank": 13,
+      "title": "能ナシ",
+      "producer": "isonosuke",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "116612657255591",
+      "bvid": "BV1CSLh6NEzS"
+    },
+    {
+      "rank": 14,
+      "title": "アンノウン・マザーグース",
+      "producer": "wowaka",
+      "lastRank": 11,
+      "weeks": 123,
+      "aid": "13673279",
+      "bvid": "BV1hx411b7CZ"
+    },
+    {
+      "rank": 15,
+      "title": "テトリス",
+      "producer": "柊マグネタイト",
+      "lastRank": 12,
+      "weeks": 72,
+      "aid": "113447568148949",
+      "bvid": "BV1GADYYmEnd"
+    },
+    {
+      "rank": 16,
+      "title": "numb numb",
+      "producer": "TAK",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "116607389079529",
+      "bvid": "BV1H1LS6SEyF"
+    },
+    {
+      "rank": 17,
+      "title": "オーバーライド",
+      "producer": "吉田夜世",
+      "lastRank": 14,
+      "weeks": 90,
+      "aid": "114500338458449",
+      "bvid": "BV1dTEFzpEKd"
+    },
+    {
+      "rank": 18,
+      "title": "コムギノフネ",
+      "producer": "いえぬ",
+      "lastRank": null,
+      "weeks": 1,
+      "aid": "116617639889054",
+      "bvid": "BV1v8Gt6zE2y"
+    },
+    {
+      "rank": 19,
+      "title": "個々々々々々人",
+      "producer": "Sohbana",
+      "lastRank": 4,
+      "weeks": 12,
+      "aid": "116112780041780",
+      "bvid": "BV17sfFBVEDk"
+    },
+    {
+      "rank": 20,
+      "title": "あなたしか見えないの",
+      "producer": "r-906",
+      "lastRank": null,
+      "weeks": 3,
+      "aid": "116437049937085",
+      "bvid": "BV1vLdrBUEYp"
+    }
+  ],
+  "source": "opus",
+  "payload": {
+    "kind": "paragraphs",
+    "data": [
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "Billboard JAPAN 自2022年12月7日起与 ニコニコ 合作，推出“ニコニコ VOCALOID SONGS TOP20” （NICONICO VOCALOID歌曲TOP20）。本排行综合ニコニコ播放数，弹幕数，收藏数，点赞数，相关衍生作品（翻唱，翻跳，演奏等）数量、播放数、弹幕数、收藏数、点赞数等数据，结合Billboard JAPAN 自主开发的独立系数算出总点数，生成排名前20的榜单。",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "统计对象为：在ニコニコGenre:音楽・サウンド投稿，带VOCALOID或者相关活动tag，使用歌声合成引擎/音声合成引擎/混合型合成引擎进行制作的原创或本家重制作品。",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "本期统计时段为2026/05/18-2026/05/24，本期视频版可点下方链接查看。",
+                "font_size": 17,
+                "color": "var(--Ly7, #AA7D00)",
+                "dark_color": "#DEC158",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ly7",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116644919641157",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上期（第168期）可点下方链接查看。",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116605677733514",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "1204449717633679396",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "【2026/05/20】ニコニコ VOCALOID SONGS TOP20"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第20位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "あなたしか見えないの/r-906",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —          在榜周数：3",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116437049937085",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第19位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "個々々々々々人/Sohbana",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 4            在榜周数：12",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116112780041780",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第18位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "コムギノフネ/いえぬ",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "（NEW!）",
+                "font_size": 17,
+                "color": "var(--Ly7, #AA7D00)",
+                "dark_color": "#DEC158",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ly7",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "   ",
+                "font_size": 17,
+                "color": "var(--Bl5, #6188FF)",
+                "dark_color": "#4B6BD4",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Bl5",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "在榜周数：1 ",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116617639889054",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第17位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "オーバーライド/吉田夜世",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 14            在榜周数：90",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "114500338458449",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第16位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "numb numb/TAK",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "（NEW!）",
+                "font_size": 17,
+                "color": "var(--Ly7, #AA7D00)",
+                "dark_color": "#DEC158",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ly7",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "   ",
+                "font_size": 17,
+                "color": "var(--Bl5, #6188FF)",
+                "dark_color": "#4B6BD4",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Bl5",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "在榜周数：1 ",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116607389079529",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第15位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "テトリス/柊マグネタイト",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 12            在榜周数：72",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "113447568148949",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第14位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "アンノウン・マザーグース/wowaka",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 11            在榜周数：123",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "13673279",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第13位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "能ナシ/isonosuke",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "（NEW!）",
+                "font_size": 17,
+                "color": "var(--Ly7, #AA7D00)",
+                "dark_color": "#DEC158",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ly7",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "   ",
+                "font_size": 17,
+                "color": "var(--Bl5, #6188FF)",
+                "dark_color": "#4B6BD4",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Bl5",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "在榜周数：1 ",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116612657255591",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第12位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "いますぐ輪廻/なきそ",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 8            在榜周数：38",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "114952954187731",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第11位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "モニタリング/DECO*27",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 13           在榜周数：69",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "113474931986942",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第10位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "クラックラッカ/きさら",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "（NEW!）",
+                "font_size": 17,
+                "color": "var(--Ly7, #AA7D00)",
+                "dark_color": "#DEC158",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ly7",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "   ",
+                "font_size": 17,
+                "color": "var(--Bl5, #6188FF)",
+                "dark_color": "#4B6BD4",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Bl5",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "在榜周数：1 ",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116600896232309",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第9位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "星に一番近い場所/TOKOTOKO（西沢さんP）",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "（NEW!）",
+                "font_size": 17,
+                "color": "var(--Ly7, #AA7D00)",
+                "dark_color": "#DEC158",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ly7",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "   ",
+                "font_size": 17,
+                "color": "var(--Bl5, #6188FF)",
+                "dark_color": "#4B6BD4",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Bl5",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "在榜周数：1 ",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "本家禁止转载，暂无链接。",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 2,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": {
+          "pics": [
+            {
+              "url": "http://i0.hdslb.com/bfs/new_dyn/61552a3a548334c9025c6dc42adfefe512446725.jpg",
+              "width": 1280,
+              "height": 720,
+              "size": 660.07,
+              "live_url": "",
+              "aigc": 0,
+              "warning": null,
+              "comment": ""
+            }
+          ],
+          "style": 2
+        },
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第8位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "星界ちゃんの角瓶ガブ飲み暴騒曲/南ノ南",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "（NEW!）",
+                "font_size": 17,
+                "color": "var(--Ly7, #AA7D00)",
+                "dark_color": "#DEC158",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ly7",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "   ",
+                "font_size": 17,
+                "color": "var(--Bl5, #6188FF)",
+                "dark_color": "#4B6BD4",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Bl5",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "在榜周数：1 ",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116606231381011",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第7位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "メズマライザー/サツキ",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 3            在榜周数：92",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "1254639592",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第6位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "ブレインロット/東京真中",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 6            在榜周数：14",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116103552437316",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第5位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "ループザルーム/ルシノ",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 7            在榜周数：22",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "115752338194968",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "115587200063090",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第4位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "メモリー/大漠波新",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "（NEW!）",
+                "font_size": 17,
+                "color": "var(--Ly7, #AA7D00)",
+                "dark_color": "#DEC158",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ly7",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "   ",
+                "font_size": 17,
+                "color": "var(--Bl5, #6188FF)",
+                "dark_color": "#4B6BD4",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Bl5",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "在榜周数：1 ",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116617639889006",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第3位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "サイバーサンダーサイダー/EZFG",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —          在榜周数：1",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "137013",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第2位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "ソラの議事録/MIMI",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： —",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "（NEW!）",
+                "font_size": 17,
+                "color": "var(--Ly7, #AA7D00)",
+                "dark_color": "#DEC158",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ly7",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "   ",
+                "font_size": 17,
+                "color": "var(--Bl5, #6188FF)",
+                "dark_color": "#4B6BD4",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Bl5",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "在榜周数：1 ",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116611633649841",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "\n",
+                "font_size": 17,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "第1位 ",
+                "font_size": 22,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            },
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "歌姫失格/ピノキオピー",
+                "font_size": 22,
+                "color": "",
+                "dark_color": "",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": ""
+                },
+                "font_level": "xLarge",
+                "translated_words": "",
+                "bili_theme": "",
+                "bg_style": null
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 1,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": {
+            "first_line_indent": 0,
+            "indent": 0
+          }
+        },
+        "text": {
+          "nodes": [
+            {
+              "type": "TEXT_NODE_TYPE_WORD",
+              "word": {
+                "words": "上周： 1            在榜周数：2",
+                "font_size": 17,
+                "color": "var(--Ga9, #2F3238)",
+                "dark_color": "#D0D3D7",
+                "style": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "background": "linear-gradient(transparent 50%, var(--Wh0, #FFFFFF) 50%)"
+                },
+                "font_level": "regular",
+                "translated_words": "",
+                "bili_theme": "Ga9",
+                "bg_style": {
+                  "style": 1,
+                  "color": {
+                    "color": "#FFFFFF",
+                    "dark_color": "#17181A",
+                    "bili_theme": "Wh0"
+                  }
+                }
+              },
+              "rich": null,
+              "formula": null,
+              "user": null
+            }
+          ]
+        },
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": null,
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      },
+      {
+        "para_type": 6,
+        "align": 0,
+        "format": {
+          "align": 0,
+          "indent": null
+        },
+        "text": null,
+        "pic": null,
+        "line": null,
+        "list": null,
+        "link_card": {
+          "card": {
+            "type": "LINK_CARD_TYPE_ITEM_NULL",
+            "oid": "116553718765633",
+            "archive": null,
+            "goods": null,
+            "vote": null,
+            "common": null,
+            "match": null,
+            "ugc": null,
+            "reserve": null,
+            "upower_lottery": null,
+            "opus": null,
+            "music": null,
+            "live": null,
+            "eva3_opus": null,
+            "eva3_video": null,
+            "eva3_comment": null,
+            "item_null": {
+              "icon": "",
+              "text": "视频"
+            },
+            "eva3_user": null,
+            "eva3_vote": null,
+            "eva3_toy": null
+          }
+        },
+        "code": null,
+        "heading": null,
+        "blockquote": null
+      }
+    ]
+  },
+  "missing": [],
+  "complete": true,
+  "warnings": [],
+  "fetchedAt": "2026-10-27T16:23:20.688Z"
+}

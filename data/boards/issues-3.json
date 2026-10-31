@@ -1,0 +1,57 @@
+[
+  {
+    "id": 199,
+    "board_id": 3,
+    "issue_id": 5,
+    "year": 2026,
+    "week": 1,
+    "video_count": 50,
+    "end_date": 1782748800,
+    "video_bvid": "BV1pvgv6aE1y",
+    "video_pubdate": 1785060105
+  },
+  {
+    "id": 95,
+    "board_id": 3,
+    "issue_id": 4,
+    "year": 2025,
+    "week": 2,
+    "video_count": 50,
+    "end_date": 1770048000,
+    "video_bvid": "BV1baZJBLEwm",
+    "video_pubdate": 1771128000
+  },
+  {
+    "id": 92,
+    "board_id": 3,
+    "issue_id": 2,
+    "year": 2025,
+    "week": 1,
+    "video_count": 50,
+    "end_date": 1751299200,
+    "video_bvid": "BV1da3vzqEa3",
+    "video_pubdate": 1751780152
+  },
+  {
+    "id": 91,
+    "board_id": 3,
+    "issue_id": 3,
+    "year": 2025,
+    "week": 0,
+    "video_count": 100,
+    "end_date": 1767110400,
+    "video_bvid": "BV1sS6UByEHa",
+    "video_pubdate": 1768104000
+  },
+  {
+    "id": 94,
+    "board_id": 3,
+    "issue_id": 1,
+    "year": 2024,
+    "week": 2,
+    "video_count": 50,
+    "end_date": 1735574400,
+    "video_bvid": null,
+    "video_pubdate": null
+  }
+]

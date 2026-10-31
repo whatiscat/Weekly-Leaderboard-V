@@ -8,7 +8,7 @@ export function createApp({ cfg, log }) {
   const repo = new Repository(cfg, log);
   const router = createRouter();
 
-  registerApiRoutes(router, repo, cfg);
+  registerApiRoutes(router, repo, cfg, log);
   registerStaticRoutes(router, cfg, repo);
 
   // 启动时预热，避免首个请求等太久

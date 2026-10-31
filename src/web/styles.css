@@ -177,6 +177,10 @@ body {
 
 a { color: inherit; text-decoration: none; }
 img { display: block; max-width: 100%; }
+
+/* 「切榜单」靠 hidden 整块收起。任何一个区块将来只要写了 display，hidden 就会失效
+   （display 的优先级高于 UA 样式里的 [hidden]），所以在基线上统一兜一次。 */
+[hidden] { display: none !important; }
 b, strong { font-weight: 650; }
 
 ::selection { background: var(--accent-soft); color: var(--accent); }
@@ -248,12 +252,28 @@ b, strong { font-weight: 650; }
    看起来像"一个蓝点"，完全看不出是四根上升的柱子。 */
 .brand-mark rect { fill: currentColor; }
 .brand-mark .on { fill: var(--accent); }
-.brand .name {
-  font-size: 15px; font-weight: 650; letter-spacing: -.01em; white-space: nowrap;
-  transition: color var(--d-2) var(--e-soft);
+/* 榜单切换（B 榜 / N 榜）：顶栏里的分段控件。
+   选中态用"抬起的一格"（surface 底色）表示，而不是描边 —— 顶栏自己就有一条
+   分隔线，再套一圈边框会和它对冲。两段各带一行小字，说明这条榜到底是什么。 */
+.charts {
+  display: flex; gap: 2px; padding: 2px;
+  background: var(--surface-2); border: 1px solid var(--line);
+  border-radius: var(--r-md);
 }
-.brand:hover .name { color: var(--accent); }
-.brand .name small { color: var(--faint); font-weight: 450; margin-left: 8px; font-size: 12.5px; }
+.cs {
+  display: flex; flex-direction: column; align-items: flex-start;
+  padding: 2px 11px; border: 0; border-radius: calc(var(--r-md) - 2px);
+  background: none; color: var(--muted); font: inherit; line-height: 1.3;
+  cursor: pointer; text-align: left;
+  transition: color var(--d-2) var(--e-soft), background-color var(--d-2) var(--e-soft);
+}
+.cs b { font-size: 13px; font-weight: 650; letter-spacing: .02em; }
+.cs span { font-size: 10.5px; color: var(--faint); white-space: nowrap; }
+.cs:hover { color: var(--text); }
+.cs:hover span { color: var(--muted); }
+.cs.on { background: var(--surface); color: var(--text); }
+.cs.on b { color: var(--accent); }
+.cs:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--accent-soft); }
 
 .actions { margin-left: auto; display: flex; align-items: center; gap: 8px; }
 
@@ -362,6 +382,40 @@ b, strong { font-weight: 650; }
 }
 .page-head p { margin: 8px 0 0; color: var(--faint); font-size: 13px; }
 
+/* 标题里的榜单选择器（周榜 / 传说榜 / 年榜）。
+   三条榜在页面上只有一个位置，切的是整页而不是筛选，所以它长得像标题的一部分：
+   字号、字重、字距全部继承 h1，只靠强调色和一个 caret 表明"这里能点"。 */
+.pick { position: relative; display: inline-block; }
+.pick-btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  margin: 0 -6px; padding: 0 6px;
+  background: none; border: 0; border-radius: var(--r-sm);
+  color: var(--accent); font: inherit; font-weight: inherit; letter-spacing: inherit;
+  line-height: inherit; cursor: pointer;
+  transition: background-color var(--d-2) var(--e-soft);
+}
+.pick-btn:hover { background: var(--accent-soft); }
+.pick-btn:focus-visible { outline: none; box-shadow: 0 0 0 2px var(--accent-soft); }
+.pick-caret { flex: none; opacity: .75; transform: translateY(1px); }
+.pick-menu {
+  position: absolute; top: calc(100% + 6px); left: 0; z-index: 120;
+  min-width: 128px; padding: 5px;
+  background: var(--surface); border: 1px solid var(--line-2); border-radius: var(--r-md);
+  box-shadow: var(--sh-3);
+  font-size: 13px; font-weight: 500; letter-spacing: 0; line-height: 1.6;
+  animation: menu-in var(--d-2) var(--e-out);
+}
+.pick-menu button {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  width: 100%; height: 32px; padding: 0 10px;
+  background: none; border: 0; border-radius: var(--r-sm);
+  color: var(--muted); font: inherit; text-align: left; cursor: pointer;
+  transition: background-color var(--d-2) var(--e-soft), color var(--d-2) var(--e-soft);
+}
+.pick-menu button:hover { background: var(--surface-2); color: var(--text); }
+.pick-menu button[aria-checked="true"] { color: var(--accent); }
+.pick-menu button[aria-checked="true"]::after { content: '✓'; font-size: 12px; }
+
 .hero {
   margin-top: 18px;
   padding: 20px 22px 18px;
@@ -449,6 +503,9 @@ section { margin-top: 34px; scroll-margin-top: 74px; }
 .sec-head h3 { margin: 0; font-size: 14px; font-weight: 650; letter-spacing: .01em; }
 .sec-head .desc { font-size: 12.5px; color: var(--faint); }
 .sec-head .right { margin-left: auto; font-size: 12.5px; color: var(--faint); font-variant-numeric: tabular-nums; }
+/* 区块副标题里的来源链接（附榜的 UP 主主页）：别用强调色，它只是说明 */
+.sec-head .desc a { color: var(--muted); border-bottom: 1px dashed var(--line-2); transition: color var(--d-2) var(--e-soft), border-color var(--d-2) var(--e-soft); }
+.sec-head .desc a:hover { color: var(--accent); border-color: var(--accent); }
 
 .toolbar { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding-bottom: 12px; }
 .nav {
@@ -461,12 +518,27 @@ section { margin-top: 34px; scroll-margin-top: 74px; }
 }
 .nav:hover { color: var(--text); border-color: var(--accent); }
 .nav:active { transform: scale(.94); }
+/* 附榜的首末期没有上一期/下一期：置灰表示"没有"，而不是点了没反应 */
+.nav:disabled { opacity: .35; cursor: default; }
+.nav:disabled:hover, .nav:disabled:active { color: var(--muted); border-color: var(--line-2); transform: none; }
 .tl-meta { font-size: 12.5px; color: var(--faint); margin-right: auto; font-variant-numeric: tabular-nums; }
 .empty { padding: 28px; text-align: center; color: var(--faint); font-size: 13px; }
 
-.board { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden; }
+/* ---- 附榜切换（传说曲周榜 / 年榜）----
+   用一排按钮而不是 <select>：只有两条，展开一个下拉比直接看见多花一次点击。 */
+
+
+.board {
+  background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); overflow: hidden;
+  /* 列宽走变量：年榜要少一列（没有「近 30 期」），只改变量就够了，
+     窄屏的 grid-template-areas 覆盖也就不会被这里的高优先级选择器压死 */
+  --cols: 56px 52px 64px minmax(0,1fr) 200px 76px 76px;
+}
+.board.no-spark { --cols: 56px 52px 64px minmax(0,1fr) 76px 76px; }
+.board.no-spark .board-head > div:nth-child(5),
+.board.no-spark .row .sp { display: none; }
 .board-head {
-  display: grid; grid-template-columns: 56px 52px 64px minmax(0,1fr) 200px 76px 76px; gap: 10px;
+  display: grid; grid-template-columns: var(--cols); gap: 10px;
   padding: 10px 18px;
   border-bottom: 1px solid var(--line);
   background: var(--surface-2);
@@ -475,7 +547,7 @@ section { margin-top: 34px; scroll-margin-top: 74px; }
 .board-head > div:nth-child(5), .board-head > div:nth-child(6), .board-head > div:nth-child(7) { text-align: right; }
 
 .row {
-  display: grid; grid-template-columns: 56px 52px 64px minmax(0,1fr) 200px 76px 76px; gap: 10px;
+  display: grid; grid-template-columns: var(--cols); gap: 10px;
   align-items: center;
   padding: 11px 18px;
   border-bottom: 1px solid var(--line);
@@ -525,14 +597,17 @@ section { margin-top: 34px; scroll-margin-top: 74px; }
 /* ==========================================================================
    9. 看点 / 冠军榜
    ========================================================================== */
-.grid3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 15px 17px; }
+/* minmax(0, 1fr) 而不是 1fr：1fr 的隐含最小值是 auto，网格项会被"最长的一个
+   不可断行的词"顶开 —— ニコニコ 那边有一条曲名是整串没有空格的日文，
+   一格就能把整个页面撑宽 194px。三处都要 min-width:0 才收得住。 */
+.grid3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); padding: 15px 17px; min-width: 0; }
 .panel h4 {
   margin: 0 0 10px; display: flex; justify-content: space-between;
   font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--faint); font-weight: 600;
 }
 .panel ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 7px; }
-.panel li { display: flex; align-items: center; gap: 10px; font-size: 13.5px; }
+.panel li { display: flex; align-items: center; gap: 10px; font-size: 13.5px; min-width: 0; }
 .panel li .t { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .panel li .d { font-size: 11.5px; font-weight: 650; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .panel p { margin: 0; color: var(--faint); font-size: 13px; }
@@ -593,6 +668,13 @@ section { margin-top: 34px; scroll-margin-top: 74px; }
 .chart-head .lnk { margin-left: auto; font-size: 12.5px; color: var(--accent); }
 .chart-head .lnk:hover { color: var(--accent-2); }
 
+/* 走势区间：从哪一期画到哪一期。默认最近 30 期（一屏放得下、也还是"最近"），
+   但历史较长的曲子经常要看"从上榜到现在"，所以两头都能改。 */
+.range { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.range .rr { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; color: var(--faint); }
+.sel.sm { height: 28px; font-size: 12.5px; padding: 0 24px 0 9px; }
+.btn.sm { height: 28px; padding: 0 10px; font-size: 12.5px; }
+
 .chart { display: block; width: 100%; height: auto; margin-top: 8px; }
 .chart text { font-family: inherit; }
 .trend-grid { stroke: var(--line); }
@@ -607,24 +689,11 @@ section { margin-top: 34px; scroll-margin-top: 74px; }
 .single-rank .big { font-size: 42px; font-weight: 800; letter-spacing: -.02em; color: var(--accent); font-variant-numeric: tabular-nums; }
 
 /* ==========================================================================
-   11. 表格（传说曲附榜）/ 页脚
+   11. 页脚
+   --------------------------------------------------------------------------
+   这里原来还有一套 .ltable（传说曲附榜的三列表格）。附榜改成与主榜同构的
+   行列表之后就没人用了，留着只会让下一个人以为"附榜用的是表格"。
    ========================================================================== */
-.ltable { width: 100%; border-collapse: separate; border-spacing: 0; font-size: 13px; }
-.ltable th {
-  padding: 9px 18px; text-align: left;
-  background: var(--surface-2); border-bottom: 1px solid var(--line);
-  font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--faint);
-}
-.ltable td { padding: 11px 18px; border-bottom: 1px solid var(--line); }
-.ltable tr:last-child td { border-bottom: 0; }
-.ltable tbody tr { transition: background-color var(--d-2) var(--e-soft); }
-.ltable tbody tr:hover { background: var(--surface-2); }
-.ltable a { color: var(--accent); font-size: 12.5px; white-space: nowrap; }
-.ltable th:nth-child(1) { width: 110px; }
-.ltable th:nth-child(2) { width: 130px; }
-.ltable th:nth-child(4) { width: 108px; text-align: right; }
-.ltable td:nth-child(4) { text-align: right; }
-
 footer { margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--faint); font-size: 12.5px; line-height: 1.9; }
 footer b { color: var(--muted); font-weight: 600; }
 footer a { color: var(--muted); border-bottom: 1px dashed var(--line-2); transition: color var(--d-2) var(--e-soft), border-color var(--d-2) var(--e-soft); }
@@ -669,6 +738,44 @@ footer a:hover { color: var(--accent); border-color: var(--accent); }
 .no-player { display: grid; place-items: center; height: 100%; color: var(--faint); font-size: 12.5px; }
 
 .d-body { padding: 18px 20px 28px; }
+
+/* ---- 设置抽屉（命令行那几件事的网页版） ---- */
+.console { width: min(520px, 100vw); }
+.c-actions { margin-top: 18px; display: flex; flex-direction: column; gap: 18px; }
+.c-group > h4 {
+  margin: 0 0 7px; font-size: 11.5px; font-weight: 650; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--faint);
+}
+.c-item {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding: 9px 0; border-top: 1px solid var(--line);
+}
+.c-item:first-of-type { border-top: 0; }
+.c-item .cm { min-width: 0; flex: 1 1 190px; }
+.c-item .cm b { display: block; font-size: 13.5px; font-weight: 600; }
+.c-item .cm span { display: block; font-size: 12px; color: var(--faint); margin-top: 2px; }
+.c-flags { display: flex; gap: 10px; flex-wrap: wrap; }
+.c-flags label { display: inline-flex; align-items: center; gap: 4px; font-size: 12px; color: var(--muted); cursor: pointer; }
+.c-flags input { accent-color: var(--accent); }
+.c-run { height: 28px; padding: 0 12px; font-size: 12.5px; }
+
+.c-out-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 20px 0 6px; font-size: 12px; color: var(--faint);
+}
+.c-clear { background: none; border: 0; color: var(--faint); font: inherit; font-size: 12px; cursor: pointer; }
+.c-clear:hover { color: var(--text); }
+.c-out {
+  margin: 0; padding: 10px 12px; min-height: 120px; max-height: 44vh; overflow: auto;
+  background: var(--surface-2); border: 1px solid var(--line); border-radius: var(--r-md);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11.5px; line-height: 1.65; color: var(--muted);
+  white-space: pre-wrap; word-break: break-word;
+}
+.c-out .cl { display: block; }
+.c-out .cl.warn { color: var(--warn-ink); }
+.c-out .cl.error { color: var(--down-ink, #f06a6a); }
+.c-out .cl.ok { color: var(--accent); }
 .d-head h3 { margin: 0; font-size: 19px; line-height: 1.35; letter-spacing: -.01em; }
 .d-head .alt { margin-top: 3px; font-size: 12.5px; color: var(--faint); }
 .d-head .tags { margin-top: 6px; font-size: 12.5px; color: var(--muted); }
@@ -797,7 +904,7 @@ body.is-locked { overflow: hidden; padding-right: var(--sbw, 0px); }
   .song-list { max-height: 300px; }
 }
 @media (max-width: 900px) {
-  .grid3 { grid-template-columns: 1fr; }
+  .grid3 { grid-template-columns: minmax(0, 1fr); }
   .board-head { display: none; }
   /* 窄屏把 7 列压成两行：第一行是名次/变化/封面/曲名，第二行左右分别是
      "上周名次" 与 "在榜周数"。
@@ -824,7 +931,8 @@ body.is-locked { overflow: hidden; padding-right: var(--sbw, 0px); }
 }
 @media (max-width: 640px) {
   .bar { height: 54px; }
-  .brand .name small { display: none; }
+  /* 手机上只留「B 榜 / N 榜」两个短标签，副标题让位给刷新与主题按钮 */
+  .cs span { display: none; }
   #themeBtn .lbl { display: none; }
   .page-head { padding-top: 22px; }
   .hero { padding: 16px; }

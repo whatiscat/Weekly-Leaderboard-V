@@ -1,23 +1,24 @@
 {
-  "lastSyncAt": "2026-10-27T15:38:23.485Z",
+  "lastSyncAt": "2026-10-31T04:04:36.008Z",
   "pagesScanned": 5,
   "scannedSongs": 500,
-  "songs": 642,
+  "songs": 646,
   "added": 0,
   "boards": {
-    "weekly": 123,
-    "legend": 84
+    "weekly": 124,
+    "legend": 85,
+    "annual": 5
   },
   "full": false,
-  "covers": 698,
+  "covers": 1541,
   "quality": {
-    "completeIssues": 123,
-    "totalIssues": 123,
+    "completeIssues": 124,
+    "totalIssues": 124,
     "incomplete": [],
     "orphanRows": 0,
     "duplicateRanks": 0,
-    "latestIssue": 124,
-    "latestInSongs": 124,
+    "latestIssue": 125,
+    "latestInSongs": 125,
     "stale": false,
     "warnings": []
   }

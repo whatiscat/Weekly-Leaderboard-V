@@ -3,7 +3,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { loadConfig } from './config.js';
 import { createLogger } from './logger.js';
-import { formatReport, loadDataset, runCrawl, runSync, runUpdate } from './run.js';
+import { formatReport, loadDataset, runCrawl, runNico, runSync, runUpdate } from './run.js';
+import { nextRunAt, reportText, scheduleText, statusText } from './commands.js';
 import { listen } from './server/index.js';
 import { doctor } from './doctor.js';
 import { RawStore } from './crawler/store.js';
@@ -20,6 +21,9 @@ const HELP = [
   '  update [--force] [--limit N] [--no-crawl] [--no-sync]   同步数据 + 增量抓帖',
   '  sync [--full]                           同步 Biliboard 期次与曲目库',
   '  crawl [--deep] [--force] [--limit N]    只抓 B 站帖子',
+  '  nico [--deep] [--force] [--limit N] [--no-covers] [--backfill]',
+  '                                         只抓附榜（ニコニコ VOCALOID TOP20）',
+  '                                         --backfill：把老期次缺的封面也重扫一遍（几分钟）',
   '  reparse [--write] [--limit N]            用当前解析器重算已存的原文（默认只报告）',
   '  report                                  终端打印数据摘要',
   '  status                                  查看数据与服务状态',
@@ -45,15 +49,6 @@ function parseArgs(argv) {
     } else args._.push(a);
   }
   return args;
-}
-
-function nextRunAt({ weekday, hour, minute }) {
-  const now = new Date();
-  const d = new Date(now);
-  d.setHours(hour, minute, 0, 0);
-  d.setDate(d.getDate() + ((weekday - d.getDay() + 7) % 7));
-  if (d <= now) d.setDate(d.getDate() + 7);
-  return d;
 }
 
 async function main() {
@@ -91,6 +86,21 @@ async function main() {
           + (res.incomplete.length ? '，其中 ' + res.incomplete.length + ' 期不满 20 名（已标记 complete:false）' : ''));
         return res.failed.length ? 2 : 0;
       }
+      case 'nico': {
+        const res = await runNico(cfg, log, {
+          force: Boolean(args.force),
+          deep: Boolean(args.deep),
+          limit: Number(args.limit || 0),
+          covers: !args['no-covers'],
+          backfillCovers: Boolean(args.backfill)
+        });
+        if (!res) { console.log('附榜未启用（config.nico.enabled = false）'); return 0; }
+        log.info('附榜完成：扫描 ' + res.scanned + ' 条动态，周榜帖 ' + res.discovered + ' 期'
+          + (res.skippedSpecial ? '（跳过非周刊帖 ' + res.skippedSpecial + ' 条）' : '')
+          + '，新增 ' + res.fetched + ' 期，失败 ' + res.failed.length + ' 期'
+          + (res.incomplete.length ? '，缺名 ' + res.incomplete.length + ' 期' : ''));
+        return res.failed.length ? 2 : 0;
+      }
       case 'reparse': {
         const store = new RawStore(cfg.paths.raw);
         const write = Boolean(args.write);
@@ -123,33 +133,21 @@ async function main() {
           log.info('抓取：发现 ' + res.crawl.discovered + ' 条，新增 ' + res.crawl.fetched + ' 条，失败 ' + res.crawl.failed.length + ' 条'
             + (res.crawl.incomplete && res.crawl.incomplete.length ? '，缺名 ' + res.crawl.incomplete.length + ' 期' : ''));
         }
+        if (res.nico) {
+          log.info('附榜：新增 ' + res.nico.fetched + ' 期，失败 ' + res.nico.failed.length + ' 期'
+            + (res.nico.error ? '（' + res.nico.error + '）' : ''));
+        }
         console.log('');
         console.log(formatReport(res.dataset));
         log.info('耗时 ' + (res.ms / 1000).toFixed(1) + 's。服务端会自动重载数据（或点页面右上角刷新）');
         return 0;
       }
       case 'report': {
-        console.log(formatReport(loadDataset(cfg)));
+        console.log(reportText(cfg));
         return 0;
       }
       case 'status': {
-        const store = new RawStore(cfg.paths.raw);
-        const state = readJson(cfg.paths.state, {}) || {};
-        console.log('数据：官方曲目库 ' + (fs.existsSync(path.join(cfg.paths.data, 'boards', 'songs.json')) ? '已同步' : '缺失') + ' · 帖子原始记录 ' + store.ids().length + ' 期');
-        const covers = readJson(path.join(cfg.paths.data, 'covers.json'), {}) || {};
-        const failures = readJson(path.join(cfg.paths.data, 'failures.json'), {}) || {};
-        console.log('封面直链 ' + Object.keys(covers).length + ' 条 · 抓帖失败记录 ' + Object.keys(failures).length + ' 条');
-        const syncMeta = readJson(path.join(cfg.paths.data, 'boards', 'meta.json'), {}) || {};
-        if (syncMeta.quality) {
-          const q = syncMeta.quality;
-          console.log('数据质量：满员 ' + q.completeIssues + '/' + q.totalIssues + ' 期'
-            + (q.stale ? ' · ⚠ 曲目库可能不是最新（建议 sync --full）' : '')
-            + (q.warnings && q.warnings.length ? ' · 一致性告警 ' + q.warnings.length + ' 条' : ''));
-        }
-        console.log('最近同步: ' + (state.lastSyncAt || '从未') + ' · 最近抓帖: ' + (state.lastCrawlAt || '从未') + ' · 最近更新: ' + (state.lastRunAt || '从未'));
-        if (state.stats) console.log('数据统计: ' + state.stats.issues + ' 期 / ' + state.stats.entries + ' 条 / ' + state.stats.songs + ' 首');
-        console.log('前端目录: ' + (fs.existsSync(path.join(cfg.paths.web, 'index.html')) ? 'ok' : '缺失'));
-        console.log('启动服务: node src/cli.js serve --open');
+        console.log(statusText(cfg));
         return 0;
       }
       case 'doctor': {
@@ -158,6 +156,7 @@ async function main() {
         return res.ok ? 0 : 1;
       }
       case 'schedule': {
+        if (args.show) { console.log(scheduleText(cfg)); return 0; }
         const run = async () => {
           log.info('开始定时更新（' + new Date().toLocaleString() + '）');
           try { await runUpdate(cfg, log, {}); }

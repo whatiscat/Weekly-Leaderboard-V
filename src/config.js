@@ -58,6 +58,12 @@ function requireString(cfg, key, { allowEmpty = false } = {}) {
   return v;
 }
 
+function requireBool(cfg, key) {
+  const v = pick(cfg, key);
+  if (typeof v !== 'boolean') fail(key + ' 必须是 true / false（当前 ' + describe(v) + '）');
+  return v;
+}
+
 function requireInt(cfg, key, { min, max } = {}) {
   const v = pick(cfg, key);
   if (!Number.isInteger(v)) fail(key + ' 必须是整数（当前 ' + describe(v) + '）');
@@ -74,7 +80,7 @@ function validate(cfg) {
 
   for (const key of ['site.title', 'site.brand', 'site.csvName']) requireString(cfg, key);
 
-  for (const key of ['raw', 'data', 'logs', 'state']) requireString(cfg, 'paths.' + key);
+  for (const key of ['raw', 'data', 'logs', 'state', 'nico']) requireString(cfg, 'paths.' + key);
 
   requireInt(cfg, 'http.minIntervalMs', { min: 0 });
   requireInt(cfg, 'http.maxRetries', { min: 0, max: 12 });
@@ -96,6 +102,18 @@ function validate(cfg) {
   requireInt(cfg, 'server.port', { min: 1, max: 65535 });
   requireString(cfg, 'server.host');
   requireString(cfg, 'bili.cookie', { allowEmpty: true });
+
+  // 附榜（ニコニコ VOCALOID SONGS TOP20）：另一个 UP 主发布的另一条榜
+  requireBool(cfg, 'nico.enabled');
+  if (cfg.nico.enabled) {
+    requireString(cfg, 'nico.mid');
+    requireString(cfg, 'nico.name');
+    const spaceUrl = requireString(cfg, 'nico.spaceUrl');
+    if (!/^https?:\/\//i.test(spaceUrl)) fail('nico.spaceUrl 必须带 http(s):// 前缀（当前 ' + describe(spaceUrl) + '）');
+    requireString(cfg, 'nico.title');
+    requireInt(cfg, 'nico.maxPages', { min: 1, max: 100 });
+  }
+  requireBool(cfg, 'nico.covers');
 }
 
 /**
@@ -113,7 +131,7 @@ export function loadConfig(overrides = {}) {
   validate(cfg);
 
   // 相对路径按仓库根解析：从任何工作目录启动，指向的都是同一份数据
-  for (const key of ['raw', 'data', 'logs', 'state']) {
+  for (const key of ['raw', 'data', 'logs', 'state', 'nico']) {
     const value = cfg.paths[key];
     cfg.paths[key] = path.isAbsolute(value) ? value : path.join(ROOT, value);
   }
